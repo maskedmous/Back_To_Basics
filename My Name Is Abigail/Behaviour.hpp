@@ -1,6 +1,8 @@
 #ifndef BEHAVIOUR_H
 #define BEHAVIOUR_H
 
+#include <vector>
+
 class GameObject;
 class Behaviour
 {
@@ -13,7 +15,6 @@ class Behaviour
 
 		virtual void update( float step );
 		virtual void onCollision( GameObject * otherGameObject );
-
 };
 
 #endif // BEHAVIOUR_H

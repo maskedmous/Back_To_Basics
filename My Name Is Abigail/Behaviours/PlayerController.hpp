@@ -27,7 +27,8 @@ class PlayerController : public Behaviour
         void OnMouseDown();
         void moveCharacter(float step);
         void checkPosition();
-        void addToInventory(GameObject * item);
+        virtual void addToInventory(GameObject * item);
+        std::vector< GameObject * >  getInventory();
 };
 
 

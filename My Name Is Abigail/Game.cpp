@@ -55,7 +55,9 @@ void Game::build()
     GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f, 1.0f));
         character->setMesh(Mesh::load("models/character.obj"));
         character->setColorMap(Texture::load("models/bricks.jpg"));
-        character->setBehaviour(new PlayerController( character, window, renderer, world ));
+        Behaviour * characterController = new PlayerController( character, window, renderer, world );
+        character->setBehaviour( characterController );
+        hud->setCharacter( characterController );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 }

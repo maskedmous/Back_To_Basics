@@ -125,3 +125,8 @@ void PlayerController::addToInventory(GameObject * item)
     items.push_back(item);
     targetItem = NULL;
 }
+
+std::vector< GameObject * > PlayerController::getInventory()
+{
+    return items;
+}

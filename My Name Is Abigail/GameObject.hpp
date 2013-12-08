@@ -39,10 +39,11 @@ class GameObject
 		bool hasCollider();
         Collider * getCollider();
 		void setBehaviour( Behaviour * aBehaviour );
+		Behaviour * getBehaviour();
 		void setCollider( Collider * aCollider );
 		void setMesh( Mesh * aMesh );
 		void setColorMap( Texture * aColorMap );
-
+        Texture * getTexture();
 		virtual void update( float step );
 		virtual void onCollision(  GameObject * otherGameObject );
 		virtual void draw( Renderer * renderer, glm::mat4 parentTransform = glm::mat4(1) );

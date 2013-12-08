@@ -67,6 +67,11 @@ void GameObject::setBehaviour( Behaviour * aBehaviour )
 	behaviour = aBehaviour;
 }
 
+Behaviour * GameObject::getBehaviour()
+{
+    return behaviour;
+}
+
 void GameObject::setCollider( Collider * aCollider )
 {
     assert( aCollider != NULL );
@@ -84,6 +89,11 @@ void GameObject::setColorMap( Texture * aColorMap )
 	assert( aColorMap != NULL );
 	assert( aColorMap->getId() > 0 );
 	colorMap = aColorMap;
+}
+
+Texture * GameObject::getTexture()
+{
+    return colorMap;
 }
 
 void GameObject::update( float step )
