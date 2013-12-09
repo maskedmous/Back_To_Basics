@@ -22,15 +22,15 @@ void World::update( float step )
 	GameObject::update( step );
 }
 
-GameObject * World::checkCollision( glm::vec3 rayOrigin )
+GameObject * World::checkCollision( glm::vec3 rayOrigin, glm::vec3 rayDirection )
 {
-      //go through the array of gameobjects
+    //go through the array of gameobjects
     for(unsigned int i=0; i<children.size(); ++i)
     {
         //if it has a collider proceed
         if(children[i]->hasCollider())
         {
-            if(children[i]->getCollider()->isColliding(rayOrigin.x, rayOrigin.y))
+            if(children[i]->getCollider()->isColliding(rayOrigin, rayDirection))
             {
                 //its colliding
                 return children[i];

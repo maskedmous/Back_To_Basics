@@ -1,15 +1,19 @@
 #ifndef COLLIDER_HPP_INCLUDED
 #define COLLIDER_HPP_INCLUDED
 
+#include "GameObject.hpp"
+#include "glm.hpp"
+
 class Collider
 {
     protected:
-    float m_x, m_y, width, height;
+    float radius;
+    GameObject * parent;
 
     public:
-        Collider(float aX, float aY, float aWidth, float aHeight);
+        Collider(float aRadius, GameObject * aParent);
         virtual ~Collider();
-        bool isColliding(float aX, float aY);
+        bool isColliding(glm::vec3 rayOrigin, glm::vec3 rayDirection);
 };
 
 #endif // COLLIDER_HPP_INCLUDED

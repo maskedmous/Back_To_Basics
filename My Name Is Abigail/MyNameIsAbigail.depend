@@ -485,13 +485,13 @@
 1386506065 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386503348 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1386559145 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1386505418 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1386560215 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -505,7 +505,7 @@
 	<SFML/Window.hpp>
 	"glm.hpp"
 
-1386451286 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
+1386549467 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
 1359823488 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
@@ -554,11 +554,13 @@
 	<string>
 	"GameObject.hpp"
 
-1386449633 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
+1386560013 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
 	<iostream>
 	"Collider.hpp"
 
-1386355188 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.hpp
+1386553419 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.hpp
+	"GameObject.hpp"
+	"glm.hpp"
 
 1361092254 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.cpp
 	<iostream>
@@ -570,7 +572,7 @@
 1358431643 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1386505357 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.cpp
+1386558207 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -677,10 +679,21 @@
 	"Time.hpp"
 	<iostream>
 
-1386451280 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
+1386553375 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
 	"Light.hpp"
 	"Collider.hpp"
+
+1386506350 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
+	<cassert>
+	<iostream>
+	<cstdio>
+	<GL/glew.h>
+	<vector>
+	"FPS.hpp"
+	"Hud.hpp"
+	"Behaviour.hpp"
+	"Behaviours/PlayerController.hpp"
 

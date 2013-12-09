@@ -34,42 +34,49 @@ void PlayerController::update(float step)
         }
     }
 
-    moveCharacter(step);
+    if(sf::Keyboard::isKeyPressed( sf::Keyboard::Right))
+    {
+        parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
+    }
+    if(sf::Keyboard::isKeyPressed( sf::Keyboard::Left))
+    {
+        parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
+    }
 
     if(targetItem != NULL)
     {
         checkPosition();
+        moveCharacter(step);
     }
 }
 
 void PlayerController::OnMouseDown()
 {
-    //std::cout << "Left MouseButton Clicked" << std::endl;
 	//middle = 0,0
-	glm::ivec2 screenPosition = glm::ivec2( sf::Mouse::getPosition( *window ).x - (window->getSize().x / 2) , sf::Mouse::getPosition( *window ).y - (window->getSize().y / 2) );
-    glm::vec4 mousePosition = glm::vec4(screenPosition.x, screenPosition.y, 6, 1);
-    //range -1, 1
-    mousePosition.x = mousePosition.x / (window->getSize().x / 2);
-    mousePosition.y = mousePosition.y / (window->getSize().y / 2);
-    //inverse matrix
-    //glm::mat4 inverseMatrix = glm::inverse(renderer->getView()) * glm::inverse(renderer->getProjection());
-    //apply inversed matrix
-    //mouseInWorld = inverseMatrix * mousePosition;
+	glm::ivec2 screenPosition = glm::ivec2( sf::Mouse::getPosition( *window ).x, sf::Mouse::getPosition( *window ).y );
+    glm::vec2 mousePosition = glm::vec2(screenPosition.x, screenPosition.y);
 
-    //ray in clip space (screen space)
-    glm::vec4 rayClip = glm::vec4(mousePosition.x, mousePosition.y, -1.0, 1.0);
-    //ray in eye space
-    glm::vec4 rayEye = glm::inverse(renderer->getProjection()) * rayClip;
-    //direction of the ray
-    rayEye = glm::vec4(rayEye.x, rayEye.y, -1.0, 0.0);
+    glm::vec2 screen = glm::vec2( 800, 600);
+    glm::mat4 projection = glm::perspective( 45.0f, 4.0f/3.0f, 0.1f, 100.0f);
+    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-    glm::vec3 rayWorld = glm::vec3(glm::inverse(renderer->getView()) * rayEye);
-    rayWorld = glm::normalize(rayWorld);
+    //get mouse coord in cam space
+    glm::vec3 point;
+    point.x = -( 2.0f * mousePosition.x / screen.x - 1) / projection[0][0];
+    point.y = (2.0f * mousePosition.y / screen.y - 1) / projection[1][1];
+    point.z = 1.0f;
 
-    //std::cout << rayWorld << std::endl;
+    //from cam space to world space by inverse view
+    glm::mat4 inverseView = glm::inverse(view);
+    glm::vec3 rayDirection = glm::normalize( glm::vec3( inverseView * glm::vec4( point, 0.0f)));
+    glm::vec3 rayOrigin = glm::vec3( inverseView * glm::vec4 (0.0f, 0.0f, 0.0f, 1.0f) );
+
+
+    std::cout << "Ray Direction: " << rayDirection << std::endl;
+    std::cout << "Ray Origin: " << rayOrigin << std::endl;
 
     //check for collision
-    GameObject * collided = world->checkCollision(rayWorld);
+    GameObject * collided = world->checkCollision(rayOrigin, rayDirection);
 
     if(collided != NULL)
     {
@@ -85,6 +92,7 @@ void PlayerController::OnMouseDown()
     //mouseInWorld.x = rayWorld.x;
 }
 
+//moves the character where the user has clicked last
 void PlayerController::moveCharacter(float step)
 {
     float distance = glm::abs(mouseInWorld.x - parent->getLocation().x);
@@ -124,6 +132,14 @@ void PlayerController::addToInventory(GameObject * item)
     std::cout << "Obtained: " << item->getName() << std::endl;
     items.push_back(item);
     targetItem = NULL;
+}
+
+void PlayerController::mergeItems(GameObject * itemA, GameObject * itemB)
+{
+    std::cout << "Merging: " << itemA->getName() << " with " << itemB->getName() << std::endl;
+
+    //list of mergable items
+    //if( itemA == "" && itemB == "") merge();
 }
 
 std::vector< GameObject * > PlayerController::getInventory()

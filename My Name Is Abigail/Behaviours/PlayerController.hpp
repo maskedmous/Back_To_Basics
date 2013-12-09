@@ -28,6 +28,7 @@ class PlayerController : public Behaviour
         void moveCharacter(float step);
         void checkPosition();
         virtual void addToInventory(GameObject * item);
+        void mergeItems( GameObject * itemA, GameObject * itemB);
         std::vector< GameObject * >  getInventory();
 };
 

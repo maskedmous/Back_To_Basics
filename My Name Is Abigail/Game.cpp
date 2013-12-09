@@ -60,6 +60,13 @@ void Game::build()
         hud->setCharacter( characterController );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
+
+    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 2.0f, 1.0f));
+        item->setMesh(Mesh::load("models/myPlane.obj"));
+        item->setColorMap(Texture::load("models/bricks.jpg"));
+        //item->setBehaviour( new RotatingBehaviour(item) );
+        item->setCollider( new Collider(2.0f, item) );
+        world->add(item);
 }
 
 void Game::run()
