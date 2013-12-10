@@ -464,7 +464,7 @@
 1359823466 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386504040 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.hpp
+1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.hpp
 	<vector>
 	<string>
 	"glm.hpp"
@@ -475,7 +475,7 @@
 	<glm/glm.hpp>
 	<glm/ext.hpp>
 
-1386340895 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
 	"LookAtBehaviour.hpp"
 	<iostream>
 	<sfml/window.hpp>
@@ -485,19 +485,20 @@
 1386506065 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386559145 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1386717707 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1386560215 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
 	"../glm.hpp"
 	"../Renderer.hpp"
 	"../Behaviour.hpp"
+	"../Inventory.hpp"
 	"../World.hpp"
 
 1386359205 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\renderer.hpp
@@ -505,7 +506,7 @@
 	<SFML/Window.hpp>
 	"glm.hpp"
 
-1386549467 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
+1386717884 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
 1359823488 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
@@ -554,7 +555,7 @@
 	<string>
 	"GameObject.hpp"
 
-1386560013 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
+1386716566 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
 	<iostream>
 	"Collider.hpp"
 
@@ -562,7 +563,7 @@
 	"GameObject.hpp"
 	"glm.hpp"
 
-1361092254 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.cpp
+1386716567 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.cpp
 	<iostream>
 	"FPS.hpp"
 	"Time.hpp"
@@ -572,7 +573,7 @@
 1358431643 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1386558207 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.cpp
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -587,6 +588,7 @@
 	"Light.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
+	"Inventory.hpp"
 	"Behaviours/KeysBehaviour.hpp"
 	"Behaviours/PlayerController.hpp"
 	"Behaviours/LookAtBehaviour.hpp"
@@ -594,8 +596,9 @@
 	"Behaviours/TextureSwappingBehaviour.hpp"
 	"Behaviours/RotatingBehaviour.hpp"
 
-1386506262 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.hpp
+1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
+	"Inventory.hpp"
 	"GameObject.hpp"
 
 1359815027 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\shaderprogram.hpp
@@ -621,7 +624,7 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1386504079 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.cpp
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.cpp
 	<cassert>
 	<iostream>
 	"Renderer.hpp"
@@ -630,7 +633,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1386339677 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.cpp
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -679,14 +682,14 @@
 	"Time.hpp"
 	<iostream>
 
-1386553375 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
+1386717982 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
 	"Light.hpp"
 	"Collider.hpp"
 
-1386506350 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -955,5 +958,13 @@
 	<vector>
 
 1386683814 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+	"Inventory.hpp"
+
+1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
+	"GameObject.hpp"
+	"World.hpp"
+	<vector>
+
+1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 
