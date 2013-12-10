@@ -41,7 +41,7 @@ void Interperter::readFile(std::string fileName, World * aWorld){
                 getline(level,line);
                 stringSize = line.size();
                 for(int i = 0; i < stringSize; i += 2 ){
-                    countX += 5;
+                    countX += 4;
                     objectNmb = line.substr(i, 1);
 
                     if(objectNmb == "9"){

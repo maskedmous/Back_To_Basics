@@ -60,7 +60,7 @@ void Hud::draw()
 	window->popGLStates();
 }
 
-void Hud::setCharacter(Behaviour * aCharacterController)
+void Hud::setInventory(Inventory * aInventory)
 {
-    characterController = aCharacterController;
+    inventory = aInventory;
 }

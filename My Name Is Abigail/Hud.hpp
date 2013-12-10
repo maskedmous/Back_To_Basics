@@ -2,13 +2,14 @@
 #define HUD_H
 
 #include <SFML/Graphics.hpp>
+#include "Inventory.hpp"
 #include "GameObject.hpp"
 
 class Hud
 {
 	private:
 		sf::RenderWindow * window;
-		Behaviour * characterController;
+		Inventory * inventory;
 		sf::Font font;
 		sf::Texture theHUDTex;
 		sf::Sprite theHUD;
@@ -17,7 +18,7 @@ class Hud
 		virtual ~Hud();
 
 		void draw( );
-		void setCharacter(Behaviour * aCharacterController);
+		void setInventory(Inventory * aInventory);
 };
 
 #endif // HUD_H

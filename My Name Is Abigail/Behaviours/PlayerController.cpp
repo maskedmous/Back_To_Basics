@@ -4,8 +4,8 @@
 #include "../GameObject.hpp"
 
 
-PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld)
-:   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld), mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby")
+PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld , Inventory* aInventory)
+:   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby")
 {}
 
 PlayerController::~PlayerController()
@@ -119,7 +119,8 @@ void PlayerController::checkPosition()
     if(distance < 0.01f)
     {
         //add item to inventory cause you're near it
-        addToInventory(targetItem);
+        inventory->addToInventory(targetItem, world);
+        targetItem = NULL;
     }
     else
     {
@@ -127,12 +128,6 @@ void PlayerController::checkPosition()
     }
 }
 
-void PlayerController::addToInventory(GameObject * item)
-{
-    std::cout << "Obtained: " << item->getName() << std::endl;
-    items.push_back(item);
-    targetItem = NULL;
-}
 
 void PlayerController::mergeItems(GameObject * itemA, GameObject * itemB)
 {

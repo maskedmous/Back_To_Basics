@@ -14,6 +14,7 @@
 #include "Light.hpp"
 #include "Mesh.hpp"
 #include "Texture.hpp"
+#include "Inventory.hpp"
 #include "Behaviours/KeysBehaviour.hpp"
 #include "Behaviours/PlayerController.hpp"
 #include "Behaviours/LookAtBehaviour.hpp"
@@ -49,19 +50,21 @@ void Game::build()
 		world->add( camera );
 		world->add( light );
 
+    Inventory * inventory = new Inventory();
+
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world);
 
-    GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f, 1.0f));
+    GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f, .2f));
         character->setMesh(Mesh::load("models/character.obj"));
         character->setColorMap(Texture::load("models/bricks.jpg"));
-        Behaviour * characterController = new PlayerController( character, window, renderer, world );
+        Behaviour * characterController = new PlayerController( character, window, renderer, world, inventory );
         character->setBehaviour( characterController );
-        hud->setCharacter( characterController );
+        hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
-    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 2.0f, 1.0f));
+    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 1.0f, .2f));
         item->setMesh(Mesh::load("models/myPlane.obj"));
         item->setColorMap(Texture::load("models/bricks.jpg"));
         //item->setBehaviour( new RotatingBehaviour(item) );

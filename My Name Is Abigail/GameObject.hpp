@@ -50,6 +50,7 @@ class GameObject
 
 
 		void add( GameObject * child );
+		void remove (GameObject * child );
 
 	protected:
 

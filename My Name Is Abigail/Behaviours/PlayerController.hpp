@@ -6,6 +6,7 @@
 #include "../glm.hpp"
 #include "../Renderer.hpp"
 #include "../Behaviour.hpp"
+#include "../Inventory.hpp"
 #include "../World.hpp"
 
 class PlayerController : public Behaviour
@@ -14,6 +15,7 @@ class PlayerController : public Behaviour
         sf::Window * window;
         Renderer * renderer;
         World * world;
+        Inventory * inventory;
         glm::vec4 mouseInWorld;
         GameObject * targetItem;
     protected:
@@ -21,13 +23,12 @@ class PlayerController : public Behaviour
         std::vector< GameObject * > items;
 
     public:
-        PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld );
+        PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld, Inventory * aInventory );
         virtual ~PlayerController();
         virtual void update(float step);
         void OnMouseDown();
         void moveCharacter(float step);
         void checkPosition();
-        virtual void addToInventory(GameObject * item);
         void mergeItems( GameObject * itemA, GameObject * itemB);
         std::vector< GameObject * >  getInventory();
 };
