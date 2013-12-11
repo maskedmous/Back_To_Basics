@@ -10,6 +10,7 @@ class Inventory
         Inventory();
         virtual ~Inventory();
         void addToInventory(GameObject * item, World * world);
+        std::vector< GameObject * > getInventory();
     protected:
         std::vector< GameObject * > items;
     private:

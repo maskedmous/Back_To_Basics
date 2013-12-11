@@ -18,3 +18,8 @@ void Inventory::addToInventory(GameObject * item, World* world)
     //targetItem = NULL;
     //std::cout << items << std::endl;
 }
+
+std::vector< GameObject * > Inventory::getInventory()
+{
+    return items;
+}

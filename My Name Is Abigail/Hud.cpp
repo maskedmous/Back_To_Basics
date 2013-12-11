@@ -7,6 +7,7 @@
 #include "Hud.hpp"
 #include "Behaviour.hpp"
 #include "Behaviours/PlayerController.hpp"
+#include "Texture.hpp"
 
 Hud::Hud( sf::RenderWindow * aWindow )
 :	window( aWindow )
@@ -44,17 +45,18 @@ void Hud::draw()
 	window->pushGLStates();
 		window->draw( theHUD );
 		//get the inventory
-    //    std::vector< GameObject * > items = character->getInventory();
+        std::vector< GameObject * > items = inventory->getInventory();
 
 		//draw inventory
-	//	for(unsigned int i=0; i<items.size(); ++i)
-       // {
-        //    GameObject * thisItem = items[i];
-        //    sf::Texture thisItemTex = thisItem->getTexture();
-        //    sf::Sprite thisItemSprite;
-        //    thisItemSprite.setTexture( thisItemTex );
-        //    thisItemSprite.setPosition( 33 + (i * 133), window->getSize().y - 200 );
-        //}
+		for(unsigned int i=0; i<items.size(); ++i)
+        {
+           // GameObject * thisItem = items[i];
+           // std::cout << thisItem->getName() << std::endl;
+           // sf::Texture thisItemTex = thisItemTex.loadFromMemory(thisItem->getTexture()->getId());
+           // sf::Sprite thisItemSprite;
+           // thisItemSprite.setTexture( thisItemTex );
+          //  thisItemSprite.setPosition( 33 + (i * 133), window->getSize().y - 200 );
+        }
 
 		window->draw( text );
 	window->popGLStates();

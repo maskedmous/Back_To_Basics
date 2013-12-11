@@ -529,7 +529,7 @@
 	<string>
 	"../Behaviour.hpp"
 
-1359061002 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.hpp
+1386720299 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.hpp
 	<iostream>
 	<map>
 	<GL/glew.h>
@@ -546,7 +546,7 @@
 	<SFML/Window.hpp>
 	"../Behaviour.hpp"
 
-1361178152 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.cpp
+1386720090 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.cpp
 	"glm.hpp"
 	"Camera.hpp"
 	"Renderer.hpp"
@@ -673,7 +673,7 @@
 	<fstream>
 	"Texture.hpp"
 
-1360915113 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.cpp
+1386720298 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.cpp
 	<SFML/Graphics.hpp>
 	"ShaderProgram.hpp"
 	"Texture.hpp"
@@ -689,7 +689,7 @@
 	"Light.hpp"
 	"Collider.hpp"
 
-1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
+1386720991 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -699,6 +699,7 @@
 	"Hud.hpp"
 	"Behaviour.hpp"
 	"Behaviours/PlayerController.hpp"
+	"Texture.hpp"
 
 1386523851 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
 	<cassert>
@@ -960,11 +961,11 @@
 1386683814 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 
-1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
+1386720543 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
 	"World.hpp"
 	<vector>
 
-1386717531 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
+1386720570 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 
