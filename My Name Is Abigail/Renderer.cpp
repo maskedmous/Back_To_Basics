@@ -69,6 +69,8 @@ void Renderer::draw( GameObject * aWorld )
 	program->use(); // make sure default shader program is used
 	glEnable( GL_DEPTH_TEST );
 	glEnable( GL_CULL_FACE ); // defaul GL_BACK
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
 	glClearColor( 0.1f, 0.1f, 0.1f, 1.0f );
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT ); // clear screen 0
 	time = Time::now(); // provide the shader with time float in seconds, for later use !
