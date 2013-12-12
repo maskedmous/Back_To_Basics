@@ -42,8 +42,8 @@ void Game::build()
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
 	camera = new Camera( "Camera", glm::vec3( 0, 1, 3.464 ) );
-        Behaviour * keysBehaviour = new KeysBehaviour(camera);
-        camera->setBehaviour( keysBehaviour );
+        //Behaviour * keysBehaviour = new KeysBehaviour(camera);
+        //camera->setBehaviour( keysBehaviour );
 
 	light = new Light( "Light", glm::vec3( 2.0f, 10.0f, 15.0f ) ); // not used now, just ambient light
 
@@ -61,16 +61,21 @@ void Game::build()
         character->setColorMap(Texture::load("models/Abigail_side.png"));
         Behaviour * characterController = new PlayerController( character, window, renderer, world, inventory );
         character->setBehaviour( characterController );
+        character->setCollider( new Collider( 1.0f, character));
         hud->setInventory( inventory );
         world->add(character);
-    //camera->setBehaviour( new LookAtBehaviour(camera, character));
+    camera->setBehaviour( new LookAtBehaviour(camera, character));
 
     GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 1.0f, .15f));
         item->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         item->setColorMap(Texture::load("models/bricks.jpg"));
         //item->setBehaviour( new RotatingBehaviour(item) );
-        item->setCollider( new Collider(2.0f, item) );
+        item->setCollider( new Collider(1.0f, item) );
         world->add(item);
+
+    GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
+        blockWall->setCollider( new Collider (3.0f, blockWall));
+        world->add(blockWall);
 }
 
 void Game::run()

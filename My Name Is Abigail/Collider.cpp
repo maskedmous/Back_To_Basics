@@ -1,48 +1,35 @@
 #include <iostream>
 #include "Collider.hpp"
 
-Collider::Collider( float aRadius, GameObject * aParent)
-: radius(aRadius), parent(aParent)
+Collider::Collider( float aWidth, GameObject * aParent)
+: width(aWidth), parent(aParent)
 {}
 
 Collider::~Collider()
 {}
 
-bool Collider::isColliding(glm::vec3 rayOrigin, glm::vec3 rayDirection)
+bool Collider::isColliding(GameObject * otherObject)
 {
-    return true;
-    //calculate the closest point
+    //left side
+    float parentX = parent->getLocation().x;
+    float parentWidth = width;
 
-    //ray end point
-    glm::vec3 endPoint = rayOrigin + (7.0f * rayDirection);
+    float otherObjectX = otherObject->getLocation().x;
+    float otherObjectWidth = otherObject->getCollider()->getWidth();
 
-    //A = ray Origin
-    //B = endPoint
-    //P = sphere center
+    if(parentX + (parentWidth / 2) > otherObjectX)
+    {
+        if(parentX + (parentWidth / 2) < otherObjectX + otherObjectWidth)
+        {
+            return true;
+        }
+    }
 
-    //B - A
-    glm::vec3 AB = endPoint - rayOrigin;
-    //AB dot AB
-    float ab2 = glm::dot(AB, AB);
-    //P - A
-    glm::vec3 AP = parent->getLocation() - rayOrigin;
-    //AP dot AB
-    float AP_dot_AB = glm::dot(AP, AB);
-    //AP dot AB / AB dot AB
-    float t = AP_dot_AB / ab2;
 
-    if(t < 0.0f) t = 0.0f;
-    else if (t > 1.0f) t = 1.0f;
+    return false;
+}
 
-    //closest point
-    glm::vec3 Q = rayOrigin + (AB * t);
-
-    //check if that point is within the sphere
-    glm::vec3 PQ = Q - parent->getLocation();
-    float pq2 = glm::dot(PQ, PQ);
-    float r2 = radius * radius;
-
-    if(pq2 > r2) return false;
-
-    return true;
+float Collider::getWidth()
+{
+    return width;
 }

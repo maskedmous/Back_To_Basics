@@ -7,13 +7,14 @@
 class Collider
 {
     protected:
-    float radius;
+    float width;
     GameObject * parent;
 
     public:
-        Collider(float aRadius, GameObject * aParent);
+        Collider(float aWidth, GameObject * aParent);
         virtual ~Collider();
-        bool isColliding(glm::vec3 rayOrigin, glm::vec3 rayDirection);
+        bool isColliding(GameObject * otherObject);
+        float getWidth();
 };
 
 #endif // COLLIDER_HPP_INCLUDED
