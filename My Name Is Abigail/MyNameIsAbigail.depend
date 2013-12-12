@@ -807,7 +807,7 @@
 1386523852 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1386683740 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1386841396 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -845,7 +845,7 @@
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 
-1386679426 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
+1386833687 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
 1386523851 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
@@ -880,7 +880,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1386683212 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1386833687 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -890,6 +890,7 @@
 	"Hud.hpp"
 	"Behaviour.hpp"
 	"Behaviours/PlayerController.hpp"
+	"Texture.hpp"
 
 1386680307 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
@@ -936,7 +937,7 @@
 	"Time.hpp"
 	<iostream>
 
-1386679426 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1386833687 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -947,18 +948,18 @@
 	<iostream>
 	"Game.hpp"
 
-1386685029 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1386833687 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1386683788 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
+1386833687 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
 	"World.hpp"
 	<vector>
 
-1386683814 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1386833687 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 
 1386720543 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
