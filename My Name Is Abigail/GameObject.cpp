@@ -101,10 +101,11 @@ void GameObject::update( float step )
 	if ( behaviour ) { // note no assert on behaviour, it is ok when there is no behaviour
 		behaviour->update( step );
 	}
-	for ( std::vector< GameObject * >::iterator i = children.begin(); i != children.end(); ++i ) {
-		((GameObject * )*i)->update( step );
-	}
 
+	for ( unsigned int i = 0; i < children.size(); i++)
+    {
+		children[i]->update( step );
+	}
 }
 
 void GameObject::onCollision(  GameObject * otherGameObject )

@@ -56,7 +56,20 @@ void Game::build()
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world);
 
-    GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f, .2f));
+
+
+    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 2.0f, .15f));
+        item->setMesh(Mesh::load("models/myPlane.obj"));
+        item->setColorMap(Texture::load("models/bricks.jpg"));
+        //item->setBehaviour( new RotatingBehaviour(item) );
+        item->setCollider( new Collider(1.0f, item) );
+        world->add(item);
+
+    GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
+        blockWall->setCollider( new Collider (3.0f, blockWall));
+        world->add(blockWall);
+
+    GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigail_side.png"));
         Behaviour * characterController = new PlayerController( character, window, renderer, world, inventory );
@@ -66,16 +79,6 @@ void Game::build()
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
-    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 1.0f, .15f));
-        item->setMesh(Mesh::load("models/AbigailCharacter.obj"));
-        item->setColorMap(Texture::load("models/bricks.jpg"));
-        //item->setBehaviour( new RotatingBehaviour(item) );
-        item->setCollider( new Collider(1.0f, item) );
-        world->add(item);
-
-    GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
-        blockWall->setCollider( new Collider (3.0f, blockWall));
-        world->add(blockWall);
 }
 
 void Game::run()
