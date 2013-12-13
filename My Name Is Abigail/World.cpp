@@ -23,8 +23,9 @@ void World::update( float step )
 	checkBlock();
 }
 
-GameObject * World::checkCollision( glm::vec3 playerPosition )
+void World::checkCollision( GameObject* firstCollider )
 {
+    glm::vec3 playerPosition = firstCollider->getLocation();
     //go through the array of gameobjects
     for(unsigned int i=0; i<children.size(); ++i)
     {
@@ -35,12 +36,14 @@ GameObject * World::checkCollision( glm::vec3 playerPosition )
             {
                 if(glm::abs(children[i]->getLocation().x - playerPosition.x) < 1.0f )
                 {
-                    return children[i];
+                    //return children[i];
+                    children[i]->onCollision(firstCollider);
                 }
             }
+
         }
     }
-    return NULL;
+    //return NULL;
 }
 
 void World::checkBlock()

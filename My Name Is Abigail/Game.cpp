@@ -19,6 +19,7 @@
 #include "Behaviours/PlayerController.hpp"
 #include "Behaviours/LookAtBehaviour.hpp"
 #include "Behaviours/WASDBehaviour.hpp"
+#include "Behaviours/DoorBehaviour.hpp"
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/RotatingBehaviour.hpp"
 
@@ -64,6 +65,16 @@ void Game::build()
         //item->setBehaviour( new RotatingBehaviour(item) );
         item->setCollider( new Collider(1.0f, item) );
         world->add(item);
+
+    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 2.0f, .15f));
+        firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
+        firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
+
+        Behaviour * doorBehaviour = new DoorBehaviour(firstDoor, world);
+        firstDoor->setBehaviour( doorBehaviour );
+
+        firstDoor->setCollider( new Collider(1.0f, firstDoor) );
+        world->add(firstDoor);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
         blockWall->setCollider( new Collider (3.0f, blockWall));

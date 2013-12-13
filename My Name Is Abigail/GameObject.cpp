@@ -112,6 +112,7 @@ void GameObject::onCollision(  GameObject * otherGameObject )
 {
 	if ( behaviour ) {
 		behaviour->onCollision( otherGameObject );
+
 	}
 }
 

@@ -53,8 +53,9 @@ void PlayerController::update(float step)
 void PlayerController::OnMouseDown()
 {
     //check for collision
-    GameObject * collided = world->checkCollision(parent->getLocation());
-
+    //GameObject * collided =
+    world->checkCollision(parent);
+/*
     if(collided != NULL)
     {
         std::cout << collided->getName() << std::endl;
@@ -65,6 +66,7 @@ void PlayerController::OnMouseDown()
     {
         std::cout << "Did not collide" << std::endl;
     }
+    */
     //set the mouseInWorld to the coordinates of the ray
     //mouseInWorld.x = rayWorld.x;
 }

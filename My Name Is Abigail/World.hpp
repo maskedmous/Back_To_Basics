@@ -13,7 +13,7 @@ class World : public GameObject
 		virtual ~World();
 
 		void update( float step );
-		GameObject * checkCollision( glm::vec3 playerPosition);
+		void checkCollision( GameObject * firstCollider);
 		void checkBlock();
 		virtual void draw( Renderer * renderer );
 
