@@ -25,7 +25,6 @@ void DoorBehaviour::update(float step ){
 void DoorBehaviour::onCollision( GameObject * otherGameObject )
 {
 	std::cout << "i am a door!" << std::endl;
-
     std::string myString;
     myString = "Item";
     if(inventory->CheckContainItem(myString)){

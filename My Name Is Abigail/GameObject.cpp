@@ -110,10 +110,14 @@ void GameObject::update( float step )
 
 void GameObject::onCollision(  GameObject * otherGameObject )
 {
+    //notify both behaviours they collided with eachother
 	if ( behaviour ) {
 		behaviour->onCollision( otherGameObject );
-
 	}
+	if (otherGameObject->getBehaviour() != NULL)
+    {
+        otherGameObject->getBehaviour()->onCollision(this);
+    }
 }
 
 void GameObject::draw( Renderer * aRenderer, glm::mat4 parentTransform )

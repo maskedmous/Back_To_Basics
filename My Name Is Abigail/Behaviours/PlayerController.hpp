@@ -27,6 +27,7 @@ class PlayerController : public Behaviour
         virtual ~PlayerController();
         virtual void update(float step);
         void OnMouseDown();
+        virtual void onCollision(GameObject * otherObject);
         void moveCharacter(float step);
         void checkPosition();
         void mergeItems( GameObject * itemA, GameObject * itemB);

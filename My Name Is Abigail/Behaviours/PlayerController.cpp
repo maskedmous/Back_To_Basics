@@ -71,6 +71,14 @@ void PlayerController::OnMouseDown()
     //mouseInWorld.x = rayWorld.x;
 }
 
+void PlayerController::onCollision(GameObject * otherObject)
+{
+    std::cout << "collided with: " << otherObject->getName() << std::endl;
+
+    //could make if statements
+    //if collided with this specific game object then do this { code }
+}
+
 //moves the character where the user has clicked last
 void PlayerController::moveCharacter(float step)
 {
