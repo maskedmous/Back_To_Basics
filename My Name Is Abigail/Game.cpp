@@ -20,6 +20,7 @@
 #include "Behaviours/LookAtBehaviour.hpp"
 #include "Behaviours/WASDBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
+#include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/RotatingBehaviour.hpp"
 
@@ -62,7 +63,9 @@ void Game::build()
     GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 2.0f, .15f));
         item->setMesh(Mesh::load("models/myPlane.obj"));
         item->setColorMap(Texture::load("models/bricks.jpg"));
-        //item->setBehaviour( new RotatingBehaviour(item) );
+
+    Behaviour * itemBehaviour = new ItemBehaviour(item, world, inventory);
+        item->setBehaviour( itemBehaviour );
         item->setCollider( new Collider(1.0f, item) );
         world->add(item);
 
@@ -70,7 +73,7 @@ void Game::build()
         firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
         firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
 
-        Behaviour * doorBehaviour = new DoorBehaviour(firstDoor, world);
+    Behaviour * doorBehaviour = new DoorBehaviour(firstDoor, world, inventory);
         firstDoor->setBehaviour( doorBehaviour );
 
         firstDoor->setCollider( new Collider(1.0f, firstDoor) );

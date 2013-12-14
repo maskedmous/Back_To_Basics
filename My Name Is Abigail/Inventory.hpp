@@ -11,6 +11,7 @@ class Inventory
         virtual ~Inventory();
         void addToInventory(GameObject * item, World * world);
         std::vector< GameObject * > getInventory();
+        bool CheckContainItem(std::string& aString);
     protected:
         std::vector< GameObject * > items;
     private:

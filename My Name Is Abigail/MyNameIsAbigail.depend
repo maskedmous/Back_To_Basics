@@ -807,7 +807,7 @@
 1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1386938769 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1386973089 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -828,6 +828,7 @@
 	"Behaviours/LookAtBehaviour.hpp"
 	"Behaviours/WASDBehaviour.hpp"
 	"Behaviours/DoorBehaviour.hpp"
+	"Behaviours/ItemBehaviour.hpp"
 	"Behaviours/TextureSwappingBehaviour.hpp"
 	"Behaviours/RotatingBehaviour.hpp"
 
@@ -955,13 +956,14 @@
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
+1386980870 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
 	"World.hpp"
 	<vector>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1386981013 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
+	<string>
 
 1386720543 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
@@ -971,19 +973,23 @@
 1386720570 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 
-1386939463 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1386980925 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
+	<string>
 
-1386939457 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+1386980421 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
+	"../Inventory.hpp"
+	<string>
 
-1386939961 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+1386980352 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
 	"ItemBehaviour.hpp"
 	<iostream>
 
-1386940230 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+1386972805 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
+	"../Inventory.hpp"
 

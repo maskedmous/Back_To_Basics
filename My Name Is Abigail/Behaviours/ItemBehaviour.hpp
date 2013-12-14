@@ -3,11 +3,12 @@
 
 #include "../Behaviour.hpp"
 #include "../World.hpp"
+#include "../Inventory.hpp"
 
 class ItemBehaviour : public Behaviour
 {
     public:
-        ItemBehaviour(GameObject* aParent, World* aWorld);
+        ItemBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory);
         virtual ~ItemBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
@@ -15,7 +16,7 @@ class ItemBehaviour : public Behaviour
     private:
         World * world;
         GameObject * parent;
-
+        Inventory * inventory;
 };
 
 

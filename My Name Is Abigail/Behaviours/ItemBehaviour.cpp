@@ -3,11 +3,12 @@
 #include <iostream>
 
 
-ItemBehaviour::ItemBehaviour(GameObject * aParent, World* aWorld)
+ItemBehaviour::ItemBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory)
 :	Behaviour( aParent )
 {
     world = aWorld;
     parent = aParent;
+    inventory = aInventory;
 }
 
 ItemBehaviour::~ItemBehaviour()
@@ -24,5 +25,6 @@ void ItemBehaviour::onCollision( GameObject * otherGameObject )
 {
 	std::cout << "i am a ITEM!" << std::endl;
 	world->remove(parent);
+    inventory->addToInventory(parent, world);
 }
 

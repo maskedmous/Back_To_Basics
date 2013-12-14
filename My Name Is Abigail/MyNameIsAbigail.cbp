@@ -44,6 +44,14 @@
 		</Linker>
 		<Unit filename="Behaviour.cpp" />
 		<Unit filename="Behaviour.hpp" />
+		<Unit filename="Behaviours\DoorBehaviour.cpp" />
+		<Unit filename="Behaviours\DoorBehaviour.hpp" />
+		<Unit filename="Behaviours\ItemBehaviour.cpp">
+			<Option target="Windows" />
+		</Unit>
+		<Unit filename="Behaviours\ItemBehaviour.hpp">
+			<Option target="Windows" />
+		</Unit>
 		<Unit filename="Behaviours\KeysBehaviour.cpp" />
 		<Unit filename="Behaviours\KeysBehaviour.hpp" />
 		<Unit filename="Behaviours\LookAtBehaviour.cpp" />
@@ -60,6 +68,7 @@
 		<Unit filename="Camera.hpp" />
 		<Unit filename="Collider.cpp" />
 		<Unit filename="Collider.hpp" />
+		<Unit filename="DoorBehaviour.hpp" />
 		<Unit filename="FPS.cpp" />
 		<Unit filename="FPS.hpp" />
 		<Unit filename="Game.cpp" />
