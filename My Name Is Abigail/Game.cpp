@@ -27,7 +27,7 @@
 Game::Game()
 :	window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
 {
-	window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
+	window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
 	std::cout << "Init Glew" << glewInit() << std::endl;
 	hud = new Hud( window );
 	//window->setVerticalSyncEnabled( true ); // sync with monitor ->60 hz approx
@@ -43,7 +43,7 @@ void Game::build()
 {
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
-	camera = new Camera( "Camera", glm::vec3( 0, 1, 3.464 ) );
+	camera = new Camera( "Camera", glm::vec3( 0, 0, 0) );
         //Behaviour * keysBehaviour = new KeysBehaviour(camera);
         //camera->setBehaviour( keysBehaviour );
 
@@ -60,7 +60,7 @@ void Game::build()
 
 
 
-    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 2.0f, .15f));
+    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 1.5f, .15f));
         item->setMesh(Mesh::load("models/myPlane.obj"));
         item->setColorMap(Texture::load("models/bricks.jpg"));
 
@@ -69,7 +69,7 @@ void Game::build()
         item->setCollider( new Collider(1.0f, item) );
         world->add(item);
 
-    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 2.0f, .15f));
+    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
         firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
         firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
 
