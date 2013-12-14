@@ -70,6 +70,8 @@ build/
 *.tmp
 *.tmp_proj
 *.log
+*.depend
+*.layout
 *.vspscc
 *.vssscc
 .builds
