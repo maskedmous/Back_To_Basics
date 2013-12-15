@@ -18,7 +18,7 @@ Hud::Hud( sf::RenderWindow * aWindow )
 		theHUD.setTexture( theHUDTex); // provide sprite with texture
 		theHUD.setPosition(0,window->getSize().y - 200); // put it somewhere anoying
     } else {
-		std::cout << "Coulf not load sprite" << std::endl;
+		std::cout << "Could not load sprite" << std::endl;
 	}
 }
 
@@ -48,14 +48,17 @@ void Hud::draw()
         std::vector< GameObject * > items = inventory->getInventory();
 
 		//draw inventory
+		int position = 0;
 		for(unsigned int i=0; i<items.size(); ++i)
         {
-           // GameObject * thisItem = items[i];
-           // std::cout << thisItem->getName() << std::endl;
-           // sf::Texture thisItemTex = thisItemTex.loadFromMemory(thisItem->getTexture()->getId());
-           // sf::Sprite thisItemSprite;
-           // thisItemSprite.setTexture( thisItemTex );
-          //  thisItemSprite.setPosition( 33 + (i * 133), window->getSize().y - 200 );
+            GameObject * thisItem = items[i];
+            sf::Texture thisItemTex;
+            thisItemTex.loadFromImage( Texture::getImage( ("models/" + thisItem->getName() + ".png").c_str() ) );
+            sf::Sprite thisItemSprite;
+            thisItemSprite.setTexture( thisItemTex );
+            position = (10 + ((i+1) * 85) + (i * 150));
+            thisItemSprite.setPosition( position, window->getSize().y - 175 );
+            window->draw(thisItemSprite);
         }
 
 		window->draw( text );

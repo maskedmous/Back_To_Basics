@@ -58,11 +58,9 @@ void Game::build()
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world);
 
-
-
-    GameObject * item = new GameObject("Item", glm::vec3(-2.0f, 1.5f, .15f));
+    GameObject * item = new GameObject("Key", glm::vec3(-2.0f, 1.5f, .15f));
         item->setMesh(Mesh::load("models/myPlane.obj"));
-        item->setColorMap(Texture::load("models/bricks.jpg"));
+        item->setColorMap(Texture::load("models/Key.png"));
 
     Behaviour * itemBehaviour = new ItemBehaviour(item, world, inventory);
         item->setBehaviour( itemBehaviour );

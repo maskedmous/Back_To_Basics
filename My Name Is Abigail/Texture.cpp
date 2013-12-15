@@ -2,9 +2,11 @@
 
 #include "ShaderProgram.hpp"
 #include "Texture.hpp"
+#include <string>
 
 
 std::map< const char *, Texture * > Texture::textures; // for static texturs var
+std::map< const std::string, sf::Image > Texture::sfImages;
 
 Texture::Texture( const char * aName )
 :	name( aName )
@@ -24,10 +26,11 @@ Texture * Texture::load( const char * aName )
 	// check if in cache
 	std::map< const char *, Texture * >::iterator textureIterator = textures.find( aName );
 	if ( textureIterator != textures.end() ) {
-		std::cout << "Done loading texture form cache " << aName << std::endl;
+		std::cout << "Done loading texture from cache " << aName << std::endl;
 		return textureIterator->second;// key 2 exists, do something with iter->second (the value)
 	} else { // load from file and store in cache
 		sf::Image image;
+
 		if ( image.loadFromFile( aName ) ) {
 			image.flipVertically();
 			Texture * texture = new Texture( aName );
@@ -43,6 +46,8 @@ Texture * Texture::load( const char * aName )
 
 				std::cout << "Done loading texture " << aName << " with id " << texture->id << std::endl;
 			textures[aName] = texture; // stores mesh in cache for reuse
+			std::string myName = aName;
+			sfImages[myName] = image;
 			return texture;
 		} else {
 			std::cout << "Error loading texture image " << aName << std::endl;
@@ -56,5 +61,19 @@ GLuint Texture::getId() {
 	return id;
 }
 
+sf::Image Texture::getImage( const std::string aName )
+{
+    std::map< const std::string, sf::Image >::iterator imageIterator = sfImages.find( aName );
+	if ( imageIterator != sfImages.end() ) {
+		return imageIterator->second;// key 2 exists, do something with iter->second (the value)
+	}
+	else
+    {
+        std::cout << "Could not get image" << std::endl;
+        //return empty image
+        sf::Image image;
+        return image;
+    }
+}
 
 
