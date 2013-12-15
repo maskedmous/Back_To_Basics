@@ -49,15 +49,16 @@ void Hud::draw()
 
 		//draw inventory
 		int position = 0;
+		sf::Texture thisItemTex;
+		sf::Sprite thisItemSprite;
+        thisItemSprite.setScale( 1, -1);
 		for(unsigned int i=0; i<items.size(); ++i)
         {
             GameObject * thisItem = items[i];
-            sf::Texture thisItemTex;
             thisItemTex.loadFromImage( Texture::getImage( ("models/" + thisItem->getName() + ".png").c_str() ) );
-            sf::Sprite thisItemSprite;
             thisItemSprite.setTexture( thisItemTex );
             position = (10 + ((i+1) * 85) + (i * 150));
-            thisItemSprite.setPosition( position, window->getSize().y - 175 );
+            thisItemSprite.setPosition( position, window->getSize().y - 25 );
             window->draw(thisItemSprite);
         }
 
