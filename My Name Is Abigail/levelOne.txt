@@ -1,8 +1,8 @@
-wallName,WallPlaceHolder,bricks.jpg,8,-3,0
+wallName,WallPlaceHolder,Abigailside.png,8,-3,0
 wallName,WallPlaceHolder,bricks.jpg,12,-3,0
 wallName,WallPlaceHolder,bricks.jpg,16,-3,0	
 vase,bone,lantern.png,14,-3,0.2
-demonstatueSwitchTexture,bone,demonstatue.png,15,-3.5,0.2
+demonstatueSwitchTexture,bone,Abigailside.png,15,-3.5,0.2
 matches,bone,matches.png,17,-3.5,0.2
 lantern,bone,lantern.png,16,-3,0.2
 wallName,wallplaceHolder,bricks.jpg,0,1,0

@@ -703,69 +703,70 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1386938198 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
 	<cassert>
 	<iostream>
 	"Behaviour.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
 	<vector>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
 	"KeysBehaviour.hpp"
 	<sfml/window.hpp>
 	"../GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
 	<vector>
 	<string>
 	"glm.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\glm.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\glm.hpp
 	<iostream>
 	<iomanip>
 	<glm/glm.hpp>
 	<glm/ext.hpp>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
 	"LookAtBehaviour.hpp"
 	<iostream>
 	<sfml/window.hpp>
 	"../glm.hpp"
 	"../GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
 	"RotatingBehaviour.hpp"
 	<iostream>
 	"../glm.hpp"
 	"../GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
 	"../Behaviour.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
 	"TextureSwappingBehaviour.hpp"
 	<sfml/window.hpp>
 	"../GameObject.hpp"
 	"../Texture.hpp"
 	<string>
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
 	<string>
 	"../Behaviour.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
+1387288575 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
 	<iostream>
 	<map>
+	<SFML/Graphics.hpp>
 	<GL/glew.h>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
 	<iostream>
 	<cmath>
 	<SFML/Window.hpp>
@@ -773,43 +774,43 @@
 	"../glm.hpp"
 	"../GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
 	<SFML/Window.hpp>
 	"../Behaviour.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
 	"glm.hpp"
 	"Camera.hpp"
 	"Renderer.hpp"
 
-1386934959 c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.hpp
 	<string>
 	"GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.hpp
 	<GL/glew.h>
 	<SFML/Window.hpp>
 	"glm.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
 	<iostream>
 	"Collider.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.hpp
 	"GameObject.hpp"
 	"glm.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.cpp
 	<iostream>
 	"FPS.hpp"
 	"Time.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.hpp
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1386973089 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1387290701 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -834,38 +835,38 @@
 	"Behaviours/TextureSwappingBehaviour.hpp"
 	"Behaviours/RotatingBehaviour.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
 	"Inventory.hpp"
 	"GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.hpp
 	<string>
 	<vector>
 	<GL/glew.h>
 	"glm.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 
-1386937663 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+1387289445 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
 	<string>
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
 	<string>
 	"GameObject.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.hpp
 	<vector>
 	<GL/glew.h>
 	"glm.hpp"
 
-1386934919 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1387289986 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -875,7 +876,7 @@
 	"../Inventory.hpp"
 	"../World.hpp"
 
-1386938605 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
 	<cassert>
 	<iostream>
 	"Renderer.hpp"
@@ -884,7 +885,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -896,7 +897,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1387290177 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -906,18 +907,18 @@
 	<fstream>
 	<string>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.cpp
 	"Light.hpp"
 	"Renderer.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
 	"Mesh.hpp"
 	<map>
 	<cstring>
 	<fstream>
 	"Renderer.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.cpp
 	"Renderer.hpp"
 	<cassert>
 	<GL/glew.h>
@@ -926,44 +927,45 @@
 	"Texture.hpp"
 	"GameObject.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.cpp
 	"ShaderProgram.hpp"
 	<iostream>
 	<fstream>
 	"Texture.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
+1387288575 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
 	<SFML/Graphics.hpp>
 	"ShaderProgram.hpp"
 	"Texture.hpp"
+	<string>
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.cpp
 	"Time.hpp"
 	<iostream>
 
-1386937858 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1387290737 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
 	"Light.hpp"
 	"Collider.hpp"
 
-1386934919 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\main.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\main.cpp
 	<iostream>
 	"Game.hpp"
 
-1386937614 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1387290871 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1386980870 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
+1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
 	"World.hpp"
 	<vector>
 
-1386981013 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 	<string>
 
@@ -976,22 +978,22 @@
 	"Inventory.hpp"
 	<string>
 
-1386980925 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
 
-1386980421 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
 	<string>
 
-1386980352 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
 	"ItemBehaviour.hpp"
 	<iostream>
 
-1386972805 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"

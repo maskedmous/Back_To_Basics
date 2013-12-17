@@ -17,6 +17,7 @@ class PlayerController : public Behaviour
         World * world;
         Inventory * inventory;
         glm::vec4 mouseInWorld;
+        glm::vec3 oldPos;
         GameObject * targetItem;
     protected:
         std::string mouseState;

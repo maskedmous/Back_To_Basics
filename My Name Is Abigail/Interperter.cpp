@@ -62,8 +62,12 @@ if(level.is_open()){
 
             if(i == 3){
                 textureName = line.substr( current, next - current);
-                }
-
+            }
+            /*
+            if(i == 4){
+                behaviourName = line.substr( current, next - current);
+            }
+*/
             if( i == 4){
                 float sumx = atof( line.substr( current, next - current ).c_str() );
                 countX = sumx;

@@ -67,20 +67,20 @@ void Game::build()
         item->setCollider( new Collider(1.0f, item) );
         world->add(item);
 
-   // GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
-   //     firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
-   //     firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
-	//	firstDoor->setBehaviour( new DoorBehaviour(firstDoor, world, inventory) );
-//		firstDoor->setCollider( new Collider(1.0f, firstDoor) );
-//        world->add(firstDoor);
+    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
+        firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
+        firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
+		firstDoor->setBehaviour( new DoorBehaviour(firstDoor, world, inventory) );
+		firstDoor->setCollider( new Collider(1.0f, firstDoor) );
+        world->add(firstDoor);
 
-    GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
+    GameObject * blockWall = new GameObject("Wall", glm::vec3(-5.0f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (3.0f, blockWall));
         world->add(blockWall);
 
     GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
-        character->setColorMap(Texture::load("models/Abigail_side.png"));
+        character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory ) );
         character->setCollider( new Collider( 1.0f, character));
         hud->setInventory( inventory );

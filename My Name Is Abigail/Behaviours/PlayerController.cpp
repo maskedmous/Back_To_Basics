@@ -13,6 +13,8 @@ PlayerController::~PlayerController()
 
 void PlayerController::update(float step)
 {
+    oldPos = parent->getLocation();
+
     //if left mouse button is cliked
     if(mouseState == "Standby")
     {
@@ -74,7 +76,7 @@ void PlayerController::OnMouseDown()
 void PlayerController::onCollision(GameObject * otherObject)
 {
     std::cout << "collided with: " << otherObject->getName() << std::endl;
-
+    parent->setPosition (oldPos);
     //could make if statements
     //if collided with this specific game object then do this { code }
 }

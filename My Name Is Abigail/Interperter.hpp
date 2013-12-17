@@ -30,6 +30,7 @@ class Interperter
         std::string objectName;
         std::string modelName;
         std::string textureName;
+        std::string behaviourName;
 
         Mesh * loadedMesh;
         Texture * loadedTextue;
