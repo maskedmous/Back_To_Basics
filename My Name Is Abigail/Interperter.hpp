@@ -19,9 +19,9 @@ class Interperter
 
         int stringSize;
 
-        int countX;
-        int countZ;
-        int countY;
+        float countX;
+        float countZ;
+        float countY;
 
         std::string line;
         std::string delimiters;

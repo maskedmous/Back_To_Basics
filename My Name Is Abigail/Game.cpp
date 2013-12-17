@@ -27,7 +27,9 @@
 Game::Game()
 :	window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
 {
-	window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
+	//window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
+	window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
+
 	std::cout << "Init Glew" << glewInit() << std::endl;
 	hud = new Hud( window );
 	//window->setVerticalSyncEnabled( true ); // sync with monitor ->60 hz approx
@@ -43,9 +45,9 @@ void Game::build()
 {
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
-	camera = new Camera( "Camera", glm::vec3( 0, 0, 0) );
-        //Behaviour * keysBehaviour = new KeysBehaviour(camera);
-        //camera->setBehaviour( keysBehaviour );
+	camera = new Camera( "Camera", glm::vec3( 0, 1, 5) );
+        Behaviour * keysBehaviour = new KeysBehaviour(camera);
+        camera->setBehaviour( keysBehaviour );
 
 	light = new Light( "Light", glm::vec3( 2.0f, 10.0f, 15.0f ) ); // not used now, just ambient light
 
@@ -83,7 +85,7 @@ void Game::build()
         character->setCollider( new Collider( 1.0f, character));
         hud->setInventory( inventory );
         world->add(character);
-    camera->setBehaviour( new LookAtBehaviour(camera, character));
+    //camera->setBehaviour( new LookAtBehaviour(camera, character));
 
 }
 

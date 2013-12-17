@@ -40,7 +40,7 @@ if(level.is_open()){
     unsigned int i = 0;
     while(level.good()){
         getline(level,line);
-        //std::cout << line << level <<std::endl;
+        std::cout << line << level <<std::endl;
 
 
         delimiters = " ,";
@@ -62,27 +62,26 @@ if(level.is_open()){
 
             if(i == 3){
                 textureName = line.substr( current, next - current);
-            }
+                }
 
             if( i == 4){
-                int sumx = atoi( line.substr( current, next - current ).c_str() );
+                float sumx = atof( line.substr( current, next - current ).c_str() );
                 countX = sumx;
             }
 
             if( i == 5){
-                int sumy = atoi( line.substr( current, next - current ).c_str() );
+                float sumy = atof( line.substr( current, next - current ).c_str() );
                 countY = sumy;
             }
 
             if( i == 6){
-                int sumz = atoi( line.substr( current, next - current ).c_str() );
+                float sumz = atof( line.substr( current, next - current ).c_str() );
                 countZ = sumz;
-
 
                 GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY, countZ ));
                 loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
                 loadedObj->setMesh( loadedMesh );
-                loadedTextue = Texture::load( ("models/" + textureName + ".jpg").c_str() );
+                loadedTextue = Texture::load( ("models/" + textureName).c_str() );
                 loadedObj->setColorMap( loadedTextue );
                 aWorld->add( loadedObj  );
                 i = 0;
