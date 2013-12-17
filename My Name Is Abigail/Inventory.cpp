@@ -21,6 +21,27 @@ void Inventory::addToInventory(GameObject * item, World* world)
     //targetItem = NULL;
     //std::cout << items << std::endl;
 }
+void Inventory::removeFromInventory(std::string& aString)
+{
+    for (unsigned int i = 0; i < items.size(); ++i){
+        if(items[i]->getName() == aString){
+            items.erase(items.begin()+i);
+            std::cout << "removing: " << items[i]->getName() << std::endl;
+        }
+    }
+}
+
+void Inventory::removeFromInventory(GameObject* aItem)
+{
+    for (unsigned int i = 0; i < items.size(); ++i){
+        if ( items[i] == aItem){
+            items.erase(items.begin()+i);
+            std::cout << "removing: " << items[i]->getName() << std::endl;
+        }
+    }
+}
+
+
 
 std::vector< GameObject * > Inventory::getInventory()
 {

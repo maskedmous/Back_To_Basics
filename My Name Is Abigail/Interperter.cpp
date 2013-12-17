@@ -26,7 +26,7 @@ void Interperter::readFile(std::string fileName, World * aWorld){
 
     //Mesh * suzanna = Mesh::load( "models/suzanna.obj");
     //Mesh * wallPlaceHolder = Mesh::load( "models/PlaceHolderWall.obj");
-    Mesh * wallPlaceHolder = Mesh::load( "models/WallPlaceHolder.obj");
+        //Mesh * wallPlaceHolder = Mesh::load( "models/WallPlaceHolder.obj");
 
 
     std::ifstream level ("levelOne.txt");
@@ -36,6 +36,69 @@ void Interperter::readFile(std::string fileName, World * aWorld){
     countZ = 0;
     countY = 0;
 
+if(level.is_open()){
+    unsigned int i = 0;
+    while(level.good()){
+        getline(level,line);
+        //std::cout << line << level <<std::endl;
+
+
+        delimiters = " ,";
+        size_t current;
+        size_t next = -1;
+        do
+        {
+            current = next + 1;
+            next = line.find_first_of( delimiters, current );
+            i++;
+
+            if(i == 1){
+                objectName = line.substr( current, next - current);
+            }
+
+            if(i == 2){
+                modelName = line.substr( current, next - current);
+            }
+
+            if(i == 3){
+                textureName = line.substr( current, next - current);
+            }
+
+            if( i == 4){
+                int sumx = atoi( line.substr( current, next - current ).c_str() );
+                countX = sumx;
+            }
+
+            if( i == 5){
+                int sumy = atoi( line.substr( current, next - current ).c_str() );
+                countY = sumy;
+            }
+
+            if( i == 6){
+                int sumz = atoi( line.substr( current, next - current ).c_str() );
+                countZ = sumz;
+
+
+                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY, countZ ));
+                loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
+                loadedObj->setMesh( loadedMesh );
+                loadedTextue = Texture::load( ("models/" + textureName + ".jpg").c_str() );
+                loadedObj->setColorMap( loadedTextue );
+                aWorld->add( loadedObj  );
+                i = 0;
+            }
+        }
+        while (next != std::string::npos);
+
+
+
+    }
+    level.close();
+}
+
+
+
+/*
         if(level.is_open()){
             while(level.good()){
                 getline(level,line);
@@ -114,7 +177,7 @@ void Interperter::readFile(std::string fileName, World * aWorld){
         //else std::cout << "Unable to open file " << level <<std::endl;
 
     }
-
+*/
 }
 
 

@@ -1,2 +1,17 @@
-1 1 2:WallPlaceHolder; 1 9
-0 1 9
+wallName,WallPlaceHolder,bricks,8,-3,0
+wallName,WallPlaceHolder,bricks,12,-3,0
+wallName,WallPlaceHolder,bricks,16,-3,0	
+	bonewhateverthidsonettreallymatter,bone,bricks_normal,0,1,0
+	wallName,wallplaceHolder,bricks,0,1,0
+	wallName,WallPlaceHolder,bricks,4,1,0
+	wallName,WallPlaceHolder,bricks,8,1,0
+	wallName,WallPlaceHolder,bricks,12,1,0
+	wallName,WallPlaceHolder,bricks,16,1,0
+	wallName,WallPlaceHolder,bricks,20,1,0
+		wallName,WallPlaceHolder,bricks,4,4,0
+		wallName,WallPlaceHolder,bricks,8,4,0
+		wallName,WallPlaceHolder,bricks,12,4,0
+		wallName,WallPlaceHolder,bricks,16,4,0
+			wallName,WallPlaceHolder,bricks,12,8,0
+			wallName,WallPlaceHolder,bricks,16,8,0
+
