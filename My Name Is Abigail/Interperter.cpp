@@ -40,7 +40,7 @@ if(level.is_open()){
     unsigned int i = 0;
     while(level.good()){
         getline(level,line);
-        std::cout << line << level <<std::endl;
+       // std::cout << line << level <<std::endl;
 
 
         delimiters = " ,";
@@ -78,9 +78,11 @@ if(level.is_open()){
                 float sumz = atof( line.substr( current, next - current ).c_str() );
                 countZ = sumz;
 
-                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY, countZ ));
+                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY+4, countZ ));
+                std::cout << '\n' << "Loading Mesh in interperter: " << modelName << '\n' << std::endl;
                 loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
                 loadedObj->setMesh( loadedMesh );
+                std::cout << "Loading Texture in interperter: " << textureName << std::endl;
                 loadedTextue = Texture::load( ("models/" + textureName).c_str() );
                 loadedObj->setColorMap( loadedTextue );
                 aWorld->add( loadedObj  );

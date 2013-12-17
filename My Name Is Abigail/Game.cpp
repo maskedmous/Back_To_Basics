@@ -27,8 +27,8 @@
 Game::Game()
 :	window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
 {
-	//window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
-	window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
+	window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
+	//window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
 
 	std::cout << "Init Glew" << glewInit() << std::endl;
 	hud = new Hud( window );
@@ -67,12 +67,12 @@ void Game::build()
         item->setCollider( new Collider(1.0f, item) );
         world->add(item);
 
-    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
-        firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
-        firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
-		firstDoor->setBehaviour( new DoorBehaviour(firstDoor, world, inventory) );
-		firstDoor->setCollider( new Collider(1.0f, firstDoor) );
-        world->add(firstDoor);
+   // GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
+   //     firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
+   //     firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
+	//	firstDoor->setBehaviour( new DoorBehaviour(firstDoor, world, inventory) );
+//		firstDoor->setCollider( new Collider(1.0f, firstDoor) );
+//        world->add(firstDoor);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(5.0f, 0.0f, 0.0f));
         blockWall->setCollider( new Collider (3.0f, blockWall));

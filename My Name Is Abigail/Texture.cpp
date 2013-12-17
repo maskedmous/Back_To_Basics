@@ -5,10 +5,10 @@
 #include <string>
 
 
-std::map< const char *, Texture * > Texture::textures; // for static texturs var
+std::map< const std::string, Texture * > Texture::textures; // for static texturs var
 std::map< const std::string, sf::Image > Texture::sfImages;
 
-Texture::Texture( const char * aName )
+Texture::Texture( const std::string aName )
 :	name( aName )
 {
 	//ctor
@@ -21,10 +21,10 @@ Texture::~Texture()
 
 
 // importer for textures
-Texture * Texture::load( const char * aName )
+Texture * Texture::load( const std::string aName )
 {
 	// check if in cache
-	std::map< const char *, Texture * >::iterator textureIterator = textures.find( aName );
+	std::map< const std::string, Texture * >::iterator textureIterator = textures.find( aName );
 	if ( textureIterator != textures.end() ) {
 		std::cout << "Done loading texture from cache " << aName << std::endl;
 		return textureIterator->second;// key 2 exists, do something with iter->second (the value)
@@ -46,8 +46,7 @@ Texture * Texture::load( const char * aName )
 
 				std::cout << "Done loading texture " << aName << " with id " << texture->id << std::endl;
 			textures[aName] = texture; // stores mesh in cache for reuse
-			std::string myName = aName;
-			sfImages[myName] = image;
+			sfImages[aName] = image;
 			return texture;
 		} else {
 			std::cout << "Error loading texture image " << aName << std::endl;
