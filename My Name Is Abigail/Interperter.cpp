@@ -4,6 +4,9 @@
 #include "Mesh.hpp"
 #include "Texture.hpp"
 #include "Behaviours/TextureSwappingBehaviour.hpp"
+#include "Behaviours/ItemBehaviour.hpp"
+#include "Behaviours/DoorBehaviour.hpp"
+#include "Collider.hpp"
 
 #include <cstdio>
 
@@ -22,7 +25,7 @@ Interperter::~Interperter()
     //dtor
 }
 
-void Interperter::readFile(std::string fileName, World * aWorld){
+void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory){
 
     //Mesh * suzanna = Mesh::load( "models/suzanna.obj");
     //Mesh * wallPlaceHolder = Mesh::load( "models/PlaceHolderWall.obj");
@@ -63,32 +66,49 @@ if(level.is_open()){
             if(i == 3){
                 textureName = line.substr( current, next - current);
             }
-            /*
+
             if(i == 4){
+
                 behaviourName = line.substr( current, next - current);
+                if(behaviourName != "0"){
+                    setBehaviour = true;
+                }
             }
-*/
-            if( i == 4){
+
+            if( i == 5){
                 float sumx = atof( line.substr( current, next - current ).c_str() );
                 countX = sumx;
             }
 
-            if( i == 5){
+            if( i == 6){
                 float sumy = atof( line.substr( current, next - current ).c_str() );
                 countY = sumy;
             }
 
-            if( i == 6){
+            if( i == 7){
                 float sumz = atof( line.substr( current, next - current ).c_str() );
                 countZ = sumz;
 
-                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY+4, countZ ));
-                std::cout << '\n' << "Loading Mesh in interperter: " << modelName << '\n' << std::endl;
+                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY + 4, countZ ));
+                //std::cout << '\n' << "Loading Mesh in interperter: " << modelName << '\n' << std::endl;
                 loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
                 loadedObj->setMesh( loadedMesh );
-                std::cout << "Loading Texture in interperter: " << textureName << std::endl;
+                //std::cout << "Loading Texture in interperter: " << textureName << std::endl;
                 loadedTextue = Texture::load( ("models/" + textureName).c_str() );
                 loadedObj->setColorMap( loadedTextue );
+
+                if(setBehaviour == true){
+                    if(behaviourName == "1"){
+                        loadedObj->setCollider( new Collider(1.0f, loadedObj) );
+                        loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory) );
+                    }else{
+                        loadedObj->setCollider( new Collider(1.0f, loadedObj) );
+                        loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, behaviourName) );
+                    }
+
+                }setBehaviour = false;
+
+
                 aWorld->add( loadedObj  );
                 i = 0;
             }

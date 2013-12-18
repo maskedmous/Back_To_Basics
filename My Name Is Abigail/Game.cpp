@@ -46,8 +46,8 @@ void Game::build()
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
 	camera = new Camera( "Camera", glm::vec3( 0, 1, 5) );
-        Behaviour * keysBehaviour = new KeysBehaviour(camera);
-        camera->setBehaviour( keysBehaviour );
+        //Behaviour * keysBehaviour = new KeysBehaviour(camera);
+        //camera->setBehaviour( keysBehaviour );
 
 	light = new Light( "Light", glm::vec3( 2.0f, 10.0f, 15.0f ) ); // not used now, just ambient light
 
@@ -58,21 +58,7 @@ void Game::build()
     Inventory * inventory = new Inventory();
 
     interperter = new Interperter (world);
-		interperter->readFile( "LevelOne", world);
-
-    GameObject * item = new GameObject("Key", glm::vec3(-2.0f, 1.5f, .15f));
-        item->setMesh(Mesh::load("models/myPlane.obj"));
-        item->setColorMap(Texture::load("models/Key.png"));
-        item->setBehaviour( new ItemBehaviour(item, world, inventory) );
-        item->setCollider( new Collider(1.0f, item) );
-        world->add(item);
-
-    GameObject * firstDoor = new GameObject("firstDoor", glm::vec3(2.0f, 1.5f, .15f));
-        firstDoor->setMesh(Mesh::load("models/myPlane.obj"));
-        firstDoor->setColorMap(Texture::load("models/bricks.jpg"));
-		firstDoor->setBehaviour( new DoorBehaviour(firstDoor, world, inventory) );
-		firstDoor->setCollider( new Collider(1.0f, firstDoor) );
-        world->add(firstDoor);
+		interperter->readFile( "LevelOne", world, inventory);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(-5.0f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (3.0f, blockWall));
@@ -81,11 +67,11 @@ void Game::build()
     GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
-        character->setBehaviour( new PlayerController( character, window, renderer, world, inventory ) );
+        character->setBehaviour( new PlayerController( character, window, renderer, world, inventory) );
         character->setCollider( new Collider( 1.0f, character));
         hud->setInventory( inventory );
         world->add(character);
-    //camera->setBehaviour( new LookAtBehaviour(camera, character));
+    camera->setBehaviour( new LookAtBehaviour(camera, character));
 
 }
 

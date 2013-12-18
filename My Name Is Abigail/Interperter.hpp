@@ -2,6 +2,7 @@
 #define INTERPERTER_H
 
 #include "World.hpp"
+#include "Inventory.hpp"
 #include <string>
 
 
@@ -10,7 +11,7 @@ class Interperter
     public:
         Interperter(World *);
 
-        void readFile(std::string aName = NULL, World * = NULL);
+        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL);
 
         virtual ~Interperter();
     protected:
@@ -18,6 +19,8 @@ class Interperter
 
 
         int stringSize;
+
+        bool setBehaviour;
 
         float countX;
         float countZ;

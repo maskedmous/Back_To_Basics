@@ -4,12 +4,13 @@
 
 #include <string>
 
-DoorBehaviour::DoorBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory)
+DoorBehaviour::DoorBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory , const std::string recievedItemName)
 :	Behaviour( aParent )
 {
     world = aWorld;
     parent = aParent;
     inventory = aInventory;
+    requiredItem = recievedItemName;
 }
 
 DoorBehaviour::~DoorBehaviour()
@@ -27,11 +28,11 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
 	std::cout << "I am a " << parent->getName() << "!" << std::endl;
     std::string myString;
     myString = "Key";
-    if(inventory->CheckContainItem(myString)){
+    if(inventory->CheckContainItem(requiredItem)){
         std::cout << "using the item the door opens" << std::endl;
 
     	world->remove(parent);
-    	inventory->removeFromInventory(myString);
-    } else std::cout << "You Might need an item to open this door" << std::endl;
+    	inventory->removeFromInventory(requiredItem);
+    } else std::cout << "You Might need an item to open this door, you need " << requiredItem <<  std::endl;
 }
 

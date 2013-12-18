@@ -8,10 +8,10 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="Behaviours\DoorBehaviour.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="395" topLine="0" />
+		<Cursor position="634" topLine="10" />
 	</File>
-	<File name="Behaviours\DoorBehaviour.hpp" open="0" top="0" tabpos="10">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\DoorBehaviour.hpp" open="1" top="0" tabpos="12">
+		<Cursor position="312" topLine="0" />
 	</File>
 	<File name="Behaviours\ItemBehaviour.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
@@ -52,8 +52,8 @@
 	<File name="Collider.hpp" open="0" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="Game.cpp" open="1" top="1" tabpos="5">
-		<Cursor position="2581" topLine="60" />
+	<File name="Game.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1777" topLine="58" />
 	</File>
 	<File name="Game.hpp" open="0" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
@@ -70,14 +70,14 @@
 	<File name="Hud.hpp" open="0" top="0" tabpos="15">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="Interperter.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="1962" topLine="57" />
+	<File name="Interperter.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="3500" topLine="91" />
 	</File>
 	<File name="Interperter.hpp" open="1" top="0" tabpos="7">
-		<Cursor position="620" topLine="11" />
+		<Cursor position="93" topLine="0" />
 	</File>
 	<File name="Inventory.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="0" topLine="35" />
 	</File>
 	<File name="Inventory.hpp" open="0" top="0" tabpos="14">
 		<Cursor position="0" topLine="0" />
@@ -89,6 +89,12 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="Renderer.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Texture.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="470" topLine="0" />
+	</File>
+	<File name="Texture.hpp" open="1" top="0" tabpos="14">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="World.cpp" open="1" top="0" tabpos="2">

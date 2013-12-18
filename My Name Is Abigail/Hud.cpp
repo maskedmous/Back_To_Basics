@@ -55,7 +55,7 @@ void Hud::draw()
 		for(unsigned int i=0; i<items.size(); ++i)
         {
             GameObject * thisItem = items[i];
-            thisItemTex.loadFromImage( Texture::getImage( ("models/" + thisItem->getName() + ".png").c_str() ) );
+            thisItemTex.loadFromImage( Texture::getImage( (thisItem->getTexture()->getName()).c_str() ) );
             thisItemSprite.setTexture( thisItemTex );
             position = (10 + ((i+1) * 85) + (i * 150));
             thisItemSprite.setPosition( position, window->getSize().y - 25 );

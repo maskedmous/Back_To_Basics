@@ -25,6 +25,8 @@ class Texture
 		virtual ~Texture();
 
 		GLuint getId();
+		std::string getName();
+
 		static sf::Image getImage( const std::string aName );
 
 };

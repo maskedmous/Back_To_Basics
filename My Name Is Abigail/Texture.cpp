@@ -20,6 +20,7 @@ Texture::~Texture()
 }
 
 
+
 // importer for textures
 Texture * Texture::load( const std::string aName )
 {
@@ -58,6 +59,12 @@ Texture * Texture::load( const std::string aName )
 
 GLuint Texture::getId() {
 	return id;
+}
+
+
+std::string Texture::getName(){
+    return name;
+
 }
 
 sf::Image Texture::getImage( const std::string aName )

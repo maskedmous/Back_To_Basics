@@ -54,7 +54,7 @@ bool Inventory::CheckContainItem(std::string& aString){
         std::cout << aString << items[i]->getName() << std::endl;
 
         if(items[i]->getName() == aString){
-            std::cout << "in infentory: " << items[i]->getName() << std::endl;
+            std::cout << "in inventory: " << items[i]->getName() << std::endl;
             return true;
         }
     }

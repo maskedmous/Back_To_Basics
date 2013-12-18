@@ -760,7 +760,7 @@
 	<string>
 	"../Behaviour.hpp"
 
-1387288575 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
+1387361435 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
 	<iostream>
 	<map>
 	<SFML/Graphics.hpp>
@@ -810,7 +810,7 @@
 1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1387290701 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1387306693 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -853,8 +853,9 @@
 1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
-1387289445 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+1387304848 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
+	"Inventory.hpp"
 	<string>
 
 1387282480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
@@ -885,7 +886,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1387361417 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -897,11 +898,14 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1387290177 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1387362458 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
 	"Behaviours/TextureSwappingBehaviour.hpp"
+	"Behaviours/ItemBehaviour.hpp"
+	"Behaviours/DoorBehaviour.hpp"
+	"Collider.hpp"
 	<cstdio>
 	<iostream>
 	<fstream>
@@ -933,7 +937,7 @@
 	<fstream>
 	"Texture.hpp"
 
-1387288575 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
+1387361255 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
 	<SFML/Graphics.hpp>
 	"ShaderProgram.hpp"
 	"Texture.hpp"
@@ -965,7 +969,7 @@
 	"World.hpp"
 	<vector>
 
-1387282480 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1387362094 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 	<string>
 
@@ -978,12 +982,12 @@
 	"Inventory.hpp"
 	<string>
 
-1387282479 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1387362396 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
 
-1387282479 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+1387306744 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
