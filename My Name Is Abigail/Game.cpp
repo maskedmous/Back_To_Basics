@@ -61,14 +61,14 @@ void Game::build()
 		interperter->readFile( "LevelOne", world, inventory);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(-5.0f, 0.0f, -1.0f));
-        blockWall->setCollider( new Collider (3.0f, blockWall));
+        blockWall->setCollider( new Collider (3.0f, 2.0f, blockWall));
         world->add(blockWall);
 
     GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory) );
-        character->setCollider( new Collider( 1.0f, character));
+        character->setCollider( new Collider( 1.0f, 1.75f, character));
         hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));

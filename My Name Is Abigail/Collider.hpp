@@ -8,13 +8,16 @@ class Collider
 {
     protected:
     float width;
+    float height;
     GameObject * parent;
+    glm::vec3 position;
 
     public:
-        Collider(float aWidth, GameObject * aParent);
+        Collider(float aWidth, float aHeight, GameObject * aParent);
         virtual ~Collider();
         bool isColliding(GameObject * otherObject);
         float getWidth();
+        float getHeight();
 };
 
 #endif // COLLIDER_HPP_INCLUDED

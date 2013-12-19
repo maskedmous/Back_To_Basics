@@ -99,10 +99,10 @@ if(level.is_open()){
 
                 if(setBehaviour == true){
                     if(behaviourName == "1"){
-                        loadedObj->setCollider( new Collider(1.0f, loadedObj) );
+                        loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                         loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory) );
                     }else{
-                        loadedObj->setCollider( new Collider(1.0f, loadedObj) );
+                        loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                         loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, behaviourName) );
                     }
 

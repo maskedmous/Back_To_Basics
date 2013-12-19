@@ -58,14 +58,15 @@ void World::checkBlock()
                 {
                    if(children[j]->getName() != "Character")
                     {
-
+                        //wall blocks are at Z -1.0f
                         if(children[j]->hasCollider() && children[j]->getLocation().z == -1.0f)
                         {
-                            //std::cout << children[j]->getName() << std::endl;
+                            //check if its colliding
                             if(children[i]->getCollider()->isColliding(children[j]))
                             {
-                                std::cout << "colliding"  << std::endl;
-                                children[i]->onCollision(children[j]);
+                                //std::cout << "colliding"  << std::endl;
+                                //its colliding so put her back
+                                //children[i]->onCollision(children[j]);
                             }
                         }
                     }
