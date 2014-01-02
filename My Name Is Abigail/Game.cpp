@@ -23,16 +23,17 @@
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/RotatingBehaviour.hpp"
+#include "MainMenu.hpp"
 
 Game::Game()
-:	window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
+:	state("Loading"),window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
 {
 	window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
 	//window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
 
 	std::cout << "Init Glew" << glewInit() << std::endl;
-	hud = new Hud( window );
-	//window->setVerticalSyncEnabled( true ); // sync with monitor ->60 hz approx
+	hud = new Hud( window, this );
+	window->setVerticalSyncEnabled( true ); // sync with monitor ->60 hz approx
 	renderer = new Renderer( window );
 }
 
@@ -46,14 +47,19 @@ void Game::build()
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
 	camera = new Camera( "Camera", glm::vec3( 0, 1, 5) );
-        //Behaviour * keysBehaviour = new KeysBehaviour(camera);
-        //camera->setBehaviour( keysBehaviour );
-
-	light = new Light( "Light", glm::vec3( 2.0f, 10.0f, 15.0f ) ); // not used now, just ambient light
 
 	world = new World( "World" );
 		world->add( camera );
-		world->add( light );
+
+    mainMenu = new MainMenu(hud, window, this);
+
+    setState("Main Menu");
+}
+
+void Game::buildLevel()
+{
+    light = new Light( "Light", glm::vec3( 2.0f, 10.0f, 15.0f ) ); // not used now, just ambient light
+        world->add( light );
 
     Inventory * inventory = new Inventory();
 
@@ -73,6 +79,7 @@ void Game::build()
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
+    setState("Play");
 }
 
 void Game::run()
@@ -110,6 +117,8 @@ void Game::update( float step )
 {
 	assert( world != NULL );
 	world->update( step );
+	assert( mainMenu != NULL );
+	mainMenu->Update(step);
 }
 
 void Game::draw()
@@ -123,4 +132,12 @@ void Game::draw()
 	window->display(); // swap colorbuffer to screen
 }
 
+void Game::setState(std::string newState)
+{
+    state = newState;
+}
 
+std::string Game::getState()
+{
+    return state;
+}

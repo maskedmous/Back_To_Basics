@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <string>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
@@ -10,10 +11,12 @@ class World;
 class Interperter;
 class Camera;
 class Light;
+class MainMenu;
+
 class Game
-
-
 {
+    public:
+        std::string state;
 	private: // data members
 		sf::RenderWindow * window;
 		Hud * hud;
@@ -22,8 +25,7 @@ class Game
         Interperter * interperter;
 		Camera * camera;
 		Light * light;
-
-
+        MainMenu * mainMenu;
 		bool running;
 
 	public: // functions
@@ -31,14 +33,18 @@ class Game
 		virtual ~Game();
 
 		void build();
+		void buildLevel();
 		void run();
 		void stop();
+		void setState(std::string newState);
+        std::string getState();
 
 	private:
 		void control();
 		void update( float step );
 		void draw();
 		void drawHud();
+
 
 };
 

@@ -9,17 +9,17 @@
 #include "Behaviours/PlayerController.hpp"
 #include "Texture.hpp"
 
-Hud::Hud( sf::RenderWindow * aWindow )
-:	window( aWindow )
+Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
+:	window( aWindow ), game(aGame), inventory(NULL)
 {
 	assert ( window != NULL );
 
-    if ( theHUDTex.loadFromFile("models/HUD.png") ) { // when succesfull loaded
+    if ( theHUDTex.loadFromFile("models/HUD.png") ) //when successful loaded
+    {
 		theHUD.setTexture( theHUDTex); // provide sprite with texture
 		theHUD.setPosition(0,window->getSize().y - 200); // put it somewhere anoying
-    } else {
-		std::cout << "Could not load sprite" << std::endl;
-	}
+    }
+    else { std::cout << "Could not load HUD.png" << std::endl; }
 }
 
 Hud::~Hud()
@@ -43,8 +43,25 @@ void Hud::draw()
 	//std::cout << "Drawing text" << std::endl;
 	assert ( window != NULL );
 	window->pushGLStates();
-		window->draw( theHUD );
-		//get the inventory
+
+    //draw the main menu
+    if(game->getState() == "Main Menu")
+    {
+        for(unsigned int j = 0; j<mainMenuButtons.size(); ++j)
+        {
+            Button * thisButton = mainMenuButtons[j];
+            window->draw(thisButton->getButtonSprite());
+        }
+    }
+
+
+
+    //get the inventory
+    if(game->getState() == "Play")
+    {
+        window->draw( theHUD );
+
+
         std::vector< GameObject * > items = inventory->getInventory();
 
 		//draw inventory
@@ -61,7 +78,7 @@ void Hud::draw()
             thisItemSprite.setPosition( position, window->getSize().y - 25 );
             window->draw(thisItemSprite);
         }
-
+    }
 		window->draw( text );
 	window->popGLStates();
 }
@@ -69,4 +86,9 @@ void Hud::draw()
 void Hud::setInventory(Inventory * aInventory)
 {
     inventory = aInventory;
+}
+
+void Hud::addButtonToMainMenu(Button * newButton)
+{
+    mainMenuButtons.push_back(newButton);
 }
