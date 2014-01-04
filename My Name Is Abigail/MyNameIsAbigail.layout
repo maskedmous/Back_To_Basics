@@ -1,106 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Windows" />
-	<File name="Behaviour.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
+	<File name="Light.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviour.hpp" open="0" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
+	<File name="Collider.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1615" topLine="18" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\DoorBehaviour.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="634" topLine="10" />
+	<File name="MainMenu.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="284" topLine="36" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\DoorBehaviour.hpp" open="1" top="0" tabpos="12">
-		<Cursor position="312" topLine="0" />
+	<File name="Collider.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="463" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\ItemBehaviour.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="0" topLine="0" />
+	<File name="MainMenu.hpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="488" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\ItemBehaviour.hpp" open="0" top="0" tabpos="12">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviour.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\KeysBehaviour.cpp" open="0" top="0" tabpos="16">
-		<Cursor position="0" topLine="0" />
+	<File name="Mesh.hpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\KeysBehaviour.hpp" open="0" top="0" tabpos="4">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviour.hpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="218" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\LookAtBehaviour.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="0" topLine="0" />
+	<File name="Renderer.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\PlayerController.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="2163" topLine="73" />
+	<File name="Behaviours\DoorBehaviour.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="72" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\PlayerController.hpp" open="1" top="0" tabpos="8">
-		<Cursor position="514" topLine="0" />
+	<File name="ShaderProgram.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\RotatingBehaviour.cpp" open="0" top="0" tabpos="13">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\DoorBehaviour.hpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\TextureSwappingBehaviour.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="0" topLine="0" />
+	<File name="Texture.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="472" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Behaviours\TextureSwappingBehaviour.hpp" open="0" top="0" tabpos="3">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\ItemBehaviour.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Camera.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\ItemBehaviour.hpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Collider.cpp" open="1" top="0" tabpos="11">
-		<Cursor position="454" topLine="7" />
+	<File name="Behaviours\KeysBehaviour.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Collider.hpp" open="0" top="0" tabpos="5">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\KeysBehaviour.hpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Game.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1777" topLine="58" />
+	<File name="World.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1727" topLine="39" />
+		</Cursor>
 	</File>
-	<File name="Game.hpp" open="0" top="0" tabpos="11">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\LookAtBehaviour.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="GameObject.cpp" open="1" top="0" tabpos="9">
-		<Cursor position="582" topLine="18" />
+	<File name="World.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="GameObject.hpp" open="0" top="0" tabpos="10">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\PlayerController.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="614" topLine="3" />
+		</Cursor>
 	</File>
-	<File name="Hud.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="0" topLine="0" />
+	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="144" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Hud.hpp" open="0" top="0" tabpos="15">
-		<Cursor position="0" topLine="0" />
+	<File name="Game.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2864" topLine="110" />
+		</Cursor>
 	</File>
-	<File name="Interperter.cpp" open="1" top="1" tabpos="6">
-		<Cursor position="3500" topLine="91" />
+	<File name="Behaviours\PlayerController.hpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="479" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Interperter.hpp" open="1" top="0" tabpos="7">
-		<Cursor position="93" topLine="0" />
+	<File name="Game.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="661" topLine="12" />
+		</Cursor>
 	</File>
-	<File name="Inventory.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="0" topLine="35" />
+	<File name="Behaviours\RotatingBehaviour.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Inventory.hpp" open="0" top="0" tabpos="14">
-		<Cursor position="0" topLine="0" />
+	<File name="GameObject.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Light.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="0" topLine="0" />
+	<File name="GameObject.hpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Mesh.hpp" open="0" top="0" tabpos="17">
-		<Cursor position="0" topLine="0" />
+	<File name="Behaviours\TextureSwappingBehaviour.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Renderer.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="0" topLine="0" />
+	<File name="Hud.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1481" topLine="55" />
+		</Cursor>
 	</File>
-	<File name="Texture.cpp" open="1" top="0" tabpos="13">
-		<Cursor position="470" topLine="0" />
+	<File name="Behaviours\TextureSwappingBehaviour.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Texture.hpp" open="1" top="0" tabpos="14">
-		<Cursor position="0" topLine="0" />
+	<File name="Hud.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="216" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="World.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1814" topLine="44" />
+	<File name="Interperter.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3062" topLine="99" />
+		</Cursor>
 	</File>
-	<File name="World.hpp" open="0" top="0" tabpos="6">
-		<Cursor position="0" topLine="0" />
+	<File name="Interperter.hpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Button.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="516" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="Inventory.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1158" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="Button.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="270" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Inventory.hpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="382" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Camera.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -100,6 +100,12 @@ void Game::stop()
 {
 }
 
+void Game::closeGame()
+{
+    running = false; // running = false;
+    window->close(); // oeps, still drawing after this one !!!!!!
+}
+
 // private functions
 
 void Game::control()

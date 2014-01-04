@@ -36,6 +36,7 @@ class Game
 		void buildLevel();
 		void run();
 		void stop();
+		void closeGame();
 		void setState(std::string newState);
         std::string getState();
 

@@ -12,7 +12,8 @@ class Inventory
         void addToInventory(GameObject * item, World * world);
         void removeFromInventory(std::string& aString);
         void removeFromInventory(GameObject * aItem);
-
+        void mergeItems(GameObject * itemA, GameObject * itemB);
+        void mergeItems(std::string& itemA, std::string& itemB);
         std::vector< GameObject * > getInventory();
         bool CheckContainItem(std::string& aString);
     protected:

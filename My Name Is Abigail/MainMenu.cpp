@@ -3,29 +3,11 @@
 MainMenu::MainMenu(Hud * aHud, sf::RenderWindow * aWindow, Game * aGame)
 : hud(aHud), window(aWindow), game(aGame)
 {
-/*
-    //new Button
-    if ( startGameTex.loadFromFile("models/StartGame.png") )
-    {
-        startGame.setTexture( startGameTex );
-        startGame.setPosition ((window->getSize().x / 2) - (startGameTex.getSize().x / 2),  100);
-    }
-
-    if ( optionsTex.loadFromFile("models/Options.png") )
-    {
-        options.setTexture( optionsTex );
-        options.setPosition( (window->getSize().x / 2) - (optionsTex.getSize().x / 2), 280);
-    }
-
-    if( exitGameTex.loadFromFile("models/ExitGame.png"))
-    {
-        exitGame.setTexture(exitGameTex);
-        exitGame.setPosition((window->getSize().x / 2) - (exitGameTex.getSize().x / 2), 460);
-    }
-*/
-
 //buttons are a graphic with a button collider
 //the update function will handle what it should do in the desired menu (aka main menu)
+
+//background as a button but no function
+
 
 //create a button for start game
 startButton = new Button("models/StartGame.png", glm::vec2(640, 100));
@@ -82,9 +64,12 @@ void MainMenu::OnMouseDown(float step)
     if(optionsButton->hitButton(mousePosition))
     {
         //options button is clicked
+        //could be just muting sound since thats the only thing
+        std::cout << "options not doing anything yet" << std::endl;
     }
     if(exitButton->hitButton(mousePosition))
     {
         //exit button is clicked
+        game->closeGame();
     }
 }

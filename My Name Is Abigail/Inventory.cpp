@@ -41,6 +41,16 @@ void Inventory::removeFromInventory(GameObject* aItem)
     }
 }
 
+void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
+{
+
+}
+
+void Inventory::mergeItems(std::string& itemA, std::string& itemB)
+{
+
+}
+
 
 
 std::vector< GameObject * > Inventory::getInventory()
