@@ -108,7 +108,7 @@ void PlayerController::checkPosition()
     if(distance < 0.01f)
     {
         //add item to inventory cause you're near it
-        inventory->addToInventory(targetItem, world);
+        inventory->addToInventory(targetItem);
         targetItem = NULL;
     }
     else

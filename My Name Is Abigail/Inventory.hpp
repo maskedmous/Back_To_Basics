@@ -9,7 +9,7 @@ class Inventory
     public:
         Inventory();
         virtual ~Inventory();
-        void addToInventory(GameObject * item, World * world);
+        void addToInventory(GameObject * item);
         void removeFromInventory(std::string& aString);
         void removeFromInventory(GameObject * aItem);
         void mergeItems(GameObject * itemA, GameObject * itemB);

@@ -25,6 +25,6 @@ void ItemBehaviour::onCollision( GameObject * otherGameObject )
 {
 	std::cout << "i am a ITEM!" << std::endl;
 	world->remove(parent);
-    inventory->addToInventory(parent, world);
+    inventory->addToInventory(parent);
 }
 
