@@ -7,16 +7,19 @@ MainMenu::MainMenu(Hud * aHud, sf::RenderWindow * aWindow, Game * aGame)
 //the update function will handle what it should do in the desired menu (aka main menu)
 
 //background as a button but no function
-
+background = new Button("models/MenuBackground.png", glm::vec2(640,0));
+hud->addButtonToMainMenu(background);
 
 //create a button for start game
-startButton = new Button("models/StartGame.png", glm::vec2(640, 100));
+startButton = new Button("models/StartGame.png", glm::vec2(900, 350));
 hud->addButtonToMainMenu(startButton);
+
 //create a button for options
 //optionsButton = new Button("models/Options.png", glm::vec2(640, 280));
 //hud->addButtonToMainMenu(optionsButton);
+
 //create a button for exit game
-exitButton = new Button("models/ExitGame.png", glm::vec2(640, 460));
+exitButton = new Button("models/ExitGame.png", glm::vec2(900, 520));
 hud->addButtonToMainMenu(exitButton);
 
 mouseState = "Standby";

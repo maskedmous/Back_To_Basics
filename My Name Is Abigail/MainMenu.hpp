@@ -19,9 +19,14 @@ class MainMenu
         sf::RenderWindow * window;
         Game * game;
 
+        Button * background;
+
         Button * startButton;
         Button * optionsButton;
         Button * exitButton;
+
+        sf::Texture backgroundTex;
+        sf::Sprite backgroundSprite;
 
         sf::Texture startGameTex;
 		sf::Sprite startGame;
