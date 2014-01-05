@@ -29,24 +29,27 @@ MainMenu::~MainMenu()
 
 void MainMenu::Update(float step)
 {
-    //on mouse down
-    if(mouseState == "Standby")
+    if(game->getState() == "Main Menu")
     {
-        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        //on mouse down
+        if(mouseState == "Standby")
         {
-            //call on mouse down
-            OnMouseDown(step);
-            mouseState = "Down";
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                //call on mouse down
+                OnMouseDown(step);
+                mouseState = "Down";
+            }
         }
-    }
-    //if it is down
-    if(mouseState == "Down")
-    {
-        //check if it is up
-        if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        //if it is down
+        if(mouseState == "Down")
         {
-            //mouse is up so put it back to standby
-            mouseState = "Standby";
+            //check if it is up
+            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                //mouse is up so put it back to standby
+                mouseState = "Standby";
+            }
         }
     }
 }
