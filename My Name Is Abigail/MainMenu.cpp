@@ -13,8 +13,8 @@ MainMenu::MainMenu(Hud * aHud, sf::RenderWindow * aWindow, Game * aGame)
 startButton = new Button("models/StartGame.png", glm::vec2(640, 100));
 hud->addButtonToMainMenu(startButton);
 //create a button for options
-optionsButton = new Button("models/Options.png", glm::vec2(640, 280));
-hud->addButtonToMainMenu(optionsButton);
+//optionsButton = new Button("models/Options.png", glm::vec2(640, 280));
+//hud->addButtonToMainMenu(optionsButton);
 //create a button for exit game
 exitButton = new Button("models/ExitGame.png", glm::vec2(640, 460));
 hud->addButtonToMainMenu(exitButton);
@@ -61,12 +61,12 @@ void MainMenu::OnMouseDown(float step)
         //build the game
         game->buildLevel();
     }
-    if(optionsButton->hitButton(mousePosition))
-    {
+    //if(optionsButton->hitButton(mousePosition))
+    //{
         //options button is clicked
         //could be just muting sound since thats the only thing
-        std::cout << "options not doing anything yet" << std::endl;
-    }
+       // std::cout << "options not doing anything yet" << std::endl;
+    //}
     if(exitButton->hitButton(mousePosition))
     {
         //exit button is clicked
