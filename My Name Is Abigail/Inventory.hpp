@@ -15,6 +15,8 @@ class Inventory
         void mergeItems(GameObject * itemA, GameObject * itemB);
         void mergeItems(std::string& itemA, std::string& itemB);
         std::vector< GameObject * > getInventory();
+        GameObject * getFromInventory(unsigned int itemIndex);
+        bool checkValidItemIndex(unsigned int itemIndex);
         bool CheckContainItem(std::string& aString);
     protected:
         std::vector< GameObject * > items;

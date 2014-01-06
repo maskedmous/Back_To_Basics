@@ -54,9 +54,17 @@ void PlayerController::update(float step)
 
 void PlayerController::OnMouseDown()
 {
-    //check for collision
-    //GameObject * collided =
-    world->checkCollision(parent);
+    glm::vec2 mousePosition = glm::vec2(glm::ivec2(sf::Mouse::getPosition( *window ).x, sf::Mouse::getPosition( *window ).y));
+    //if the click is within the inventory space dont check for collision
+    if(mousePosition.y > 520)
+    {
+        //do nothing
+    }
+    else
+    {
+        world->checkCollision(parent);
+    }
+
 /*
     if(collided != NULL)
     {

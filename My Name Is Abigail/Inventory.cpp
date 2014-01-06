@@ -120,6 +120,21 @@ std::vector< GameObject * > Inventory::getInventory()
     return items;
 }
 
+GameObject * Inventory::getFromInventory(unsigned int itemIndex)
+{
+    return items[itemIndex];
+}
+
+bool Inventory::checkValidItemIndex(unsigned int itemIndex)
+{
+    if (itemIndex-1 < items.size())
+    {
+        return true;
+    }
+
+    return false;
+}
+
 bool Inventory::CheckContainItem(std::string& aString){
     for (unsigned int i = 0; i < items.size(); ++i){
 
