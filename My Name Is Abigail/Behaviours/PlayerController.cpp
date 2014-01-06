@@ -76,7 +76,7 @@ void PlayerController::OnMouseDown()
 void PlayerController::onCollision(GameObject * otherObject)
 {
     std::cout << "collided with: " << otherObject->getName() << std::endl;
-    parent->setPosition (oldPos);
+    //parent->setPosition (oldPos);
     //could make if statements
     //if collided with this specific game object then do this { code }
 }

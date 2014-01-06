@@ -4,6 +4,8 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <sfml/audio.hpp>
+
 
 class Hud;
 class Renderer;
@@ -45,6 +47,12 @@ class Game
 		void update( float step );
 		void draw();
 		void drawHud();
+
+        sf::SoundBuffer bufferMenuMusic;
+        sf::Sound menuMusic;
+
+        sf::SoundBuffer bufferMainMusic;
+        sf::Sound mainMusic;
 
 
 };
