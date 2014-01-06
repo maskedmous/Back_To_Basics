@@ -16,8 +16,8 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
 
     if ( theHUDTex.loadFromFile("models/HUD.png") ) //when successful loaded
     {
-		theHUD.setTexture( theHUDTex); // provide sprite with texture
-		theHUD.setPosition(0,window->getSize().y - 200); // put it somewhere anoying
+		theHUD.setTexture( theHUDTex);                      //set the texture of the sprite
+		theHUD.setPosition(0,window->getSize().y - 200);    //place the sprite note: top left corner
     }
     else { std::cout << "Could not load HUD.png" << std::endl; }
 }
@@ -54,32 +54,32 @@ void Hud::draw()
         }
     }
 
-
-
     //get the inventory
     if(game->getState() == "Play")
     {
         window->draw( theHUD );
-
-
         std::vector< GameObject * > items = inventory->getInventory();
 
 		//draw inventory
-		int position = 0;
+		int position = 0;                   //int cause round numbers
 		sf::Texture thisItemTex;
 		sf::Sprite thisItemSprite;
-        thisItemSprite.setScale( 1, -1);
+        thisItemSprite.setScale( 1, -1);    //flip the sprite its flipped in the world
 		for(unsigned int i=0; i<items.size(); ++i)
         {
-            GameObject * thisItem = items[i];
-            thisItemTex.loadFromImage( Texture::getImage( (thisItem->getTexture()->getName()).c_str() ) );
-            thisItemSprite.setTexture( thisItemTex );
-            position = (10 + ((i+1) * 85) + (i * 150));
-            thisItemSprite.setPosition( position, window->getSize().y - 25 );
-            window->draw(thisItemSprite);
+            //preventing more than 5 items being drawn (optimization / error prevention)
+            if(i <= 5)
+            {
+                GameObject * thisItem = items[i];
+                thisItemTex.loadFromImage( Texture::getImage( (thisItem->getTexture()->getName()).c_str() ) );
+                thisItemSprite.setTexture( thisItemTex );
+                position = (10 + ((i+1) * 85) + (i * 150));
+                thisItemSprite.setPosition( position, window->getSize().y - 25 );
+                window->draw(thisItemSprite);
+            }
         }
     }
-		window->draw( text );
+    window->draw( text );
 	window->popGLStates();
 }
 
