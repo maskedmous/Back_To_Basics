@@ -1,10 +1,10 @@
 wallName,WallPlaceHolder,bricks.jpg,0,8,-3,0
 wallName,WallPlaceHolder,bricks.jpg,0,12,-3,0
 wallName,WallPlaceHolder,bricks.jpg,0,16,-3,0	
-vase,bone,lantern.png,1,16.7,-2.6,0.15
-demonstatueSwitchTexture,bone,demonstatue.png,matches,14,-3.8,0.15
+vase,lantern,lantern.png,1,16.7,-2.6,0.15
+demonstatueSwitchTexture,demon,demonstatue.png,matches,14,-3.7,0.15
 matches,bone,matches.png,1,16.7,-3.5,0.15
-lantern,bone,lantern.png,1,16,-3,0.15
+lantern,lantern,lantern.png,1,16,-3,0.15
 wallName,wallplaceHolder,bricks.jpg,0,0,1,0
 wallName,WallPlaceHolder,bricks.jpg,0,4,1,0
 wallName,WallPlaceHolder,bricks.jpg,0,8,1,0
