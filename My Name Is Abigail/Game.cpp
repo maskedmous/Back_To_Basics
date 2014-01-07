@@ -72,18 +72,29 @@ void Game::buildLevel()
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world, inventory);
 
-    GameObject * stairs = new GameObject("Stairs", glm::vec3(12.0f,  0.0f , 0.15f));
+    GameObject * stairs = new GameObject("Stairs", glm::vec3(12.0f,  4.0f , 0.15f));
         stairs->setMesh(Mesh::load("models/AbigailCharacter.obj"));
-        stairs->setColorMap(Texture::load("models/Abigailside.png"));
+        //stairs->setColorMap(Texture::load("models/Abigailside.png"));
         stairs->setBehaviour( new StairsBehaviour(stairs, world, inventory) );
         stairs->setCollider( new Collider( 1.0f, 1.75f, stairs));
     world->add(stairs);
 
-    GameObject * blockWall = new GameObject("Wall", glm::vec3(-5.0f, 0.0f, -1.0f));
+    GameObject * stairs2 = new GameObject("Stairs", glm::vec3(14.0f,  0.0f , 0.15f));
+        stairs2->setMesh(Mesh::load("models/AbigailCharacter.obj"));
+        //stairs->setColorMap(Texture::load("models/Abigailside.png"));
+        stairs2->setBehaviour( new StairsBehaviour(stairs2, world, inventory) );
+        stairs2->setCollider( new Collider( 1.0f, 1.75f, stairs2));
+    world->add(stairs2);
+
+    GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (3.0f, 2.0f, blockWall));
         world->add(blockWall);
 
-    GameObject * character = new GameObject("Character", glm::vec3(0.0f, 0.0f,0.2f));
+    GameObject * blockWall2 = new GameObject("Wall", glm::vec3(19.5f, 0.0f, -1.0f));
+        blockWall2->setCollider( new Collider (3.0f, 2.0f, blockWall));
+        world->add(blockWall2);
+
+    GameObject * character = new GameObject("Character", glm::vec3(15.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory) );

@@ -6,6 +6,7 @@
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
+#include "Behaviours/StairsBehaviour.h"
 #include "Collider.hpp"
 
 #include <cstdio>
@@ -68,10 +69,10 @@ if(level.is_open()){
             }
 
             if(i == 4){
-
                 behaviourName = line.substr( current, next - current);
                 if(behaviourName != "0"){
                     setBehaviour = true;
+                    std::cout << behaviourName << std::endl;
                 }
             }
 
@@ -90,22 +91,88 @@ if(level.is_open()){
                 countZ = sumz;
 
                 GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY + 4, countZ ));
-                //std::cout << '\n' << "Loading Mesh in interperter: " << modelName << '\n' << std::endl;
                 loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
                 loadedObj->setMesh( loadedMesh );
-                //std::cout << "Loading Texture in interperter: " << textureName << std::endl;
                 loadedTextue = Texture::load( ("models/" + textureName).c_str() );
                 loadedObj->setColorMap( loadedTextue );
 
                 if(setBehaviour == true){
+
+                    delimiter2 = " !";
+                    unsigned int j = 0;
+                    size_t currentBehaviour;
+                    size_t nextBehaviour = -1;
+                    do
+                    {
+                        currentBehaviour = nextBehaviour + 1;
+                        nextBehaviour = behaviourName.find_first_of( delimiter2, currentBehaviour );
+                        j++;
+                        if(j == 1){
+                            BehaviourId = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                            //std::cout << behaviourName << "fuuuuuuuuuuuuuuuuuuuuuuuuuu" <<std::endl;
+                            //std::cout << BehaviourId << "loooooooooooooooooooooooooo" <<std::endl;
+
+                            if(BehaviourId == "Item"){
+                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
+                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory) );
+                            }
+
+                            if(BehaviourId == "Stairs"){
+                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
+                                loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory) );
+
+                            }
+
+                            if(BehaviourId == "Swaping"){
+                            //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
+                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
+                            std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
+                            }
+
+
+                        }
+
+                        if(j == 2){
+                            if(BehaviourId == "ReqItem"){
+                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
+                                BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
+
+                            }
+
+
+                            if(BehaviourId == "Swaping"){
+                                BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                std::cout << BehaviourArgument1 << "first argument========================" << std::endl;
+                            }
+                        }
+                        if(j == 3){
+                            if(BehaviourId == "Swaping"){
+                                BehaviourArgument2 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
+                                loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, BehaviourArgument1, BehaviourArgument2) );
+                            }
+
+                        }
+
+                    }
+                    while (nextBehaviour != std::string::npos);
+
+
+
+  /*
                     if(behaviourName == "1"){
                         loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                         loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory) );
+                    }else if(behaviourName == "Swaping"){
+                        //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
+                        loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
+
                     }else{
                         loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                         loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, behaviourName) );
                     }
-
+*/
                 }setBehaviour = false;
 
 

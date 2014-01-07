@@ -34,7 +34,7 @@ void World::checkCollision( GameObject* firstCollider )
             //if it has a collider proceed
             if(children[i]->hasCollider() && children[i]->getLocation().z == 0.15f)
             {
-                if(glm::abs(children[i]->getLocation().x - playerPosition.x) < 1.0f )
+                if(glm::abs(children[i]->getLocation().x - playerPosition.x) < 0.5f )
                 {
                     //return children[i];
                     children[i]->onCollision(firstCollider);
@@ -66,7 +66,7 @@ void World::checkBlock()
                             {
                                 //std::cout << "colliding"  << std::endl;
                                 //its colliding so put her back
-                                //children[i]->onCollision(children[j]);
+                                children[i]->onCollision(children[j]);
                             }
                         }
                     }

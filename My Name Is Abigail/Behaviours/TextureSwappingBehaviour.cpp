@@ -10,8 +10,12 @@ TextureSwappingBehaviour::TextureSwappingBehaviour( GameObject * aParent ,GameOb
 : Behaviour( aParent )
 {
     myParent = mememe;
-    textureDelay = 0;
+    textureOne = Texture::load(("models/" + firstTexture).c_str());
+    textureTwo = Texture::load(("models/" + secondTexture).c_str());
+    textureDelay = -1;
     textureState = 1;
+
+    //("models/" + textureName).c_str()
 }
 
 TextureSwappingBehaviour::~TextureSwappingBehaviour()
@@ -27,22 +31,25 @@ void TextureSwappingBehaviour::update(float step)
     if(textureDelay < 1){
          if ( sf::Keyboard::isKeyPressed( sf::Keyboard::Up )) {
             if(textureState == 1){
-                myParent->setColorMap( Texture::load("models/bricks.jpg") );
+                //myParent->setColorMap( Texture::load("models/StorageRoomLIGHT.png") );
+                myParent->setColorMap( textureTwo);
+
                 //player->setColorMap( Texture::load("models/bricks.jpg") );
 
                 //Texture * texture = Texture::load( "wallPillar.png" );
                 //aBody->setTexture( texture );
                 textureState = 2;
             } else if(textureState == 2){
+                //myParent->setColorMap( Texture::load("models/StorageRoomDARK.png") );
 
-                myParent->setColorMap( Texture::load("models/monkey.jpg") );
+                myParent->setColorMap( textureOne );
                 //Texture * texture = Texture::load( "Dice.jpg" );
                 //aBody->setTexture( texture );+
                 textureState = 1;
             }
 
 
-            textureDelay = 500;
+            textureDelay = 50;
         }
     }
 

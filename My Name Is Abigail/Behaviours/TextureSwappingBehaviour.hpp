@@ -1,8 +1,10 @@
 #ifndef TEXTURESWAPPINGBEHAVIOUR_H_INCLUDED
 #define TEXTURESWAPPINGBEHAVIOUR_H_INCLUDED
 
+
 #include <string>
 
+#include "../Texture.hpp"
 #include "../Behaviour.hpp"
 
 class TextureSwappingBehaviour : public Behaviour
@@ -18,6 +20,13 @@ class TextureSwappingBehaviour : public Behaviour
         GameObject * myParent;
         int textureDelay;
         int textureState;
+
+
+        Texture * textureOne;
+        Texture * textureTwo;
+
+        //std::string textureOne;
+        //std::string textureTwo;
 };
 
 #endif // TEXTURESWAPPINGBEHAVIOUR_H_INCLUDED
