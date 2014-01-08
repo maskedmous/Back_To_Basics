@@ -4,6 +4,7 @@ wallName,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGH
 vase,lantern,vase.png,Stairs,15.7,-2.3,0.15
 demonstatueSwitchTexture,demon,demonstatue.png,0,14,-3.7,0.15
 matches,bone,matches.png,Item,16.9,-3.4,0.15
+matches,bone,matches.png,Item,16.9,-3.4,0.15
 lantern,lantern,lanternoff.png,ReqItem!matches,16,-2.8,0.15
 lantern,lantern,lantern.png,1,16,-2.8,0.14.9999
 wallName,Wall4x3,06Kitchen.png,0,-5.5,1,0

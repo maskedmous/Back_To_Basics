@@ -97,7 +97,7 @@ void Game::buildLevel()
     GameObject * character = new GameObject("Character", glm::vec3(15.0f, 0.0f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
-        character->setBehaviour( new PlayerController( character, window, renderer, world, inventory) );
+        character->setBehaviour( new PlayerController( character, window, renderer, world, inventory, hud) );
         character->setCollider( new Collider( 1.0f, 1.75f, character));
         hud->setInventory( inventory );
         world->add(character);

@@ -27,6 +27,7 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     }
     else { std::cout << "could not load selection.png" << std::endl; }
 
+    firstTrigger = 999;
     slot1Trigger = false;
     slot2Trigger = false;
     slot3Trigger = false;
@@ -94,22 +95,27 @@ void Hud::draw()
         if(slot1Trigger)
         {
             selection.setPosition(90, 540);
+            window->draw(selection);
         }
         if(slot2Trigger)
         {
             selection.setPosition(325, 540);
+            window->draw(selection);
         }
         if(slot3Trigger)
         {
             selection.setPosition(560, 540);
+            window->draw(selection);
         }
         if(slot4Trigger)
         {
             selection.setPosition(795, 540);
+            window->draw(selection);
         }
         if(slot5Trigger)
         {
             selection.setPosition(1030, 540);
+            window->draw(selection);
         }
     }
     window->draw( text );
@@ -133,8 +139,6 @@ void Hud::setSlotTrigger()
                     slot1Trigger = true;
                     firstTrigger = 0;
                 }
-
-
             }
             if(mousePosition.x > 330 && mousePosition.x < 480)
             {
@@ -216,18 +220,20 @@ void Hud::setSlotTrigger()
             if(itemA != NULL && itemB != NULL)
             {
                 inventory->mergeItems(itemA, itemB);
-
-                //reset slots!
-                firstTrigger = 999;
-                itemA = NULL;
-                itemB = NULL;
-                slot1Trigger = false;
-                slot2Trigger = false;
-                slot3Trigger = false;
-                slot4Trigger = false;
-                slot5Trigger = false;
             }
-            else{ std::cout <<  "something went wrong when retrieving items from the inventory! can't merge" << std::endl; }
+            else
+            {
+                std::cout <<  "can't merge" << std::endl;
+            }
+            //reset slots!
+            firstTrigger = 999;
+            itemA = NULL;
+            itemB = NULL;
+            slot1Trigger = false;
+            slot2Trigger = false;
+            slot3Trigger = false;
+            slot4Trigger = false;
+            slot5Trigger = false;
         }
     }
 }

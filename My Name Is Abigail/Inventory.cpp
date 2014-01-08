@@ -43,6 +43,8 @@ void Inventory::removeFromInventory(GameObject* aItem)
 
 void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
 {
+    //std::cout << itemA << " " << itemB << std::endl;
+
     std::string line = "";
     std::string seperator = ";";
 
@@ -60,6 +62,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
         while(mergeItems.good())
         {
             getline(mergeItems, line);
+            //std::cout << line << std::endl;
             size_t current;
             size_t next = -1;
 
@@ -72,27 +75,32 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                 if(i == 1)
                 {
                     tempItemA = line.substr(current, next - current);
+                    //std::cout << "temp itemA: " << tempItemA << std::endl;
                 }
                 if(i == 2)
                 {
                     tempItemB = line.substr(current, next - current);
+                    //std::cout << "temp itemB: " << tempItemB << std::endl;
                 }
                 if(i == 3)
                 {
                     itemC = line.substr(current, next - current);
+                    //std::cout << "itemC: " << itemC << std::endl;
                 }
                 if(i == 4)
                 {
                     itemCTexture = line.substr(current, next - current);
+                    //std::cout << "texture: " << itemCTexture << std::endl;
                 }
 
-                if(tempItemA == itemA->getName() && tempItemB == itemB->getName())
+                if(tempItemA != "" && tempItemB != "" && itemC != "" && itemCTexture != "")
                 {
-                    std::cout << "found a match! merging items" << std::endl;
-                    std::cout << itemA->getName() << " " << itemB->getName() << " becomes " << itemC << std::endl;
-                    //check if everything is valid
-                    if(itemA != NULL && itemB != NULL && itemC != "" && itemCTexture != "")
+                    if(tempItemA == itemA->getName() && tempItemB == itemB->getName())
                     {
+                        //std::cout << "found a match! merging items" << std::endl;
+                        //std::cout << itemA->getName() << " " << itemB->getName() << " becomes " << itemC << std::endl;
+                        //check if everything is valid
+
                         //remove items A and B cause they're destroyed in merging
                         removeFromInventory(itemA);
                         removeFromInventory(itemB);
@@ -102,12 +110,17 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                         //new item is made add it to the inventory!
                         addToInventory(newItem);
                     }
+                    else
+                    {
+                        //search further
+                        i=0;
+                        tempItemA = "";
+                        tempItemB = "";
+                        itemC = "";
+                        itemCTexture = "";
+                    }
                 }
-                else
-                {
-                    //search further
-                    i=0;
-                }
+
             }
             while(next != std::string::npos);
         }
@@ -127,7 +140,7 @@ GameObject * Inventory::getFromInventory(unsigned int itemIndex)
 
 bool Inventory::checkValidItemIndex(unsigned int itemIndex)
 {
-    if (itemIndex-1 < items.size())
+    if (itemIndex <= items.size() && items.size() != 1)
     {
         return true;
     }

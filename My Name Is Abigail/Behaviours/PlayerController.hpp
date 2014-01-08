@@ -8,6 +8,7 @@
 #include "../Behaviour.hpp"
 #include "../Inventory.hpp"
 #include "../World.hpp"
+#include "../Hud.hpp"
 
 class PlayerController : public Behaviour
 {
@@ -16,6 +17,7 @@ class PlayerController : public Behaviour
         Renderer * renderer;
         World * world;
         Inventory * inventory;
+        Hud * hud;
         glm::vec4 mouseInWorld;
         glm::vec3 oldPos;
         GameObject * targetItem;
@@ -24,7 +26,7 @@ class PlayerController : public Behaviour
         std::vector< GameObject * > items;
 
     public:
-        PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld, Inventory * aInventory );
+        PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld, Inventory * aInventory, Hud * aHud );
         virtual ~PlayerController();
         virtual void update(float step);
         void OnMouseDown();

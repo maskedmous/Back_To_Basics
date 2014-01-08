@@ -1,1 +1,2 @@
-aKey;bKey;cKey;"models/marvin.png"
+aKey;bKey;cKey;models/marvin.png
+matches;matches;vase;models/vase.png
