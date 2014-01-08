@@ -18,6 +18,7 @@ class Inventory
         GameObject * getFromInventory(unsigned int itemIndex);
         bool checkValidItemIndex(unsigned int itemIndex);
         bool CheckContainItem(std::string& aString);
+        std::string getItemName(unsigned int index);
     protected:
         std::vector< GameObject * > items;
     private:

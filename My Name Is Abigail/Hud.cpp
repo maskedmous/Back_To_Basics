@@ -27,6 +27,13 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     }
     else { std::cout << "could not load selection.png" << std::endl; }
 
+    if(font.loadFromFile("Fonts/Cardinal.ttf"))
+    {
+        //setFont(itemNameText, font);
+        itemNameText.setFont(font);
+    }
+    else { std::cout << "could not load this font" << std::endl; }
+
     firstTrigger = 999;
     slot1Trigger = false;
     slot2Trigger = false;
@@ -116,6 +123,41 @@ void Hud::draw()
         {
             selection.setPosition(1030, 540);
             window->draw(selection);
+        }
+
+
+        glm::vec2 mousePosition = glm::vec2(glm::ivec2(sf::Mouse::getPosition( *window ).x, sf::Mouse::getPosition( *window ).y));
+
+        if(mousePosition.y > 520)
+        {
+            std::string itemName;
+            //inventory space
+            //where did it click? any inventory slots?
+            if(mousePosition.x > 95 && mousePosition.x < 245)
+            {
+                itemName = inventory->getItemName(0);
+            }
+            if(mousePosition.x > 330 && mousePosition.x < 480)
+            {
+                itemName = inventory->getItemName(1);
+            }
+            if(mousePosition.x > 565 && mousePosition.x < 715)
+            {
+                itemName = inventory->getItemName(2);
+            }
+            if(mousePosition.x > 800 && mousePosition.x < 950)
+            {
+                itemName = inventory->getItemName(3);
+            }
+            if(mousePosition.x > 1035 && mousePosition.x < 1185)
+            {
+                itemName = inventory->getItemName(4);
+            }
+            itemNameText.setCharacterSize(30);
+            itemNameText.setColor(sf::Color::Black);
+            itemNameText.setString(itemName);
+            itemNameText.setPosition((mousePosition.x+10), mousePosition.y);
+            window->draw(itemNameText);
         }
     }
     window->draw( text );

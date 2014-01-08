@@ -14,6 +14,8 @@ class Hud
 		Game * game;
 		Inventory * inventory;
 		sf::Font font;
+		sf::Text itemNameText;
+		sf::Font itemNameFont;
 		sf::Texture theHUDTex;
 		sf::Sprite theHUD;
 

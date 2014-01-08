@@ -161,3 +161,13 @@ bool Inventory::CheckContainItem(std::string& aString){
     return false;
 
 }
+
+std::string Inventory::getItemName(unsigned int index)
+{
+    if(index <= items.size()-1 && items.size() != 0)
+    {
+        return items[index]->getName();
+    }
+
+    return "";
+}
