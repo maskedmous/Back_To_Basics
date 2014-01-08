@@ -27,7 +27,7 @@ Texture * Texture::load( const std::string aName )
 	// check if in cache
 	std::map< const std::string, Texture * >::iterator textureIterator = textures.find( aName );
 	if ( textureIterator != textures.end() ) {
-		std::cout << "Done loading texture from cache " << aName << std::endl;
+		//std::cout << "Done loading texture from cache " << aName << std::endl;
 		return textureIterator->second;// key 2 exists, do something with iter->second (the value)
 	} else { // load from file and store in cache
 		sf::Image image;
@@ -45,7 +45,7 @@ Texture * Texture::load( const std::string aName )
 				//glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0 ); 	// for mipmapping
 				//glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 4 ); 	// for mipmapping
 
-				std::cout << "Done loading texture " << aName << " with id " << texture->id << std::endl;
+				//std::cout << "Done loading texture " << aName << " with id " << texture->id << std::endl;
 			textures[aName] = texture; // stores mesh in cache for reuse
 			sfImages[aName] = image;
 			return texture;

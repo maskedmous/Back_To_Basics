@@ -1,7 +1,13 @@
 wallName,Wall3x3,14BoilerRoom.png,0,8,-3,0
-wallMAINIMPORTANTROOMName,Wall5x3,15MainCellartemp.png,0,12,-3,0	
+wallMAINIMPORTANTROOMName,Wall5x3,15MainCellar.png,0,12,-3,0	
 wallName,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGHT.png,16.5,-3,0
-vase,lantern,vase.png,Stairs,15.7,-2.3,0.15
+vase,lantern,vase.png,Item,15.7,-2.3,0.15
+vase,lantern,vase.png,Item,14.7,-2.3,0.15
+vase,lantern,vase.png,Item,13.7,-2.3,0.15
+vase,lantern,vase.png,Item,12.7,-2.3,0.15
+stairs,lantern,bricks.jpg,Stairs,12,-3,0.15
+stairs,lantern,bricks.jpg,Stairs,12,1,0.15
+stairs,lantern,bricks.jpg,Stairs,12,5,0.15
 demonstatueSwitchTexture,demon,demonstatue.png,0,14,-3.7,0.15
 matches,bone,matches.png,Item,16.9,-3.4,0.15
 matches,bone,matches.png,Item,16.9,-3.4,0.15
@@ -12,11 +18,11 @@ wallName,Wall5x3,07Diningroom.png,0,-1,1,0
 wallName,Wall8x3,08Livingroom.png,0,5.5,1,0
 wallMAINIMPORTANTROOMName,Wall5x3,09EntranceHall.png,0,12,1,0
 wallName,Wall4x3,10Study.png,0,16.5,1,0
-wallName,Wall5x3,StorageRoomDARK.png,0,21,1,0
-wallName,Wall3x3,bricks.jpg,0,2.5,5,0
+wallName,Wall5x3,11Wintergarden.png,0,21,1,0
+wallName,Wall3x3,02Bathroom.png,0,2.5,5,0
 wallName,Wall6x3,03GuestBedroom.png,0,7,5,0
-wallMAINIMPORTANTROOMName,Wall4x3,bricks.jpg,0,12,5,0
-wallName,Wall7x3,bricks.jpg,0,17.5,5,0
+wallMAINIMPORTANTROOMName,Wall4x3,04UpperHallway.png,0,12,5,0
+wallName,Wall7x3,05MasterBedroom.png,0,17.5,5,0
 wallName,Wall10x3,bricks.jpg,0,12,9,0
 wallName,Wall10x3,bricks.jpg,0,16,9,0
 

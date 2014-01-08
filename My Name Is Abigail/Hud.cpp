@@ -81,7 +81,7 @@ void Hud::draw()
 		for(unsigned int i=0; i<items.size(); ++i)
         {
             //preventing more than 5 items being drawn (optimization / error prevention)
-            if(i <= 5)
+            if(i <= 4)
             {
                 GameObject * thisItem = items[i];
                 thisItemTex.loadFromImage( Texture::getImage( (thisItem->getTexture()->getName()).c_str() ) );

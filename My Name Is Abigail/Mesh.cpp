@@ -97,9 +97,9 @@ Mesh * Mesh::load( const char * fileName )
 			}
 		}
 		file.close();
-		std::cout << "Done loading " << fileName;
+		//std::cout << "Done loading " << fileName;
 		mesh->buffer();
-		std::cout << " and buffering " << std::endl;
+		//std::cout << " and buffering " << std::endl;
 		return mesh;
 	} else { // file could not be opened;
 		std::cout << "Could not read " << fileName << std::endl;

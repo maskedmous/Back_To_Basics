@@ -740,7 +740,7 @@
 	<glm/glm.hpp>
 	<glm/ext.hpp>
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
+1389193691 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
 	"LookAtBehaviour.hpp"
 	<iostream>
 	<sfml/window.hpp>
@@ -789,7 +789,7 @@
 	<SFML/Window.hpp>
 	"../Behaviour.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
+1389193000 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
 	"glm.hpp"
 	"Camera.hpp"
 	"Renderer.hpp"
@@ -821,7 +821,7 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1389102564 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1389193680 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -884,7 +884,7 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1389188125 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -893,6 +893,7 @@
 	"../Behaviour.hpp"
 	"../Inventory.hpp"
 	"../World.hpp"
+	"../Hud.hpp"
 
 1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
 	<cassert>
@@ -903,7 +904,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1389119554 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1389192944 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -915,7 +916,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1389103375 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1389189987 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -933,7 +934,7 @@
 	"Light.hpp"
 	"Renderer.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
+1389176677 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
 	"Mesh.hpp"
 	<map>
 	<cstring>
@@ -955,7 +956,7 @@
 	<fstream>
 	"Texture.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
+1389176493 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
 	<SFML/Graphics.hpp>
 	"ShaderProgram.hpp"
 	"Texture.hpp"
@@ -965,7 +966,7 @@
 	"Time.hpp"
 	<iostream>
 
-1389097192 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1389190068 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -976,7 +977,7 @@
 	<iostream>
 	"Game.hpp"
 
-1389119553 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1389188125 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
@@ -987,7 +988,7 @@
 	"World.hpp"
 	<vector>
 
-1389119554 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1389188126 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 	<string>
 	<cstdio>
