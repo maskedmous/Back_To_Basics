@@ -16,7 +16,6 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add option="static-glew32" />
 					<Add library="opengl32" />
 					<Add library="glew32" />
 				</Linker>
@@ -100,6 +99,8 @@
 		<Unit filename="Texture.hpp" />
 		<Unit filename="Time.cpp" />
 		<Unit filename="Time.hpp" />
+		<Unit filename="TipSystem.cpp" />
+		<Unit filename="TipSystem.hpp" />
 		<Unit filename="World.cpp" />
 		<Unit filename="World.hpp" />
 		<Unit filename="glm.hpp" />

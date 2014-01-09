@@ -14,6 +14,7 @@ class Interperter;
 class Camera;
 class Light;
 class MainMenu;
+class TipSystem;
 
 class Game
 {
@@ -28,6 +29,7 @@ class Game
 		Camera * camera;
 		Light * light;
         MainMenu * mainMenu;
+        TipSystem * tipSystem;
 		bool running;
 
 	public: // functions

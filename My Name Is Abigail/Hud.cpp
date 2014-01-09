@@ -27,10 +27,17 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     }
     else { std::cout << "could not load selection.png" << std::endl; }
 
+    if(tipBackgroundTex.loadFromFile("models/backgroundText.png"))
+    {
+        tipBackground.setTexture(tipBackgroundTex);
+        tipBackground.setPosition(0, 480);
+    }
+
     if(font.loadFromFile("Fonts/Cardinal.ttf"))
     {
         //setFont(itemNameText, font);
         itemNameText.setFont(font);
+        tipText.setFont(font);
     }
     else { std::cout << "could not load this font" << std::endl; }
 
@@ -159,7 +166,17 @@ void Hud::draw()
             itemNameText.setPosition((mousePosition.x+10), mousePosition.y);
             window->draw(itemNameText);
         }
+
+        if(tipBool)
+        {
+            window->draw(tipBackground);
+            tipText.setCharacterSize(40);
+            tipText.setColor(sf::Color::White);
+            tipText.setPosition(5, 475);
+            window->draw(tipText);
+        }
     }
+
     window->draw( text );
 	window->popGLStates();
 }
@@ -288,4 +305,24 @@ void Hud::setInventory(Inventory * aInventory)
 void Hud::addButtonToMainMenu(Button * newButton)
 {
     mainMenuButtons.push_back(newButton);
+}
+
+void Hud::setTip(std::string aTip)
+{
+    tipText.setString(aTip);
+    tipBool = true;
+    tipTimer = 5;
+}
+
+void Hud::countdown(float step)
+{
+    if(tipTimer >= 0)
+    {
+        tipTimer -= step;
+    }
+    else
+    {
+        tipBool = false;
+        tipText.setString("");
+    }
 }

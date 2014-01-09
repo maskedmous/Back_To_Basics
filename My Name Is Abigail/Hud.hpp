@@ -22,6 +22,13 @@ class Hud
 		sf::Texture selectionTex;
 		sf::Sprite selection;
 
+        sf::Text tipText;
+        sf::Texture tipBackgroundTex;
+        sf::Sprite tipBackground;
+
+        float tipTimer;
+        bool tipBool;
+
         std::vector< Button * > mainMenuButtons;
 
         unsigned int firstTrigger;
@@ -41,6 +48,8 @@ class Hud
 		void setSlotTrigger();
 		void setInventory(Inventory * aInventory);
 		void addButtonToMainMenu(Button * newButton);
+		void setTip(std::string aTip);
+		void countdown(float step);
 };
 
 #endif // HUD_H

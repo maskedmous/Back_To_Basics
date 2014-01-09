@@ -25,9 +25,10 @@
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/RotatingBehaviour.hpp"
 #include "MainMenu.hpp"
+#include "TipSystem.hpp"
 
 Game::Game()
-:	state("Loading"),window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL)
+:	state("Loading"),window(NULL), hud(NULL), renderer(NULL), world(NULL),interperter(NULL), camera(NULL), light(NULL), tipSystem(NULL)
 {
 	window = new sf::RenderWindow( sf::VideoMode( 1280, 720 ), "My Name Is Abigail" ); // get a window
 	//window = new sf::RenderWindow( sf::VideoMode( 800, 600 ), "My Name Is Abigail" ); // get a window
@@ -71,6 +72,8 @@ void Game::buildLevel()
 
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world, inventory);
+
+    tipSystem = new TipSystem(hud);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (3.0f, 2.0f, blockWall));
@@ -142,6 +145,13 @@ void Game::update( float step )
 	world->update( step );
 	assert( mainMenu != NULL );
 	mainMenu->Update(step);
+	assert( hud != NULL);
+	hud->countdown(step);
+
+	if(tipSystem != NULL)
+    {
+        tipSystem->countdown(step);
+    }
 }
 
 void Game::draw()
