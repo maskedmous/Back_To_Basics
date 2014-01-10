@@ -148,7 +148,7 @@ void GameObject::remove( GameObject * child)
 {
     for( unsigned int i = 0; i < children.size(); ++i){
         if ( children[i] == child){
-            std::cout << children[i]->getName() << std::endl;
+            //std::cout << children[i]->getName() << std::endl;
             children.erase(children.begin()+i);
         }
     }
@@ -159,10 +159,22 @@ void GameObject::remove( std::string& child)
     for( unsigned int i = 0; i < children.size(); ++i){
         std::cout << children[i]->getName() << std::endl;
         if ( children[i]->getName() == child){
-            std::cout << children[i]->getName() << std::endl;
+            //std::cout << children[i]->getName() << std::endl;
             children.erase(children.begin()+i);
         }
     }
+}
+
+GameObject* GameObject::findGameObject(std::string& object)
+{
+    for( unsigned int i = 0; i < children.size(); ++i){
+        if ( children[i]->getName() == object){
+            //std::cout << children[i]->getName() << std::endl;
+            return(children[i]);
+        }
+    }
+
+    return NULL;
 }
 
 // private functions

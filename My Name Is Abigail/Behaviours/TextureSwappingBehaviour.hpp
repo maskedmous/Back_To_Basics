@@ -14,6 +14,7 @@ class TextureSwappingBehaviour : public Behaviour
         virtual ~TextureSwappingBehaviour();
 
         virtual void update (float step);
+        void swapTexture();
         //virtual void update( glm::mat4 & transformation, float step ,  Body * aBody );
     protected:
     private:

@@ -48,7 +48,7 @@ bool Collider::isColliding(GameObject * otherObject)
         {
             if(parentBottom > otherObjectBottom)
             {
-                std::cout << "colliding" << std::endl;
+                //std::cout << "colliding" << std::endl;
                 //match in Y
                 return true;
             }

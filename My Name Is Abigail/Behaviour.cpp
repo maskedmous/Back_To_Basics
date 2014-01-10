@@ -21,3 +21,8 @@ void Behaviour::onCollision( GameObject * otherGameObject )
 {
 	std::cout << "Behavour handles collision. Should not be ! " << std::endl;
 }
+
+void Behaviour::swapTexture(){
+
+    std::cout << "should not be called" << std::endl;
+}

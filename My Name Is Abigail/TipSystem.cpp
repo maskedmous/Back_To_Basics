@@ -34,7 +34,7 @@ void TipSystem::getTip(std::string itemName)
         {
             getline(tipReader, line);
 
-            std::cout << line << std::endl;
+            //std::cout << line << std::endl;
             size_t current;
             size_t next = -1;
 
@@ -50,7 +50,7 @@ void TipSystem::getTip(std::string itemName)
                 }
                 if(i == 2)
                 {
-                    std::cout << "executed" << std::endl;
+                    //std::cout << "executed" << std::endl;
                     tempTip = line.substr(current, next - current);
                     std::cout << "Reading: " << tempTip << std::endl;
                 }
@@ -67,7 +67,9 @@ void TipSystem::getTip(std::string itemName)
                     {
                         std::cout << "Using: " << tempTip << std::endl;
                         sendTip(tempTip);
-                        next = std::string::npos;
+                        tempTip = "";
+                        tempItemA = "";
+                        //next = std::string::npos;
                     }
                 }
 
@@ -89,6 +91,7 @@ void TipSystem::getSecondTip()
 
 void TipSystem::sendTip(std::string aTip)
 {
+    std::cout << aTip << std::endl;
     //send the tip to the hud so the hud shows the tip above the inventory
     hud->setTip(aTip);
 }

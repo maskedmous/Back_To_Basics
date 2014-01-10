@@ -119,7 +119,7 @@ void PlayerController::OnMouseDown()
 
 void PlayerController::onCollision(GameObject * otherObject)
 {
-    std::cout << "collided with: " << otherObject->getName() << std::endl;
+    //std::cout << "collided with: " << otherObject->getName() << std::endl;
 
     if(otherObject->getLocation().z == -1){
         parent->setPosition (oldPos);

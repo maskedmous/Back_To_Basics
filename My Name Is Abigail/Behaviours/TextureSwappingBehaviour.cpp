@@ -30,27 +30,30 @@ void TextureSwappingBehaviour::update(float step)
     }
     if(textureDelay < 1){
          if ( sf::Keyboard::isKeyPressed( sf::Keyboard::Up )) {
-            if(textureState == 1){
-                //myParent->setColorMap( Texture::load("models/StorageRoomLIGHT.png") );
-                myParent->setColorMap( textureTwo);
-
-                //player->setColorMap( Texture::load("models/bricks.jpg") );
-
-                //Texture * texture = Texture::load( "wallPillar.png" );
-                //aBody->setTexture( texture );
-                textureState = 2;
-            } else if(textureState == 2){
-                //myParent->setColorMap( Texture::load("models/StorageRoomDARK.png") );
-
-                myParent->setColorMap( textureOne );
-                //Texture * texture = Texture::load( "Dice.jpg" );
-                //aBody->setTexture( texture );+
-                textureState = 1;
-            }
-
-
+            swapTexture();
             textureDelay = 50;
         }
+    }
+
+}
+
+void TextureSwappingBehaviour::swapTexture(){
+    if(textureState == 1){
+        //myParent->setColorMap( Texture::load("models/StorageRoomLIGHT.png") );
+        myParent->setColorMap( textureTwo);
+
+        //player->setColorMap( Texture::load("models/bricks.jpg") );
+
+        //Texture * texture = Texture::load( "wallPillar.png" );
+        //aBody->setTexture( texture );
+        textureState = 2;
+    } else if(textureState == 2){
+        //myParent->setColorMap( Texture::load("models/StorageRoomDARK.png") );
+
+        myParent->setColorMap( textureOne );
+        //Texture * texture = Texture::load( "Dice.jpg" );
+        //aBody->setTexture( texture );+
+        textureState = 1;
     }
 
 }

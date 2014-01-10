@@ -138,7 +138,7 @@ if(level.is_open()){
                         if(j == 2){
                             if(BehaviourId == "ReqItem"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
+                                loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
 
                             }
 
