@@ -70,10 +70,10 @@ void Game::buildLevel()
 
     Inventory * inventory = new Inventory();
 
-    interperter = new Interperter (world);
-		interperter->readFile( "LevelOne", world, inventory);
-
     tipSystem = new TipSystem(hud);
+
+    interperter = new Interperter (world);
+		interperter->readFile( "LevelOne", world, inventory, tipSystem);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (3.0f, 2.0f, blockWall));

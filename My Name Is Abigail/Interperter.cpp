@@ -26,7 +26,7 @@ Interperter::~Interperter()
     //dtor
 }
 
-void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory){
+void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory, TipSystem * aTipsystem){
 
     //Mesh * suzanna = Mesh::load( "models/suzanna.obj");
     //Mesh * wallPlaceHolder = Mesh::load( "models/PlaceHolderWall.obj");
@@ -114,7 +114,7 @@ if(level.is_open()){
 
                             if(BehaviourId == "Item"){
                                 loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
-                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory) );
+                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem) );
                             }
 
                             if(BehaviourId == "Stairs"){

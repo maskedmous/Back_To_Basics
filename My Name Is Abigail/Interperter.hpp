@@ -3,6 +3,7 @@
 
 #include "World.hpp"
 #include "Inventory.hpp"
+#include "TipSystem.hpp"
 #include <string>
 
 
@@ -11,7 +12,7 @@ class Interperter
     public:
         Interperter(World *);
 
-        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL);
+        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL, TipSystem * = NULL);
 
         virtual ~Interperter();
     protected:
