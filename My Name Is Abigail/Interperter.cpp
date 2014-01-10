@@ -71,6 +71,7 @@ if(level.is_open()){
             if(i == 4){
                 behaviourName = line.substr( current, next - current);
                 if(behaviourName != "0"){
+
                     setBehaviour = true;
                     std::cout << behaviourName << std::endl;
                 }
@@ -90,13 +91,18 @@ if(level.is_open()){
                 float sumz = atof( line.substr( current, next - current ).c_str() );
                 countZ = sumz;
 
-                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY + 4, countZ ));
-                loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
-                loadedObj->setMesh( loadedMesh );
-                loadedTextue = Texture::load( ("models/" + textureName).c_str() );
-                loadedObj->setColorMap( loadedTextue );
+                GameObject * loadedObj = new GameObject(objectName, glm::vec3( countX, countY, countZ ));
+                if(modelName != "0"){
+                    loadedMesh = Mesh::load( ("models/" + modelName + ".obj").c_str() );
+                    loadedObj->setMesh( loadedMesh );
+                }
+                if(textureName != "0"){
+                    loadedTextue = Texture::load( ("models/" + textureName).c_str() );
+                    loadedObj->setColorMap( loadedTextue );
+                }
 
                 if(setBehaviour == true){
+                    loadedObj->setCollider( new Collider(0.5f, 2.0f, loadedObj) );
 
                     delimiter2 = " !";
                     unsigned int j = 0;
@@ -113,19 +119,16 @@ if(level.is_open()){
                             //std::cout << BehaviourId << "loooooooooooooooooooooooooo" <<std::endl;
 
                             if(BehaviourId == "Item"){
-                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                                 loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem) );
                             }
 
                             if(BehaviourId == "Stairs"){
-                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                                 loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory) );
 
                             }
 
                             if(BehaviourId == "Swaping"){
-                            //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
-                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
+                            //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
                             std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
                             }
 
@@ -134,7 +137,6 @@ if(level.is_open()){
 
                         if(j == 2){
                             if(BehaviourId == "ReqItem"){
-                                loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
                                 loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
 

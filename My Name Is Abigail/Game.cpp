@@ -54,12 +54,12 @@ void Game::build()
 		world->add( camera );
 
     mainMenu = new MainMenu(hud, window, this);
-
+/*
     bufferMenuMusic.loadFromFile("sound/menu.wav");
     menuMusic.setBuffer(bufferMenuMusic);
     menuMusic.setLoop(true);
     menuMusic.play();
-
+*/
     setState("Main Menu");
 }
 
@@ -76,14 +76,14 @@ void Game::buildLevel()
 		interperter->readFile( "LevelOne", world, inventory, tipSystem);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
-        blockWall->setCollider( new Collider (3.0f, 2.0f, blockWall));
+        blockWall->setCollider( new Collider (1.0f, 2.0f, blockWall));
         world->add(blockWall);
-
-    GameObject * blockWall2 = new GameObject("Wall", glm::vec3(19.5f, 0.0f, -1.0f));
+/*
+    GameObject * blockWall2 = new GameObject("Wall", glm::vec3(20.0f, -0.45f, -1.0f));
         blockWall2->setCollider( new Collider (3.0f, 2.0f, blockWall));
         world->add(blockWall2);
-
-    GameObject * character = new GameObject("Character", glm::vec3(15.0f, -0.45f,0.2f));
+*/
+    GameObject * character = new GameObject("Character", glm::vec3(16.0f, -4.45f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory, hud) );
@@ -91,7 +91,7 @@ void Game::buildLevel()
         hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
-
+/*
     menuMusic.stop();
 
     bufferMainMusic.loadFromFile("sound/musicAct1.wav");
@@ -99,7 +99,10 @@ void Game::buildLevel()
     mainMusic.setLoop(true);
     mainMusic.play();
 
+*/
     setState("Play");
+
+
 }
 
 void Game::run()

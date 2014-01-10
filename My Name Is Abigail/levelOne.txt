@@ -1,10 +1,6 @@
 wallName,Wall3x3,14BoilerRoom.png,0,8,-3,0
 wallMAINIMPORTANTROOMName,Wall5x3,15MainCellar.png,0,12,-3,0	
 wallName,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGHT.png,16.5,-3,0
-vase,lantern,vase.png,Item,15.7,-2.3,0.15
-vase,lantern,vase.png,Item,14.7,-2.3,0.15
-vase,lantern,vase.png,Item,13.7,-2.3,0.15
-vase,lantern,vase.png,Item,12.7,-2.3,0.15
 stairs,lantern,bricks.jpg,Stairs,12,-3,0.15
 stairs,lantern,bricks.jpg,Stairs,12,1,0.15
 stairs,lantern,bricks.jpg,Stairs,12,5,0.15
@@ -25,4 +21,5 @@ wallMAINIMPORTANTROOMName,Wall4x3,04UpperHallway.png,0,12,5,0
 wallName,Wall7x3,05MasterBedroom.png,0,17.5,5,0
 wallName,Wall10x3,bricks.jpg,0,12,9,0
 wallName,Wall10x3,bricks.jpg,0,16,9,0
-
+BlockWall,0,0,1,18.5,-4.45,-1
+BlockWall2,0,0,1,14.5,-4.45,-1

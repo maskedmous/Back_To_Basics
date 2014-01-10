@@ -51,6 +51,8 @@ class GameObject
 
 		void add( GameObject * child );
 		void remove (GameObject * child );
+		void remove (std::string& child );
+
 
 	protected:
 

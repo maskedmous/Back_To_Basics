@@ -32,11 +32,14 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
         std::cout << "using the item the door opens" << std::endl;
 
         if(parent->getName() == "lantern"){
-
+            std::string bbb = "BlockWall2";
+            world->remove(bbb);
     	}
 
     	world->remove(parent);
     	inventory->removeFromInventory(requiredItem);
+
+
 
     } else std::cout << "You Might need an item to open this door, you need " << requiredItem <<  std::endl;
 }

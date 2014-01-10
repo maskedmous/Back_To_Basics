@@ -23,6 +23,7 @@ class PlayerController : public Behaviour
         GameObject * targetItem;
     protected:
         std::string mouseState;
+        std::string interactButton;
         std::vector< GameObject * > items;
 
     public:
@@ -30,6 +31,7 @@ class PlayerController : public Behaviour
         virtual ~PlayerController();
         virtual void update(float step);
         void OnMouseDown();
+        void InteractWithObject();
         virtual void onCollision(GameObject * otherObject);
         void moveCharacter(float step);
         void checkPosition();

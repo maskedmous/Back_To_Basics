@@ -5,7 +5,7 @@
 
 
 PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld , Inventory* aInventory, Hud * aHud)
-:   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , hud(aHud),mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby")
+:   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , hud(aHud),mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby") , interactButton("Standby")
 {}
 
 PlayerController::~PlayerController()
@@ -36,13 +36,41 @@ void PlayerController::update(float step)
         }
     }
 
-    if(sf::Keyboard::isKeyPressed( sf::Keyboard::Right))
+
+
+
+
+
+
+    if(interactButton == "Standby")
+    {
+        if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
+        {
+            //call on mouse down
+            InteractWithObject();
+            interactButton = "Down";
+        }
+    }
+    //if it is down
+    if(interactButton == "Down")
+    {
+        //check if it is up
+        if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W))
+        {
+            //mouse is up so put it back to standby
+            interactButton = "Standby";
+        }
+    }
+
+    if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
     {
         parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
+        //std::cout << "right is loved" << std::endl;
     }
-    if(sf::Keyboard::isKeyPressed( sf::Keyboard::Left))
+    if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
     {
         parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
+        //std::cout << "left is loved" << std::endl;
     }
 
     if(targetItem != NULL)
@@ -50,6 +78,13 @@ void PlayerController::update(float step)
         checkPosition();
         moveCharacter(step);
     }
+}
+
+void PlayerController::InteractWithObject(){
+
+    world->checkCollision(parent);
+
+
 }
 
 void PlayerController::OnMouseDown()
@@ -85,7 +120,11 @@ void PlayerController::OnMouseDown()
 void PlayerController::onCollision(GameObject * otherObject)
 {
     std::cout << "collided with: " << otherObject->getName() << std::endl;
-    //parent->setPosition (oldPos);
+
+    if(otherObject->getLocation().z == -1){
+        parent->setPosition (oldPos);
+
+    }
     //could make if statements
     //if collided with this specific game object then do this { code }
 }
