@@ -43,7 +43,7 @@ void Inventory::removeFromInventory(GameObject* aItem)
 
 void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
 {
-    //std::cout << itemA << " " << itemB << std::endl;
+    std::cout << itemA->getName() << " " << itemB->getName() << std::endl;
 
     std::string line = "";
     std::string seperator = ";";
@@ -68,9 +68,8 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
 
             do
             {
-                std::cout << next << std::endl;
                 current = next + 1;
-                next = line.find_first_of( seperator, current );
+                if(itemA != NULL && itemB != NULL) next = line.find_first_of( seperator, current );
                 i++;
 
                 if(i == 1)
@@ -112,6 +111,29 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                         addToInventory(newItem);
                         std::cout << "quitiing" << std::endl;
                         next = std::string::npos;
+                        itemA = NULL;
+                        itemB = NULL;
+                        break;
+                    }
+                    else if(tempItemA == itemB->getName() && tempItemB == itemA->getName())
+                    {
+                        //std::cout << "found a match! merging items" << std::endl;
+                        //std::cout << itemA->getName() << " " << itemB->getName() << " becomes " << itemC << std::endl;
+                        //check if everything is valid
+
+                        //remove items A and B cause they're destroyed in merging
+                        removeFromInventory(itemA);
+                        removeFromInventory(itemB);
+                        //create the new item
+                        GameObject * newItem = new GameObject(itemC, glm::vec3(0.0f,0.0f,0.0f));
+                        newItem->setColorMap(Texture::load(itemCTexture));
+                        //new item is made add it to the inventory!
+                        addToInventory(newItem);
+                        std::cout << "quitiing" << std::endl;
+                        next = std::string::npos;
+                        itemA = NULL;
+                        itemB = NULL;
+                        break;
                     }
                     else
                     {
