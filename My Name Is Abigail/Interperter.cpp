@@ -7,6 +7,7 @@
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
 #include "Behaviours/StairsBehaviour.h"
+#include "Behaviours/InvadableBehaviour.hpp"
 #include "Collider.hpp"
 
 #include <cstdio>
@@ -122,11 +123,6 @@ if(level.is_open()){
                                 loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem) );
                             }
 
-                            if(BehaviourId == "Stairs"){
-                                loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory) );
-
-                            }
-
                             if(BehaviourId == "Swaping"){
                             //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
                             std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
@@ -142,6 +138,20 @@ if(level.is_open()){
 
                             }
 
+                            if(BehaviourId == "Npc"){
+                                BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                loadedObj->setBehaviour( new InvadableBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
+                            }
+                            if(BehaviourId == "Stairs"){
+                                BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                //if(BehaviourArgument1 == "Up"){
+                                    loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
+                                //}
+                                //if(BehaviourArgument1 == "Down"){
+                                    loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
+                                //}
+
+                            }
 
                             if(BehaviourId == "Swaping"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);

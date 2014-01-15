@@ -8,7 +8,7 @@
 class StairsBehaviour : public Behaviour
 {
     public:
-        StairsBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory);
+        StairsBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, std::string aString);
         virtual ~StairsBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
@@ -17,6 +17,7 @@ class StairsBehaviour : public Behaviour
         World * world;
         GameObject * parent;
         Inventory * inventory;
+        std::string stairsExit;
 };
 
 

@@ -30,17 +30,17 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
     std::string myString;
     myString = "Key";
     if(inventory->CheckContainItem(requiredItem)){
-        std::cout << parent->getName() << "WTF IS GOING ON!" << std::endl;
+        //std::cout << parent->getName() << "WTF IS GOING ON!" << std::endl;
         tipSystem->getTip(parent->getName());
 
-        std::cout << "using the item the door opens" << std::endl;
+        //std::cout << "using the item the door opens" << std::endl;
 
         if(parent->getName() == "lanternoff"){
             std::string bbb = "BlockWall2";
             world->remove(bbb);
 
 
-            std::string ddd = "wallName5";
+            std::string ddd = "StorageRoomDARK";
             GameObject * randomGameObject = world->findGameObject(ddd);
 
             randomGameObject->getBehaviour()->swapTexture();
@@ -48,8 +48,26 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
 
 
     	}
+    	if(parent->getName() == "chest"){
+    	    std::string keyname = "key3";
+    	    GameObject * key3 = world->findGameObject(keyname);
+            inventory->addToInventory(key3);
+    	}
 
-    	//world->remove(parent);
+        if(parent->getName() == "fire"){
+            std::string keyname = "key2";
+    	    GameObject * key2 = world->findGameObject(keyname);
+            key2->setPosition(parent->getLocation());
+            //inventory->addToInventory(key2);
+
+        }
+        if(parent->getName() == "MasterBedRoomDoor"){
+            std::string keyname = "BlockWallMasterBedRoom";
+    	    GameObject * key2 = world->findGameObject(keyname);
+            key2->setPosition(parent->getLocation());
+        }
+
+    	world->remove(parent);
     	inventory->removeFromInventory(requiredItem);
 
 

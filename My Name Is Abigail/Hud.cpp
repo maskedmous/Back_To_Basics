@@ -311,7 +311,7 @@ void Hud::setTip(std::string aTip)
 {
     tipText.setString(aTip);
     tipBool = true;
-    mmtipTimer = 5;
+    tipTimer = 5;
 }
 
 void Hud::countdown(float step)

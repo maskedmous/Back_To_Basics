@@ -3,12 +3,13 @@
 #include <iostream>
 
 
-StairsBehaviour::StairsBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory)
+StairsBehaviour::StairsBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory, std::string aString)
 :	Behaviour( aParent )
 {
     world = aWorld;
     parent = aParent;
     inventory = aInventory;
+    stairsExit = aString;
 }
 
 StairsBehaviour::~StairsBehaviour()
@@ -23,12 +24,18 @@ void StairsBehaviour::update(float step ){
 
 void StairsBehaviour::onCollision( GameObject * otherGameObject )
 {
-	//std::cout << "You walk up the Stairs!" <<  std::endl;
-    otherGameObject->translate( glm::vec3(0.0f , 4.0f, 0.0f));
-    //otherGameObject->getLocation().x;
-	//otherGameObject->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));
-	//world->remove(parent);
-    //inventory->addToInventory(parent, world);
+    GameObject * otherStairObject = world->findGameObject(stairsExit);
+    otherGameObject->setPosition ( glm::vec3(otherStairObject->getLocation().x, otherStairObject->getLocation().y -1.45, otherGameObject->getLocation().z) );
+    /*
+    if(upOrDown == true){
+        otherGameObject->translate( glm::vec3(-3.0f , 4.0f, 0.0f));
+
+    }
+    if(upOrDown == false){
+        otherGameObject->translate( glm::vec3(3.0f , -4.0f, 0.0f));
+
+    }
+    */
 }
 
 

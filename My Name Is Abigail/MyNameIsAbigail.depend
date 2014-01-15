@@ -713,12 +713,12 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
+1389366441 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
 	<cassert>
 	<iostream>
 	"Behaviour.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
+1389366494 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
 	<vector>
 
 1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
@@ -729,7 +729,7 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
 	"../Behaviour.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
+1389365669 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
 	<vector>
 	<string>
 	"glm.hpp"
@@ -759,14 +759,14 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
 	"../Behaviour.hpp"
 
-1389017075 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
+1389365114 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
 	"TextureSwappingBehaviour.hpp"
 	<sfml/window.hpp>
 	"../GameObject.hpp"
 	"../Texture.hpp"
 	<string>
 
-1389013153 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
+1389365216 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
 	<string>
 	"../Texture.hpp"
 	"../Behaviour.hpp"
@@ -803,7 +803,7 @@
 	<SFML/Window.hpp>
 	"glm.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
+1389366626 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
 	<iostream>
 	"Collider.hpp"
 
@@ -821,7 +821,7 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1389193680 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1389788051 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -841,14 +841,16 @@
 	"Behaviours/PlayerController.hpp"
 	"Behaviours/LookAtBehaviour.hpp"
 	"Behaviours/WASDBehaviour.hpp"
+	"Behaviours/InvadableBehaviour.hpp"
 	"Behaviours/DoorBehaviour.hpp"
 	"Behaviours/ItemBehaviour.hpp"
 	"Behaviours/StairsBehaviour.h"
 	"Behaviours/TextureSwappingBehaviour.hpp"
 	"Behaviours/RotatingBehaviour.hpp"
 	"MainMenu.hpp"
+	"TipSystem.hpp"
 
-1389119554 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+1389355509 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
 	"Game.hpp"
 	"Button.hpp"
@@ -861,18 +863,19 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1388965681 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
+1389355509 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<sfml/audio.hpp>
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
+1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
-1389049090 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
 	"Inventory.hpp"
+	"TipSystem.hpp"
 	<string>
 
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
@@ -884,7 +887,7 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1389188125 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1389362972 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -895,7 +898,7 @@
 	"../World.hpp"
 	"../Hud.hpp"
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
+1389625853 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
 	<cassert>
 	<iostream>
 	"Renderer.hpp"
@@ -904,7 +907,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1389192944 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1389621843 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -916,7 +919,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1389189987 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1389787786 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -924,6 +927,7 @@
 	"Behaviours/ItemBehaviour.hpp"
 	"Behaviours/DoorBehaviour.hpp"
 	"Behaviours/StairsBehaviour.h"
+	"Behaviours/InvadableBehaviour.hpp"
 	"Collider.hpp"
 	<cstdio>
 	<iostream>
@@ -966,7 +970,7 @@
 	"Time.hpp"
 	<iostream>
 
-1389190068 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1389793565 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -977,18 +981,18 @@
 	<iostream>
 	"Game.hpp"
 
-1389188125 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1389366602 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"PlayerController.hpp"
 	"../GameObject.hpp"
 
-1389119554 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
+1389263145 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
 	"World.hpp"
 	<vector>
 
-1389188126 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1389793996 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 	<string>
 	<cstdio>
@@ -1005,25 +1009,27 @@
 	"Inventory.hpp"
 	<string>
 
-1389004513 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1389792058 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+1389367753 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
+	"../TipSystem.hpp"
 	<string>
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+1389369518 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
 	"ItemBehaviour.hpp"
 	<iostream>
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
+	"../TipSystem.hpp"
 
 1387286418 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
 	"ItemBehaviour.hpp"
@@ -1408,12 +1414,32 @@
 	"../World.hpp"
 	"../Inventory.hpp"
 
-1388951197 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
+1389787317 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
 	"StairsBehaviour.h"
 	<iostream>
 
-1388943499 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
+1389786627 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
+
+1389355509 c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.hpp
+	"Hud.hpp"
+
+1389369468 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.cpp
+	<string>
+	<cstdio>
+	<iostream>
+	<fstream>
+	"TipSystem.hpp"
+
+1389781182 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+	"InvadableBehaviour.hpp"
+	<iostream>
+
+1389741602 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
 

@@ -157,7 +157,7 @@ void GameObject::remove( std::string& child)
 {
     std::cout << "tring to remove " << child << std::endl;
     for( unsigned int i = 0; i < children.size(); ++i){
-        std::cout << children[i]->getName() << std::endl;
+        //std::cout << children[i]->getName() << std::endl;
         if ( children[i]->getName() == child){
             //std::cout << children[i]->getName() << std::endl;
             children.erase(children.begin()+i);

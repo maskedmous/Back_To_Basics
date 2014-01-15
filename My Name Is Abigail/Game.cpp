@@ -19,6 +19,7 @@
 #include "Behaviours/PlayerController.hpp"
 #include "Behaviours/LookAtBehaviour.hpp"
 #include "Behaviours/WASDBehaviour.hpp"
+#include "Behaviours/InvadableBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/StairsBehaviour.h"
@@ -87,11 +88,22 @@ void Game::buildLevel()
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory, hud) );
+
         character->setCollider( new Collider( 1.0f, 1.75f, character));
         hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
+
+
 /*
+    GameObject * earnest = new GameObject("Earnest", glm::vec3(12.0f, 0.0f, 0.15f));
+        earnest->setMesh(Mesh::load("models/AbigailCharacter.obj"));
+        earnest->setColorMap(Texture::load("models/h.png"));
+        earnest->setBehaviour( new InvadableBehaviour( earnest, world, inventory, tipSystem, "StorageRoomDARK") );
+        earnest->setCollider( new Collider( 1.0f, 1.75f, earnest));
+    world->add(earnest);
+*/
+    /*
     menuMusic.stop();
 
     bufferMainMusic.loadFromFile("sound/musicAct1.wav");

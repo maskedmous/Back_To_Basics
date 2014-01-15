@@ -32,13 +32,16 @@ void World::checkCollision( GameObject* firstCollider )
         if(children[i]->getName() != "Character")
         {
             //if it has a collider proceed
+
             if(children[i]->hasCollider() && children[i]->getLocation().z == 0.15f)
             {
-                if(glm::abs(children[i]->getLocation().y - playerPosition.y - 1.5) < 1.5f ){
 
+                if(glm::abs(children[i]->getLocation().y - playerPosition.y - 1.5) < 1.5f ){
+                        //std::cout << children[i]->getName() << std::endl;
                     if(glm::abs(children[i]->getLocation().x - playerPosition.x) < 0.5f )
                     {
                         //return children[i];
+                        std::cout << children[i]->getName() << std::endl;
                         children[i]->onCollision(firstCollider);
                     }
                 }

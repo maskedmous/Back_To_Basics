@@ -68,6 +68,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
 
             do
             {
+                std::cout << next << std::endl;
                 current = next + 1;
                 next = line.find_first_of( seperator, current );
                 i++;
@@ -93,7 +94,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                     //std::cout << "texture: " << itemCTexture << std::endl;
                 }
 
-                if(tempItemA != "" && tempItemB != "" && itemC != "" && itemCTexture != "")
+                if(tempItemA != "" && tempItemB != "" && itemC != "" && itemCTexture != "" && i == 4)
                 {
                     if(tempItemA == itemA->getName() && tempItemB == itemB->getName())
                     {
@@ -109,6 +110,8 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                         newItem->setColorMap(Texture::load(itemCTexture));
                         //new item is made add it to the inventory!
                         addToInventory(newItem);
+                        std::cout << "quitiing" << std::endl;
+                        next = std::string::npos;
                     }
                     else
                     {
