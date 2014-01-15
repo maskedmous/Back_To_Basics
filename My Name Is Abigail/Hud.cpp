@@ -89,14 +89,16 @@ void Hud::draw()
 
 		//draw inventory
 		int position = 0;                   //int cause round numbers
-		sf::Texture thisItemTex;
-		sf::Sprite thisItemSprite;
-        thisItemSprite.setScale( 1, -1);    //flip the sprite its flipped in the world
+
 		for(unsigned int i=0; i<items.size(); ++i)
         {
             //preventing more than 5 items being drawn (optimization / error prevention)
             if(i <= 4)
             {
+                sf::Texture thisItemTex;
+                sf::Sprite thisItemSprite;
+                thisItemSprite.setScale( 1, -1);    //flip the sprite its flipped in the world
+
                 GameObject * thisItem = items[i];
                 thisItemTex.loadFromImage( Texture::getImage( (thisItem->getTexture()->getName()).c_str() ) );
                 thisItemSprite.setTexture( thisItemTex );

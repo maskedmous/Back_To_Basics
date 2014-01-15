@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include "Texture.hpp"
+#include <string>
 
 Inventory::Inventory()
 {
@@ -19,7 +20,17 @@ Inventory::~Inventory()
 void Inventory::addToInventory(GameObject * item)
 {
     std::cout << "Obtained: " << item->getName() << std::endl;
-    items.push_back(item);
+
+    //create new 150x150 texture for the object
+    std::string textureName = item->getTexture()->getName();
+    textureName = textureName.substr(0 , textureName.size() - 4);
+    textureName = (textureName + "150x150.png").c_str();
+    std::cout << textureName << std::endl;
+
+    GameObject * newItem = new GameObject (item->getName(), glm::vec3(999,999,999));
+        newItem->setColorMap(Texture::load(textureName));
+
+    items.push_back(newItem);
 }
 void Inventory::removeFromInventory(std::string& aString)
 {
