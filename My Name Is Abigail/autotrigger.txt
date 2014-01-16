@@ -1,0 +1,2 @@
+fireplace;Looks like something shiney lays in the fire.
+masterdoor;This door is locked with 4 locks, but one seems rusty.
