@@ -163,7 +163,7 @@ void Hud::draw()
                 itemName = inventory->getItemName(4);
             }
             itemNameText.setCharacterSize(30);
-            itemNameText.setColor(sf::Color::Black);
+            itemNameText.setColor(sf::Color::White);
             itemNameText.setString(itemName);
             itemNameText.setPosition((mousePosition.x+10), mousePosition.y);
             window->draw(itemNameText);

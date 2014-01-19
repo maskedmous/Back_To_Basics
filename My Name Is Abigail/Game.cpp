@@ -84,7 +84,7 @@ void Game::buildLevel()
         blockWall2->setCollider( new Collider (3.0f, 2.0f, blockWall));
         world->add(blockWall2);
 */
-    GameObject * character = new GameObject("Character", glm::vec3(16.0f, -4.45f,0.2f));
+    GameObject * character = new GameObject("Character", glm::vec3(17.0f, -4.45f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory, hud) );

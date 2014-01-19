@@ -36,7 +36,7 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
         //std::cout << "using the item the door opens" << std::endl;
 
         if(parent->getName() == "lanternoff"){
-            std::string bbb = "BlockWall2";
+            std::string bbb = "BlockWallMainCellar";
             world->remove(bbb);
 
 
@@ -63,6 +63,11 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
         }
         if(parent->getName() == "MasterBedRoomDoor"){
             std::string keyname = "BlockWallMasterBedRoom";
+    	    GameObject * key2 = world->findGameObject(keyname);
+            key2->setPosition(parent->getLocation());
+        }
+        if(parent->getName() == "MasterBedRoomDoor2"){
+            std::string keyname = "BlockWallMasterBedRoom2";
     	    GameObject * key2 = world->findGameObject(keyname);
             key2->setPosition(parent->getLocation());
         }

@@ -821,7 +821,7 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1389788051 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1389877188 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -907,7 +907,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1389621843 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1389872592 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -919,7 +919,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1389787786 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1389874875 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -992,13 +992,14 @@
 	"World.hpp"
 	<vector>
 
-1389793996 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+1389871305 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
 	<string>
 	<cstdio>
 	<iostream>
 	<fstream>
 	"Texture.hpp"
+	<string>
 
 1388759646 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
@@ -1009,7 +1010,7 @@
 	"Inventory.hpp"
 	<string>
 
-1389792058 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1389877407 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>

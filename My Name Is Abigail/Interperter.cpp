@@ -44,6 +44,11 @@ void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInv
 if(level.is_open()){
     unsigned int i = 0;
     while(level.good()){
+
+        if (level.peek() == '\n') {
+        // in.get(buf, SZ) won't read newlines
+        level.get();
+        }
         getline(level,line);
        // std::cout << line << level <<std::endl;
 
