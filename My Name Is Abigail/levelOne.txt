@@ -18,6 +18,8 @@ lanternoff,lantern,lanternoff.png,ReqItem!matches,17.6,-2.7,0.15
 lantern,lantern,lantern.png,1,17.6,-2.7,0.14.9999
 BlockWallBasementRight,0,0,1,19.5,-4.45,-1
 
+triggerOne,lantern,07Diningroom.png,Trigger!creakingdoor,16.6,-2.7,0.15
+
 Kitchen,Wall4x3,06Kitchen.png,0,-8.5,1,0
 BlockWallGroundFloorLeft,0,0,1,-10.6,-0.45,-1
 

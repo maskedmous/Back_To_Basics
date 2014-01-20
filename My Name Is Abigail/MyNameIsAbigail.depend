@@ -872,10 +872,11 @@
 1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
-1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+1390167158 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
 	"Inventory.hpp"
 	"TipSystem.hpp"
+	"AudioPlayer.hpp"
 	<string>
 
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
@@ -919,7 +920,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1389874875 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1390169908 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -927,6 +928,7 @@
 	"Behaviours/ItemBehaviour.hpp"
 	"Behaviours/DoorBehaviour.hpp"
 	"Behaviours/StairsBehaviour.h"
+	"Behaviours/TriggerBehaviour.hpp"
 	"Behaviours/InvadableBehaviour.hpp"
 	"Collider.hpp"
 	<cstdio>
@@ -970,7 +972,7 @@
 	"Time.hpp"
 	<iostream>
 
-1389793565 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1390169555 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -1010,7 +1012,7 @@
 	"Inventory.hpp"
 	<string>
 
-1389877407 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1390165498 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
@@ -1443,4 +1445,23 @@
 	"../World.hpp"
 	"../Inventory.hpp"
 	"../TipSystem.hpp"
+
+1389967225 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
+	"AudioPlayer.hpp"
+
+1389967225 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
+	<iostream>
+	<SFML/audio.hpp>
+	<string>
+
+1390176658 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
+	"TriggerBehaviour.hpp"
+	<iostream>
+
+1390210390 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
 

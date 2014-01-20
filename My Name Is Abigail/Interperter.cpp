@@ -7,6 +7,7 @@
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
 #include "Behaviours/StairsBehaviour.h"
+#include "Behaviours/TriggerBehaviour.hpp"
 #include "Behaviours/InvadableBehaviour.hpp"
 #include "Collider.hpp"
 
@@ -27,7 +28,7 @@ Interperter::~Interperter()
     //dtor
 }
 
-void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory, TipSystem * aTipsystem){
+void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer){
 
     //Mesh * suzanna = Mesh::load( "models/suzanna.obj");
     //Mesh * wallPlaceHolder = Mesh::load( "models/PlaceHolderWall.obj");
@@ -142,6 +143,10 @@ if(level.is_open()){
                                 loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
 
                             }
+                            if(BehaviourId == "Trigger"){
+                                BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                loadedObj->setBehaviour( new TriggerBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, BehaviourArgument1) );
+                            }
 
                             if(BehaviourId == "Npc"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
@@ -149,13 +154,7 @@ if(level.is_open()){
                             }
                             if(BehaviourId == "Stairs"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                //if(BehaviourArgument1 == "Up"){
-                                    loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
-                                //}
-                                //if(BehaviourArgument1 == "Down"){
-                                    loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
-                                //}
-
+                                loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
                             }
 
                             if(BehaviourId == "Swaping"){
@@ -169,6 +168,7 @@ if(level.is_open()){
                                 std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
                                 loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, BehaviourArgument1, BehaviourArgument2) );
                             }
+
 
                         }
 

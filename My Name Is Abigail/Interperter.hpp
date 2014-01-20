@@ -4,6 +4,7 @@
 #include "World.hpp"
 #include "Inventory.hpp"
 #include "TipSystem.hpp"
+#include "AudioPlayer.hpp"
 #include <string>
 
 
@@ -12,7 +13,7 @@ class Interperter
     public:
         Interperter(World *);
 
-        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL, TipSystem * = NULL);
+        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL, TipSystem * = NULL, AudioPlayer * = NULL);
 
         virtual ~Interperter();
     protected:

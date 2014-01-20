@@ -39,13 +39,10 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
             std::string bbb = "BlockWallMainCellar";
             world->remove(bbb);
 
-
             std::string ddd = "StorageRoomDARK";
             GameObject * randomGameObject = world->findGameObject(ddd);
 
             randomGameObject->getBehaviour()->swapTexture();
-
-
 
     	}
     	if(parent->getName() == "chest"){
@@ -59,7 +56,6 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
     	    GameObject * key2 = world->findGameObject(keyname);
             key2->setPosition(parent->getLocation());
             //inventory->addToInventory(key2);
-
         }
         if(parent->getName() == "MasterBedRoomDoor"){
             std::string keyname = "BlockWallMasterBedRoom";
