@@ -69,6 +69,8 @@
 		<Unit filename="Behaviours/StairsBehaviour.h" />
 		<Unit filename="Behaviours/TextureSwappingBehaviour.cpp" />
 		<Unit filename="Behaviours/TextureSwappingBehaviour.hpp" />
+		<Unit filename="Behaviours/TriggerBehaviour.cpp" />
+		<Unit filename="Behaviours/TriggerBehaviour.hpp" />
 		<Unit filename="Behaviours/WASDBehaviour.cpp" />
 		<Unit filename="Behaviours/WASDBehaviour.hpp" />
 		<Unit filename="Button.cpp" />
