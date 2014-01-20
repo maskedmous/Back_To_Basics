@@ -126,7 +126,7 @@ if(level.is_open()){
                             //std::cout << BehaviourId << "loooooooooooooooooooooooooo" <<std::endl;
 
                             if(BehaviourId == "Item"){
-                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem) );
+                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );
                             }
 
                             if(BehaviourId == "Swaping"){
@@ -154,7 +154,7 @@ if(level.is_open()){
                             }
                             if(BehaviourId == "Stairs"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, BehaviourArgument1) );
+                                loadedObj->setBehaviour( new StairsBehaviour(loadedObj, aWorld, aInventory, aAudioPlayer , BehaviourArgument1) );
                             }
 
                             if(BehaviourId == "Swaping"){

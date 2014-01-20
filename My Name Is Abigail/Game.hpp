@@ -5,7 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <sfml/audio.hpp>
-
+#include "AudioPlayer.hpp"
 
 class Hud;
 class Renderer;
@@ -27,6 +27,7 @@ class Game
 		World * world;
         Interperter * interperter;
 		Camera * camera;
+		AudioPlayer * audioPlayer;
 		Light * light;
         MainMenu * mainMenu;
         TipSystem * tipSystem;

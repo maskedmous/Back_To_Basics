@@ -24,7 +24,7 @@ TriggerBehaviour::~TriggerBehaviour()
 void TriggerBehaviour::update(float step ){
 	//std::cout << "TRIGGERD GAWD DAMN IT" << std::endl;
 	if(active){
-	    std::cout << countdown << std::endl;
+	    //std::cout << countdown << std::endl;
         if(countdown > 0){
             countdown -= 1 * step;
         }
@@ -44,7 +44,8 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
 	audioPlayer->Play(soundToPlay,false);
 	parent->translate(glm::vec3(0,-100,0));
 	active = true;
-	countdown = 50;
+	//100 is a bit less then a second 3500 is roughly 30 sec
+	countdown = 3500;
 
 	//world->remove(parent);
     //inventory->addToInventory(parent);

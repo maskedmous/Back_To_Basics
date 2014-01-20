@@ -1,11 +1,13 @@
 #include "AudioPlayer.hpp"
 
+/*
 sf::Music AudioPlayer::music;
 sf::SoundBuffer AudioPlayer::bufferSound;
 sf::Sound AudioPlayer::sound;
+*/
 
-bool AudioPlayer::muted;
-float AudioPlayer::volume;
+//bool AudioPlayer::muted;
+//float AudioPlayer::volume;
 
 
 AudioPlayer::AudioPlayer()
@@ -32,6 +34,9 @@ void AudioPlayer::Play(std::string soundName, bool loop)
     }
     else
     {
+        //std::cout << sound.getStatus() << std::endl;
+        //sf::SoundBuffer bufferSound;
+        sound.resetBuffer();
         bufferSound.loadFromFile(("sound/" + soundName + ".wav").c_str());
         sound.setBuffer(bufferSound);
         sound.play();

@@ -11,22 +11,22 @@ class AudioPlayer
         AudioPlayer();
         virtual ~AudioPlayer();
 
-        static void Play(std::string soundName, bool loop );
-        static void Stop();
-        static void Pause();
-        static void UnPause();
-        static void SetVolume(float value);
-        static void Mute();
+        void Play(std::string soundName, bool loop );
+        void Stop();
+        void Pause();
+        void UnPause();
+        void SetVolume(float value);
+        void Mute();
 
     protected:
     private:
-       static sf::Music music;
+       sf::Music music;
 
-       static sf::SoundBuffer bufferSound;
-       static sf::Sound sound;
+       sf::SoundBuffer bufferSound;
+       sf::Sound sound;
 
-       static bool muted;
-       static float volume;
+       bool muted;
+       float volume;
 };
 
 #endif // AUDIOPLAYER_HPP

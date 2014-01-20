@@ -50,9 +50,10 @@ void Game::build()
 	renderer->use(  new ShaderProgram( "shaders/default.vs", "shaders/default.fs" ) );
 
 	camera = new Camera( "Camera", glm::vec3( 0, 1, 5) );
-
 	world = new World( "World" );
 		world->add( camera );
+
+    audioPlayer = new AudioPlayer();
 
     mainMenu = new MainMenu(hud, window, this);
 /*
@@ -73,8 +74,10 @@ void Game::buildLevel()
 
     tipSystem = new TipSystem(hud);
 
+
+
     interperter = new Interperter (world);
-		interperter->readFile( "LevelOne", world, inventory, tipSystem);
+		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (1.0f, 2.0f, blockWall));
