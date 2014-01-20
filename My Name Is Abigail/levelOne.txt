@@ -31,8 +31,12 @@ Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0.21
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0
 
 Livingroom,Wall8x3,08Livingroom.png,0,4.5,1,0
-fire,lantern,lantern.png,ReqItem!BucketOfWater,4.5,0,0.15
+pokerholder,pokerholder,pokerholder.png,0,3.55,0.5,0.14999999
 poker,poker,poker.png,Item,3.55,0.3,0.15
+statue,statue,statue.png,0,
+LivingroomScenery,wall8x3,livingroomFurniture.png,0,4.5,1,0.14999899
+fire,lantern,lantern.png,ReqItem!BucketOfWater,4.5,0,0.15
+
 stone,stone,stone.png,Item,999,1,0.15
 
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0.21
@@ -41,7 +45,7 @@ livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0
 EntranceHall,Wall5x3,09EntranceHall.png,0,12,1,0
 stairsEntranceHallUp,lantern,arrowStairwayUp.png,Stairs!UpperHallwayDown,14,1,0.15
 stairsEntranceHallDown,lantern,arrowStairwayDown.png,Stairs!stairsBasementUp,10,1,0.15
-earnest,lantern,Abigailside.png,Npc!StorageRoomDARK,12.0,12.1,0.15
+earnest,earnest,earnest.png,Npc!StorageRoomDARK,11.7,-0.45,0.15
 
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0.21
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0
@@ -81,6 +85,7 @@ BlockWallMasterBedRoom2,lantern,bricks.jpg,1,16.1,3.55,-1
 BlockWallFirstFloorRight,0,0,1,22,3.55,-1
 
 Atticleft,Wall10x3,01Atticleft.png,0,7,9,0
+grace,grace,grace.png,0,7.8,9,0.15
 AtticDown,lantern,arrowStairwayDown.png,Stairs!UpperHallwayUp,10,9,0.15
 chest,chest,chest.png,ReqItem!Chestkey,7,8,0.15
 Chestkey,key3,chestkey.png,Item,6,8,0.15
