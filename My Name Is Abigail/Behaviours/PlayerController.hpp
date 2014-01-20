@@ -21,6 +21,7 @@ class PlayerController : public Behaviour
         glm::vec4 mouseInWorld;
         glm::vec3 oldPos;
         GameObject * targetItem;
+        std::vector< Texture * > animation;
     protected:
         std::string mouseState;
         std::string interactButton;

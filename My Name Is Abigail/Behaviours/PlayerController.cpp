@@ -1,12 +1,17 @@
 #include <sfml/window.hpp>
 #include <iostream>
+#include "../Texture.hpp"
 #include "PlayerController.hpp"
 #include "../GameObject.hpp"
 
 
 PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld , Inventory* aInventory, Hud * aHud)
 :   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , hud(aHud),mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby") , interactButton("Standby")
-{}
+{
+    animation.push_back(Texture::load("models/AbigailsideLeft.png"));
+    animation.push_back(Texture::load("models/AbigailsideRight.png"));
+    parent->setColorMap(animation[0]);
+}
 
 PlayerController::~PlayerController()
 {}
@@ -66,11 +71,19 @@ void PlayerController::update(float step)
     {
         parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
         //std::cout << "right is loved" << std::endl;
+            if(parent->getTexture()->getName() != "models/AbigailsideRight.png")
+            {
+                parent->setColorMap(animation[1]);
+            }
     }
     if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
     {
         parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
         //std::cout << "left is loved" << std::endl;
+        if(parent->getTexture()->getName() != "models/AbigailsideLeft.png")
+        {
+            parent->setColorMap(animation[0]);
+        }
     }
 
     if(targetItem != NULL)
@@ -139,11 +152,13 @@ void PlayerController::moveCharacter(float step)
         {
             //mouse position is at the right side of the character
             parent->translate(glm::vec3(3.0f * step, 0.0f, 0.0f));
+
         }
         else
         {
             //mouse position is at the left side of the character
             parent->translate(glm::vec3(-3.0f * step, 0.0f, 0.0f));
+
         }
     }
 
