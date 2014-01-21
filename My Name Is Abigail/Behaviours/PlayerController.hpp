@@ -22,6 +22,7 @@ class PlayerController : public Behaviour
         glm::vec3 oldPos;
         GameObject * targetItem;
         std::vector< Texture * > animation;
+        bool ableToMove;
     protected:
         std::string mouseState;
         std::string interactButton;
@@ -39,6 +40,7 @@ class PlayerController : public Behaviour
         void checkPosition();
         void mergeItems( GameObject * itemA, GameObject * itemB);
         std::vector< GameObject * >  getInventory();
+        void setAbleToMove(bool value);
 };
 
 

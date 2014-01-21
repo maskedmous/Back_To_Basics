@@ -8,6 +8,7 @@
 PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld , Inventory* aInventory, Hud * aHud)
 :   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , hud(aHud),mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby") , interactButton("Standby")
 {
+    ableToMove = true;
     animation.push_back(Texture::load("models/AbigailsideLeft.png"));
     animation.push_back(Texture::load("models/AbigailsideRight.png"));
     parent->setColorMap(animation[0]);
@@ -18,78 +19,81 @@ PlayerController::~PlayerController()
 
 void PlayerController::update(float step)
 {
-    oldPos = parent->getLocation();
-
-    //if left mouse button is cliked
-    if(mouseState == "Standby")
+    if(ableToMove)
     {
-        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        oldPos = parent->getLocation();
+
+        //if left mouse button is cliked
+        if(mouseState == "Standby")
         {
-            //call on mouse down
-            OnMouseDown();
-            mouseState = "Down";
-        }
-    }
-    //if it is down
-    if(mouseState == "Down")
-    {
-        //check if it is up
-        if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
-        {
-            //mouse is up so put it back to standby
-            mouseState = "Standby";
-        }
-    }
-
-
-
-
-
-
-
-    if(interactButton == "Standby")
-    {
-        if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
-        {
-            //call on mouse down
-            InteractWithObject();
-            interactButton = "Down";
-        }
-    }
-    //if it is down
-    if(interactButton == "Down")
-    {
-        //check if it is up
-        if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
-        {
-            //mouse is up so put it back to standby
-            interactButton = "Standby";
-        }
-    }
-
-    if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
-    {
-        parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
-        //std::cout << "right is loved" << std::endl;
-            if(parent->getTexture()->getName() != "models/AbigailsideRight.png")
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                parent->setColorMap(animation[1]);
+                //call on mouse down
+                OnMouseDown();
+                mouseState = "Down";
             }
-    }
-    if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
-    {
-        parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
-        //std::cout << "left is loved" << std::endl;
-        if(parent->getTexture()->getName() != "models/AbigailsideLeft.png")
-        {
-            parent->setColorMap(animation[0]);
         }
-    }
+        //if it is down
+        if(mouseState == "Down")
+        {
+            //check if it is up
+            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                //mouse is up so put it back to standby
+                mouseState = "Standby";
+            }
+        }
 
-    if(targetItem != NULL)
-    {
-        checkPosition();
-        moveCharacter(step);
+
+
+
+
+
+
+        if(interactButton == "Standby")
+        {
+            if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
+            {
+                //call on mouse down
+                InteractWithObject();
+                interactButton = "Down";
+            }
+        }
+        //if it is down
+        if(interactButton == "Down")
+        {
+            //check if it is up
+            if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
+            {
+                //mouse is up so put it back to standby
+                interactButton = "Standby";
+            }
+        }
+
+        if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
+        {
+            parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
+            //std::cout << "right is loved" << std::endl;
+                if(parent->getTexture()->getName() != "models/AbigailsideRight.png")
+                {
+                    parent->setColorMap(animation[1]);
+                }
+        }
+        if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
+        {
+            parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
+            //std::cout << "left is loved" << std::endl;
+            if(parent->getTexture()->getName() != "models/AbigailsideLeft.png")
+            {
+                parent->setColorMap(animation[0]);
+            }
+        }
+
+        if(targetItem != NULL)
+        {
+            checkPosition();
+            moveCharacter(step);
+        }
     }
 }
 
@@ -197,4 +201,9 @@ void PlayerController::mergeItems(GameObject * itemA, GameObject * itemB)
 std::vector< GameObject * > PlayerController::getInventory()
 {
     return items;
+}
+
+void PlayerController::setAbleToMove(bool value)
+{
+    ableToMove = value;
 }
