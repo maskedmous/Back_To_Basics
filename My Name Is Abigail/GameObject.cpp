@@ -120,6 +120,10 @@ void GameObject::onCollision(  GameObject * otherGameObject )
     }
 }
 
+void GameObject::onBlock(){
+    std::cout << "behavoir should handle onblock" << std::endl;
+}
+
 void GameObject::draw( Renderer * aRenderer, glm::mat4 parentTransform )
 {
 	assert( aRenderer != NULL );

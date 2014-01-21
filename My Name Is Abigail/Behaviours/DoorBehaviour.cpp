@@ -31,7 +31,7 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
     myString = "Key";
     if(inventory->CheckContainItem(requiredItem)){
         //std::cout << parent->getName() << "WTF IS GOING ON!" << std::endl;
-        tipSystem->getTip(parent->getName());
+        tipSystem->getFeedback(parent->getName());
 
         //std::cout << "using the item the door opens" << std::endl;
 
@@ -73,6 +73,12 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
 
 
 
-    } else std::cout << "You Might need an item to open this door, you need " << requiredItem <<  std::endl;
-}
+    } else {
+        tipSystem->getTip(parent->getName());
+        //tipSystem->sendTip("You Might need an item to open this door");
+        //std::cout << "You Might need an item to open this door, you need " << requiredItem <<  std::endl;
+
+
+    }
+ }
 

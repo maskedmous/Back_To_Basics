@@ -15,6 +15,7 @@ class Behaviour
 
 		virtual void update( float step );
 		virtual void onCollision( GameObject * otherGameObject );
+		virtual void onBlock();
 		virtual void swapTexture();
 };
 

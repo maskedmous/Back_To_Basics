@@ -6,6 +6,7 @@
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/ItemBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
+#include "Behaviours/BlockWallBehaviour.hpp"
 #include "Behaviours/StairsBehaviour.h"
 #include "Behaviours/TriggerBehaviour.hpp"
 #include "Behaviours/InvadableBehaviour.hpp"
@@ -109,7 +110,7 @@ if(level.is_open()){
                 }
 
                 if(setBehaviour == true){
-                    loadedObj->setCollider( new Collider(0.5f, 2.0f, loadedObj) );
+                    loadedObj->setCollider( new Collider(0.0f, 2.0f, loadedObj) );
 
                     delimiter2 = " !";
                     unsigned int j = 0;
@@ -128,6 +129,9 @@ if(level.is_open()){
                             if(BehaviourId == "Item"){
                                 loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );
                             }
+                            if(BehaviourId == "Block"){
+                                loadedObj->setBehaviour( new BlockWallBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );
+                            }
 
                             if(BehaviourId == "Swaping"){
                             //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
@@ -143,10 +147,11 @@ if(level.is_open()){
                                 loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
 
                             }
-                            if(BehaviourId == "Trigger"){
+                             if(BehaviourId == "Trigger"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                loadedObj->setBehaviour( new TriggerBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, BehaviourArgument1) );
+                                //loadedObj->setBehaviour( new TriggerBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, BehaviourArgument1) );
                             }
+
 
                             if(BehaviourId == "Npc"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
@@ -167,6 +172,12 @@ if(level.is_open()){
                                 BehaviourArgument2 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
                                 std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
                                 loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, BehaviourArgument1, BehaviourArgument2) );
+                            }
+
+                            if(BehaviourId == "Trigger"){
+                                int value = atoi(BehaviourArgument1.c_str());
+                                BehaviourArgument2 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
+                                loadedObj->setBehaviour( new TriggerBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, value , BehaviourArgument2) );
                             }
 
 

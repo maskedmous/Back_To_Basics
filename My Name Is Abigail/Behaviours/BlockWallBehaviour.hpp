@@ -1,5 +1,5 @@
-#ifndef TRIGGERBEHAVIOUR_HPP_INCLUDED
-#define TRIGGERBEHAVIOUR_HPP_INCLUDED
+#ifndef BLOCKWALLBEHAVIOUR_HPP_INCLUDED
+#define BLOCKWALLBEHAVIOUR_HPP_INCLUDED
 
 #include "../Behaviour.hpp"
 #include "../World.hpp"
@@ -7,11 +7,11 @@
 #include "../TipSystem.hpp"
 #include "../AudioPlayer.hpp"
 
-class TriggerBehaviour : public Behaviour
+class BlockWallBehaviour : public Behaviour
 {
     public:
-        TriggerBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer,int aInt, std::string aString);
-        virtual ~TriggerBehaviour();
+        BlockWallBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer);
+        virtual ~BlockWallBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
     protected:
@@ -22,13 +22,9 @@ class TriggerBehaviour : public Behaviour
         TipSystem * tipSystem;
         AudioPlayer * audioPlayer;
         std::string soundToPlay;
-
-        int countdown;
-        bool active;
-        bool reUseTrigger;
 };
 
-#endif // TRIGGERBEHAVIOUR_HPP_INCLUDED
 
 
 
+#endif // BLOCKWALLBEHAVIOUR_HPP_INCLUDED

@@ -12,6 +12,7 @@ class AudioPlayer
         virtual ~AudioPlayer();
 
         void Play(std::string soundName, bool loop );
+        void PlayMusic(std::string musicName);
         void Stop();
         void Pause();
         void UnPause();

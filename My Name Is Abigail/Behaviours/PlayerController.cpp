@@ -60,7 +60,7 @@ void PlayerController::update(float step)
     if(interactButton == "Down")
     {
         //check if it is up
-        if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W))
+        if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
         {
             //mouse is up so put it back to standby
             interactButton = "Standby";
@@ -134,12 +134,17 @@ void PlayerController::onCollision(GameObject * otherObject)
 {
     //std::cout << "collided with: " << otherObject->getName() << std::endl;
 
-    if(otherObject->getLocation().z == -1){
-        parent->setPosition (oldPos);
+    //if(otherObject->getLocation().z == -1){
+     //   parent->setPosition (oldPos);
 
-    }
+    //}
     //could make if statements
     //if collided with this specific game object then do this { code }
+}
+
+
+void PlayerController::onBlock(){
+    parent->setPosition(oldPos);
 }
 
 //moves the character where the user has clicked last

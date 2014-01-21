@@ -46,6 +46,7 @@ class GameObject
         Texture * getTexture();
 		virtual void update( float step );
 		virtual void onCollision(  GameObject * otherGameObject );
+		virtual void onBlock();
 		virtual void draw( Renderer * renderer, glm::mat4 parentTransform = glm::mat4(1) );
 
 

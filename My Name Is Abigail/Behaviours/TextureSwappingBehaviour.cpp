@@ -28,12 +28,12 @@ void TextureSwappingBehaviour::update(float step)
     if(textureDelay > 0){
         textureDelay -=1 * step ;
     }
-    if(textureDelay < 1){
-         if ( sf::Keyboard::isKeyPressed( sf::Keyboard::Up )) {
-            swapTexture();
-            textureDelay = 50;
-        }
-    }
+    //if(textureDelay < 1){
+         //if ( sf::Keyboard::isKeyPressed( sf::Keyboard::Up )) {
+         //   swapTexture();
+         //   textureDelay = 50;
+        //}
+    //}
 
 }
 

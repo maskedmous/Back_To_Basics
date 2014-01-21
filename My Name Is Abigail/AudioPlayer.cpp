@@ -42,6 +42,14 @@ void AudioPlayer::Play(std::string soundName, bool loop)
         sound.play();
     }
 }
+
+void AudioPlayer::PlayMusic(std::string musicName){
+    music.openFromFile(("sound/" + musicName + ".wav").c_str());
+    music.setLoop(true);
+    music.play();
+
+}
+
 void AudioPlayer::Stop()
 {
     music.stop();

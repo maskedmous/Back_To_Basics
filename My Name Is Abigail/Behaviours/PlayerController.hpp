@@ -34,6 +34,7 @@ class PlayerController : public Behaviour
         void OnMouseDown();
         void InteractWithObject();
         virtual void onCollision(GameObject * otherObject);
+        virtual void onBlock();
         void moveCharacter(float step);
         void checkPosition();
         void mergeItems( GameObject * itemA, GameObject * itemB);

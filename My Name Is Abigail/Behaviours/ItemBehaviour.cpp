@@ -24,7 +24,7 @@ void ItemBehaviour::update(float step ){
 
 void ItemBehaviour::onCollision( GameObject * otherGameObject )
 {
-	tipSystem->getTip(parent->getName());
+	tipSystem->getFeedback(parent->getName());
     audioPlayer->Play("pickUpItem", false);
 	world->remove(parent);
     inventory->addToInventory(parent);

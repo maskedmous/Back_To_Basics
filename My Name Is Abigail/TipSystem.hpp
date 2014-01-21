@@ -10,11 +10,13 @@ class TipSystem
         virtual ~TipSystem();
         void getTip(std::string itemName);
         void countdown(float step);
+        void sendTip(std::string aTip);
+        void getFeedback(std::string aTip);
+
     protected:
 
     private:
         void getSecondTip();
-        void sendTip(std::string aTip);
         void reset();
 
         Hud * hud;
