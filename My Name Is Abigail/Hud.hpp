@@ -6,6 +6,7 @@
 #include "Button.hpp"
 #include "Inventory.hpp"
 #include "GameObject.hpp"
+#include "AudioPlayer.hpp"
 
 class Hud
 {
@@ -13,6 +14,8 @@ class Hud
 		sf::RenderWindow * window;
 		Game * game;
 		Inventory * inventory;
+		AudioPlayer * audioPlayer;
+
 		sf::Font font;
 		sf::Text itemNameText;
 		sf::Font itemNameFont;
@@ -50,6 +53,7 @@ class Hud
 		void addButtonToMainMenu(Button * newButton);
 		void setTip(std::string aTip);
 		void countdown(float step);
+		void setAudioPlayer(AudioPlayer * m_audioPlayer);
 };
 
 #endif // HUD_H

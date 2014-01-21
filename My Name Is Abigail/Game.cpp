@@ -56,12 +56,7 @@ void Game::build()
     audioPlayer = new AudioPlayer();
 
     mainMenu = new MainMenu(hud, window, this);
-/*
-    bufferMenuMusic.loadFromFile("sound/menu.wav");
-    menuMusic.setBuffer(bufferMenuMusic);
-    menuMusic.setLoop(true);
-    menuMusic.play();
-*/
+
     setState("Main Menu");
 }
 
@@ -74,19 +69,13 @@ void Game::buildLevel()
 
     tipSystem = new TipSystem(hud);
 
-
-
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (1.0f, 2.0f, blockWall));
         world->add(blockWall);
-/*
-    GameObject * blockWall2 = new GameObject("Wall", glm::vec3(20.0f, -0.45f, -1.0f));
-        blockWall2->setCollider( new Collider (3.0f, 2.0f, blockWall));
-        world->add(blockWall2);
-*/
+
     GameObject * character = new GameObject("Character", glm::vec3(17.0f, -4.45f,0.2f));
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
@@ -97,24 +86,6 @@ void Game::buildLevel()
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
-
-/*
-    GameObject * earnest = new GameObject("Earnest", glm::vec3(12.0f, 0.0f, 0.15f));
-        earnest->setMesh(Mesh::load("models/AbigailCharacter.obj"));
-        earnest->setColorMap(Texture::load("models/h.png"));
-        earnest->setBehaviour( new InvadableBehaviour( earnest, world, inventory, tipSystem, "StorageRoomDARK") );
-        earnest->setCollider( new Collider( 1.0f, 1.75f, earnest));
-    world->add(earnest);
-*/
-    /*
-    menuMusic.stop();
-
-    bufferMainMusic.loadFromFile("sound/musicAct1.wav");
-    mainMusic.setBuffer(bufferMainMusic);
-    mainMusic.setLoop(true);
-    mainMusic.play();
-
-*/
     setState("Play");
 
 
@@ -123,11 +94,14 @@ void Game::buildLevel()
 void Game::run()
 {
 	running = true;
-	while ( running ) {
-		Time::update();
-		FPS::update();
-		control();
-		if ( running ) { // control may have changed running;
+	while ( running )
+    {
+        Time::update();
+        FPS::update();
+        control();  //should be done while running
+
+		if ( running )
+		{   // control may have changed running;
 			update( Time::step() );
 			draw();
 		}
@@ -159,10 +133,17 @@ void Game::control()
 
 void Game::update( float step )
 {
-	assert( world != NULL );
-	world->update( step );
-	assert( mainMenu != NULL );
-	mainMenu->Update(step);
+	if(state == "Play")
+    {
+        assert( world != NULL );
+        world->update( step );
+    }
+
+	if(state == "Main Menu")
+    {
+        assert( mainMenu != NULL );
+        mainMenu->Update(step);
+    }
 	assert( hud != NULL);
 	hud->countdown(step);
 

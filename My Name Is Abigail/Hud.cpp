@@ -10,7 +10,7 @@
 #include "Texture.hpp"
 
 Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
-:	window( aWindow ), game(aGame), inventory(NULL)
+:	window( aWindow ), game(aGame), inventory(NULL), audioPlayer(NULL)
 {
 	assert ( window != NULL );
 
@@ -281,6 +281,7 @@ void Hud::setSlotTrigger()
             if(itemA != NULL && itemB != NULL)
             {
                 inventory->mergeItems(itemA, itemB);
+                audioPlayer->Play("merge", false);
             }
             else
             {
@@ -327,4 +328,9 @@ void Hud::countdown(float step)
         tipBool = false;
         tipText.setString("");
     }
+}
+
+void Hud::setAudioPlayer(AudioPlayer * m_audioPlayer)
+{
+    audioPlayer = m_audioPlayer;
 }
