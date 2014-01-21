@@ -43,6 +43,7 @@ void World::checkCollision( GameObject* firstCollider )
                         //return children[i];
                         std::cout << children[i]->getName() << std::endl;
                         children[i]->onCollision(firstCollider);
+                        break;
                     }
                 }
             }
@@ -70,8 +71,6 @@ void World::checkBlock()
                             //check if its colliding
                             if(children[i]->getCollider()->isColliding(children[j]))
                             {
-                                //std::cout << "colliding"  << std::endl;
-                                //its colliding so put her back
                                 children[i]->onCollision(children[j]);
                             }
                         }

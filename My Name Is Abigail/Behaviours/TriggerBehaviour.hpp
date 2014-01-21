@@ -23,9 +23,10 @@ class TriggerBehaviour : public Behaviour
         AudioPlayer * audioPlayer;
         std::string soundToPlay;
 
-        int countdown;
+        float countdown;
         bool active;
         bool reUseTrigger;
+        bool continuous;
 };
 
 #endif // TRIGGERBEHAVIOUR_HPP_INCLUDED

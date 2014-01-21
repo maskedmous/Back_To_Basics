@@ -759,14 +759,14 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
 	"../Behaviour.hpp"
 
-1390231045 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
+1390314339 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
 	"TextureSwappingBehaviour.hpp"
 	<sfml/window.hpp>
 	"../GameObject.hpp"
 	"../Texture.hpp"
 	<string>
 
-1390231033 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
+1390314347 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
 	<string>
 	"../Texture.hpp"
 	"../Behaviour.hpp"
@@ -922,7 +922,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1390306805 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1390314996 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -933,6 +933,7 @@
 	"Behaviours/StairsBehaviour.h"
 	"Behaviours/TriggerBehaviour.hpp"
 	"Behaviours/InvadableBehaviour.hpp"
+	"Behaviours/TextureAnimationBehaviour.hpp"
 	"Collider.hpp"
 	<cstdio>
 	<iostream>
@@ -975,7 +976,7 @@
 	"Time.hpp"
 	<iostream>
 
-1390304544 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1390312100 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -1016,12 +1017,12 @@
 	"Inventory.hpp"
 	<string>
 
-1390233292 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1390321085 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
 
-1389367753 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+1390313492 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
@@ -1435,7 +1436,7 @@
 1390232704 c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.hpp
 	"Hud.hpp"
 
-1390232601 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.cpp
+1390318767 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.cpp
 	<string>
 	<cstdio>
 	<iostream>
@@ -1452,19 +1453,19 @@
 	"../Inventory.hpp"
 	"../TipSystem.hpp"
 
-1390235275 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
+1390317626 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
 	"AudioPlayer.hpp"
 
-1390234967 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
+1390317631 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
 	<iostream>
 	<SFML/audio.hpp>
 	<string>
 
-1390301662 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
+1390320306 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
 	"TriggerBehaviour.hpp"
 	<iostream>
 
-1390301551 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
+1390317359 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
@@ -1481,4 +1482,15 @@
 	"../Inventory.hpp"
 	"../TipSystem.hpp"
 	"../AudioPlayer.hpp"
+
+1390317973 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.cpp
+	"TextureAnimationBehaviour.hpp"
+	"../Texture.hpp"
+	<iostream>
+
+1390316267 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
 

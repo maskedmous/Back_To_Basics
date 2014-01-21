@@ -10,6 +10,7 @@
 #include "Behaviours/StairsBehaviour.h"
 #include "Behaviours/TriggerBehaviour.hpp"
 #include "Behaviours/InvadableBehaviour.hpp"
+#include "Behaviours/TextureAnimationBehaviour.hpp"
 #include "Collider.hpp"
 
 #include <cstdio>
@@ -138,13 +139,17 @@ if(level.is_open()){
                             std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
                             }
 
+                            if(BehaviourId == "Animation"){
+                                loadedObj->setBehaviour(new TextureAnimationBehaviour(loadedObj, aWorld , aInventory, aTipsystem, aAudioPlayer) );
+                            }
+
 
                         }
 
                         if(j == 2){
                             if(BehaviourId == "ReqItem"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
+                                loadedObj->setBehaviour( new DoorBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, BehaviourArgument1) );
 
                             }
                              if(BehaviourId == "Trigger"){
@@ -171,7 +176,7 @@ if(level.is_open()){
                             if(BehaviourId == "Swaping"){
                                 BehaviourArgument2 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
                                 std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
-                                loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, BehaviourArgument1, BehaviourArgument2) );
+                                loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj, BehaviourArgument1, BehaviourArgument2) );
                             }
 
                             if(BehaviourId == "Trigger"){

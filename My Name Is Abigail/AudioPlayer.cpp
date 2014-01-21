@@ -55,6 +55,11 @@ void AudioPlayer::Stop()
     music.stop();
     sound.stop();
 }
+
+const int AudioPlayer::CheckStatus(){
+    return sound.getStatus();
+}
+
 void AudioPlayer::Pause()
 {
     music.pause();

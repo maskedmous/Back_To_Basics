@@ -4,12 +4,13 @@
 
 #include <string>
 
-DoorBehaviour::DoorBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory , TipSystem * aTipsystem, const std::string recievedItemName)
+DoorBehaviour::DoorBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory , TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, const std::string recievedItemName)
 :	Behaviour( aParent ), tipSystem(aTipsystem)
 {
     world = aWorld;
     parent = aParent;
     inventory = aInventory;
+    audioPlayer = aAudioPlayer;
 
     requiredItem = recievedItemName;
 }
@@ -36,8 +37,11 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
         //std::cout << "using the item the door opens" << std::endl;
 
         if(parent->getName() == "lanternoff"){
-            std::string bbb = "BlockWallMainCellar";
-            world->remove(bbb);
+            std::string removeOne = "BlockWallMainCellar";
+            world->remove(removeOne);
+
+            std::string removeTwo = "triggerBasementDoor";
+            world->remove(removeTwo);
 
             std::string ddd = "StorageRoomDARK";
             GameObject * randomGameObject = world->findGameObject(ddd);
@@ -52,15 +56,18 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
     	}
 
         if(parent->getName() == "fire"){
-            std::string keyname = "key2";
+            std::string keyname = "stone";
     	    GameObject * key2 = world->findGameObject(keyname);
             key2->setPosition(parent->getLocation());
+            tipSystem->sendTip("Hey a stone! maybe i should pick it up");
             //inventory->addToInventory(key2);
+
         }
         if(parent->getName() == "MasterBedRoomDoor"){
             std::string keyname = "BlockWallMasterBedRoom";
     	    GameObject * key2 = world->findGameObject(keyname);
             key2->setPosition(parent->getLocation());
+
         }
         if(parent->getName() == "MasterBedRoomDoor2"){
             std::string keyname = "BlockWallMasterBedRoom2";

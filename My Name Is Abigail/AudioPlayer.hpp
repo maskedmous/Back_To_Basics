@@ -19,6 +19,8 @@ class AudioPlayer
         void SetVolume(float value);
         void Mute();
 
+        const int CheckStatus();
+
     protected:
     private:
        sf::Music music;

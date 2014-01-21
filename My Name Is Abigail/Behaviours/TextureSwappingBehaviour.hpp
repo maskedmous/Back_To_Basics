@@ -10,7 +10,7 @@
 class TextureSwappingBehaviour : public Behaviour
 {
     public:
-        TextureSwappingBehaviour(GameObject * aParent, GameObject * mememe, std::string firstTexture , std::string secondTexture);
+        TextureSwappingBehaviour(GameObject * aParent, std::string firstTexture , std::string secondTexture);
         virtual ~TextureSwappingBehaviour();
 
         virtual void update (float step);

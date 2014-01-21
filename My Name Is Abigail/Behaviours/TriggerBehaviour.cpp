@@ -12,11 +12,17 @@ TriggerBehaviour::TriggerBehaviour(GameObject * aParent, World* aWorld, Inventor
     audioPlayer = aAudioPlayer;
     soundToPlay = aString;
 
+    reUseTrigger = true;
+    continuous = false;
     countdown = aInt;
+
     if(countdown == 0) {
         reUseTrigger = false;
     }
-    active = false;
+    if(countdown < 0){
+        continuous = true;
+    }
+    active = true;;
 }
 
 TriggerBehaviour::~TriggerBehaviour()
@@ -27,15 +33,14 @@ TriggerBehaviour::~TriggerBehaviour()
 void TriggerBehaviour::update(float step ){
 	//std::cout << "TRIGGERD GAWD DAMN IT" << std::endl;
 	if(reUseTrigger == true){
-        if(active){
-            std::cout << countdown << std::endl;
+        if(active == false){
+            //std::cout << countdown << std::endl;
             if(countdown > 0){
                 countdown -= 1 * step;
             }
             if(countdown <= 0){
                 countdown = 0;
-                parent->translate(glm::vec3(0,100,0));
-                active = false;
+                active = true;
             }
         }
 	}
@@ -46,15 +51,19 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
 {
 	//std::cout << "TRIGGERD GAWD DAMN IT" << std::endl;
 
-	tipSystem->getTip(parent->getName());
-	if(soundToPlay != ""){
-        audioPlayer->Play(soundToPlay,false);
-	}
-	parent->translate(glm::vec3(0,-100,0));
-	active = true;
-	//100 is a bit less then a second 3500 is roughly 30 sec
-	countdown = 3500;
-
+    if(active == true){
+        tipSystem->getTip(parent->getName());
+        if(soundToPlay != ""){
+            if(audioPlayer->CheckStatus() != 2){
+                //std::cout << audioPlayer->CheckStatus() << std::endl;
+                audioPlayer->Play(soundToPlay,false);
+            }
+        }
+        if(continuous == false){
+            active = false;
+            countdown = 30;
+        }
+    }
 	//world->remove(parent);
     //inventory->addToInventory(parent);
 

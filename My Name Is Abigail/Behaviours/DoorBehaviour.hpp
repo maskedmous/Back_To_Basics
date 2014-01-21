@@ -10,7 +10,7 @@
 class DoorBehaviour : public Behaviour
 {
     public:
-        DoorBehaviour(GameObject* aParent, World* aWorld, Inventory* aInventory, TipSystem * aTipsystem, const std::string recievedItemName);
+        DoorBehaviour(GameObject* aParent, World* aWorld, Inventory* aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, const std::string recievedItemName);
         virtual ~DoorBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
@@ -20,8 +20,10 @@ class DoorBehaviour : public Behaviour
         GameObject * parent;
         Inventory * inventory;
         TipSystem * tipSystem;
+        AudioPlayer * audioPlayer;
         std::string myString;
         std::string requiredItem;
+
 
 };
 

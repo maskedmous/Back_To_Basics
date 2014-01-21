@@ -6,10 +6,10 @@
 
 #include <string>
 
-TextureSwappingBehaviour::TextureSwappingBehaviour( GameObject * aParent ,GameObject * mememe ,std::string firstTexture , std::string secondTexture)
+TextureSwappingBehaviour::TextureSwappingBehaviour( GameObject * aParent ,std::string firstTexture , std::string secondTexture)
 : Behaviour( aParent )
 {
-    myParent = mememe;
+    myParent = aParent;
     textureOne = Texture::load(("models/" + firstTexture).c_str());
     textureTwo = Texture::load(("models/" + secondTexture).c_str());
     textureDelay = -1;
