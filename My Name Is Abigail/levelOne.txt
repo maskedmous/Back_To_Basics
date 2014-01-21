@@ -71,7 +71,9 @@ GuestBedroom,Wall6x3,03GuestBedroom.png,0,6,5,0
 GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0.21
 GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0
 
-UpperHallway,Wall4x3,04UpperHallway.png,0,12,5,0
+UpperHallWayPart0,Wall4x3,UpperHallWayPart0.png,0,12,5,0.0
+UpperHallWayPart1,Wall4x3,UpperHallWayPart1.png,0,12,5,0.01
+UpperHallWayPart2,Wall4x3,UpperHallWayPart2.png,0,12,5,0.145
 UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.5,5,0.15
 UpperHallwayDown,lantern,arrowStairwayDown.png,Stairs!stairsEntranceHallUp,10.5,5,0.15
 
