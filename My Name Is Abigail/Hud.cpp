@@ -21,6 +21,13 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     }
     else { std::cout << "Could not load HUD.png" << std::endl; }
 
+    if ( introTex.loadFromFile("models/intro.png"))
+    {
+        intro.setTexture(introTex);
+        intro.setPosition(0,0);
+    }
+
+
     if(selectionTex.loadFromFile("models/selection.png"))
     {
         selection.setTexture(selectionTex);
@@ -79,6 +86,11 @@ void Hud::draw()
             Button * thisButton = mainMenuButtons[j];
             window->draw(thisButton->getButtonSprite());
         }
+    }
+
+    if(game->getState() == "Intro")
+    {
+        window->draw(intro);
     }
 
     //get the inventory

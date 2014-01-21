@@ -23,6 +23,10 @@ class PlayerController : public Behaviour
         GameObject * targetItem;
         std::vector< Texture * > animation;
         bool ableToMove;
+
+        enum charState {intro,frozen,moving};
+        charState characterState;
+
     protected:
         std::string mouseState;
         std::string interactButton;
@@ -42,6 +46,7 @@ class PlayerController : public Behaviour
         void mergeItems( GameObject * itemA, GameObject * itemB);
         std::vector< GameObject * >  getInventory();
         virtual void setAbleToMove();
+        virtual void setState(int aState);
 };
 
 

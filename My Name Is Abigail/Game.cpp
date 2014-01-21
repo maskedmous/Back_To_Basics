@@ -1,4 +1,5 @@
 #include <cassert>
+#include <SFML/Window.hpp>
 
 #include "Time.hpp"
 #include "FPS.hpp"
@@ -87,7 +88,7 @@ void Game::buildLevel()
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
     audioPlayer->PlayMusic("musicAct1");
-    setState("Play");
+    setState("Intro");
 
 
 }
@@ -134,6 +135,15 @@ void Game::control()
 
 void Game::update( float step )
 {
+
+    if(state == "Intro")
+    {
+        if(sf::Keyboard::isKeyPressed( sf::Keyboard::W) || sf::Keyboard::isKeyPressed( sf::Keyboard::Space) )
+        {
+            state = "Play";
+            audioPlayer->Play("intro", false);
+        }
+    }
 	if(state == "Play")
     {
         assert( world != NULL );
@@ -152,6 +162,8 @@ void Game::update( float step )
     {
         tipSystem->countdown(step);
     }
+
+
 }
 
 void Game::draw()

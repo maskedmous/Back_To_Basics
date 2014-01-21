@@ -4,14 +4,15 @@
 #include "PlayerController.hpp"
 #include "../GameObject.hpp"
 
-
 PlayerController::PlayerController( GameObject * aParent, sf::Window * aWindow, Renderer * aRenderer, World * aWorld , Inventory* aInventory, Hud * aHud)
 :   Behaviour( aParent ), window(aWindow), renderer(aRenderer), world(aWorld),inventory(aInventory) , hud(aHud),mouseInWorld(0.0f, 0.0f, 0.0f, 1.0f), targetItem(NULL) ,mouseState("Standby") , interactButton("Standby")
 {
     ableToMove = true;
     animation.push_back(Texture::load("models/AbigailsideLeft.png"));
     animation.push_back(Texture::load("models/AbigailsideRight.png"));
-    parent->setColorMap(animation[0]);
+    animation.push_back(Texture::load("models/AbigailIdle.png"));
+    parent->setColorMap(animation[2]);
+    characterState = intro;
 }
 
 PlayerController::~PlayerController()
@@ -19,35 +20,53 @@ PlayerController::~PlayerController()
 
 void PlayerController::update(float step)
 {
-
-
-        //if left mouse button is cliked
-        if(mouseState == "Standby")
+    if(characterState == intro)
+    {
+        if(interactButton == "Standby")
         {
-            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
             {
-                //call on mouse down
-                OnMouseDown();
-                mouseState = "Down";
+                //set the game state to "play"
+                setState(2);
+                interactButton = "Down";
             }
         }
         //if it is down
-        if(mouseState == "Down")
+        if(interactButton == "Down")
         {
             //check if it is up
-            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
             {
                 //mouse is up so put it back to standby
-                mouseState = "Standby";
+                interactButton = "Standby";
             }
         }
+    }
 
+    if(characterState == frozen)
+    {
+        if(interactButton == "Standby")
+        {
+            if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
+            {
+                //call on mouse down
+                interactButton = "Down";
+            }
+        }
+        //if it is down
+        if(interactButton == "Down")
+        {
+            //check if it is up
+            if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
+            {
+                //mouse is up so put it back to standby
+                interactButton = "Standby";
+            }
+        }
+    }
 
-
-
-
-
-
+    if(characterState == moving)
+    {
         if(interactButton == "Standby")
         {
             if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
@@ -68,9 +87,8 @@ void PlayerController::update(float step)
             }
         }
 
-    if(ableToMove)
-    {
         oldPos = parent->getLocation();
+
         if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
         {
             parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
@@ -118,33 +136,11 @@ void PlayerController::OnMouseDown()
     {
         world->checkCollision(parent);
     }
-
-/*
-    if(collided != NULL)
-    {
-        std::cout << collided->getName() << std::endl;
-        targetItem = collided;
-        mouseInWorld = glm::vec4(collided->getLocation(), 1.0);
-    }
-    else
-    {
-        std::cout << "Did not collide" << std::endl;
-    }
-    */
-    //set the mouseInWorld to the coordinates of the ray
-    //mouseInWorld.x = rayWorld.x;
 }
 
 void PlayerController::onCollision(GameObject * otherObject)
 {
-    //std::cout << "collided with: " << otherObject->getName() << std::endl;
 
-    //if(otherObject->getLocation().z == -1){
-     //   parent->setPosition (oldPos);
-
-    //}
-    //could make if statements
-    //if collided with this specific game object then do this { code }
 }
 
 
@@ -194,9 +190,6 @@ void PlayerController::checkPosition()
 void PlayerController::mergeItems(GameObject * itemA, GameObject * itemB)
 {
     std::cout << "Merging: " << itemA->getName() << " with " << itemB->getName() << std::endl;
-
-    //list of mergable items
-    //if( itemA == "" && itemB == "") merge();
 }
 
 std::vector< GameObject * > PlayerController::getInventory()
@@ -208,5 +201,27 @@ void PlayerController::setAbleToMove()
 {
     if(ableToMove == true){
         ableToMove = false;
-    } else ableToMove = true;
+        setState(1);
+    } else
+    {
+        ableToMove = true;
+        setState(2);
+    }
+}
+
+void PlayerController::setState(int aState)
+{
+    if(aState == 0)
+    {
+        characterState = intro;
+    }
+    if(aState == 1)
+    {
+        characterState = frozen;
+        parent->setColorMap(animation[2]);
+    }
+    if(aState == 2)
+    {
+        characterState = moving;
+    }
 }

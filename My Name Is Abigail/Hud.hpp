@@ -22,6 +22,9 @@ class Hud
 		sf::Texture theHUDTex;
 		sf::Sprite theHUD;
 
+        sf::Texture introTex;
+        sf::Sprite intro;
+
 		sf::Texture selectionTex;
 		sf::Sprite selection;
 

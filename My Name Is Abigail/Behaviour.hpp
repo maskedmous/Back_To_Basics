@@ -18,6 +18,7 @@ class Behaviour
 		virtual void onBlock();
 		virtual void swapTexture();
         virtual void setAbleToMove();
+        virtual void setState(int aState);
 };
 
 #endif // BEHAVIOUR_H

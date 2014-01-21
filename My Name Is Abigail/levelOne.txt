@@ -32,10 +32,11 @@ Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0.21
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0
 
 Livingroom,Wall8x3,08Livingroom.png,0,4.5,1,0
-pokerholder,pokerholder,pokerholder.png,0,3.55,0.5,0.14999999
+LivingroomScenery,wall8x3,livingroomFurniture.png,0,4.5,1,0.14
+pokerholder,pokerholder,pokerholder.png,0,3.55,0.5,0.149999
 poker,poker,poker.png,Item,3.55,0.3,0.15
-LivingroomScenery,wall8x3,livingroomFurniture.png,0,4.5,1,0.14999899
 fire,lantern,lantern.png,ReqItem!BucketOfWater,4.5,0,0.15
+statue,statue,statue.png,0,2,0.20,0.14999999
 
 stone,stone,stone.png,Item,999,1,0.15
 

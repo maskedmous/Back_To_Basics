@@ -33,3 +33,8 @@ void Behaviour::swapTexture(){
 
     std::cout << "should not be called" << std::endl;
 }
+
+void Behaviour::setState(int aState)
+{
+    std::cout << "should not be called!!!" << std::endl;
+}
