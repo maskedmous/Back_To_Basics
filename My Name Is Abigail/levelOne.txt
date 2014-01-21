@@ -1,6 +1,6 @@
 BoilerRoom,Wall3x3,14BoilerRoom.png,0,7,-3,0
 pileOfBricks,pileofbricks,pileofbricks.png,0,8,-4.2,0.15
-BlockWallBasementleft,0,0,1,5.5,-4.45,-1
+BlockWallBasementleft,0,0,Block,5.5,-4.45,-1
 
 boiler-MainCellar,WallBetweenWall,wallthingie.png,0,9,-3,0.21
 boiler-MainCellar,WallBetweenWall,wallthingie.png,0,9,-3,0
@@ -9,7 +9,7 @@ MainCellar,Wall5x3,15MainCellar.png,0,12,-3,0
 stairsBasementUp,lantern,arrowStairwayUp.png,Stairs!stairsEntranceHallDown,14,-3,0.15
 MainCellar-storage,WallBetweenWall,wallthingie.png,0,15,-3,0.21
 MainCellar-storage,WallBetweenWall,wallthingie.png,0,15,-3,0
-BlockWallMainCellar,0,0,1,15.5,-4.45,-1
+BlockWallMainCellar,0,0,Block,15.5,-4.45,-1
 
 StorageRoomDARK,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGHT.png,17.5,-3,0
 demonstatueSwitchTexture,demon,demonstatue.png,0,15,-3.7,0.15
@@ -17,15 +17,16 @@ matches,matches,matches.png,Item,18.35,-3.8,0.15
 
 lanternoff,lantern,lanternoff.png,ReqItem!matches,17.6,-2.7,0.15
 lantern,lantern,lantern.png,1,17.6,-2.7,0.14.9999
-BlockWallBasementRight,0,0,1,19.5,-4.45,-1
+BlockWallBasementRight,0,0,Block,19.5,-4.45,-1
 
 Kitchen,Wall4x3,06Kitchen.png,0,-8.5,1,0
-BlockWallGroundFloorLeft,0,0,1,-10.6,-0.45,-1
+BlockWallGroundFloorLeft,0,0,Block,-10.6,-0.45,-1
 
 Kitchen-Diningroom,WallBetweenWall,wallthingie.png,0,-6,1,0.21
 Kitchen-Diningroom,WallBetweenWall,wallthingie.png,0,-6,1,0
 
 Diningroom,Wall5x3,07Diningroom.png,0,-3,1,0
+BlockWalldiningRoom,0,0,Block,0,-0.45,-1
 
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0.21
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0
@@ -41,10 +42,11 @@ stone,stone,stone.png,Item,999,1,0.15
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0.21
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0
 
-EntranceHall,Wall5x3,09EntranceHall.png,0,12,1,0
+EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!StorageRoomLIGHT.png,12,1,0
 stairsEntranceHallUp,lantern,arrowStairwayUp.png,Stairs!UpperHallwayDown,14,1,0.15
 stairsEntranceHallDown,lantern,arrowStairwayDown.png,Stairs!stairsBasementUp,10,1,0.15
-earnest,earnest,earnest.png,Npc!StorageRoomDARK,11.7,-0.45,0.15
+triggerEarnest,0,0,Trigger!3500!NULL,10,-0.45,-1
+earnest,earnest,earnest.png,Npc!EntranceHall,11.7,-0.45,0.15
 
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0.21
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0
@@ -55,14 +57,14 @@ Study-Wintergarden,WallBetweenWall,wallthingie.png,0,20,1,0.21
 Study-Wintergarden,WallBetweenWall,wallthingie.png,0,20,1,0
 
 Wintergarden,Wall5x3,11Wintergarden.png,0,23,1,0
-BlockWallGroundFloorRight,0,0,1,25.6,-0.45,-1
+BlockWallGroundFloorRight,0,0,Block,25.6,-0.45,-1
 
 Bathroom,Wall3x3,02Bathroom.png,0,0.5,5,0
 BucketOfWater,bucket,bucketwater.png,Item,0.5,5,0.15
 
 Bathroom-GuestBedroom,WallBetweenWall,wallthingie.png,0,2.5,5,0.21
 Bathroom-GuestBedroom,WallBetweenWall,wallthingie.png,0,2.5,5,0
-BlockWallFirstFloorLeft,0,0,1,-1.0,3.55,-1
+BlockWallFirstFloorLeft,0,0,Block,-1.0,3.55,-1
 
 GuestBedroom,Wall6x3,03GuestBedroom.png,0,6,5,0
 
@@ -79,18 +81,19 @@ UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0
 MasterBedroom,Wall7x3,05MasterBedroom.png,0,18.5,5,0
 MasterBedRoomDoor,lantern,bricks.jpg,ReqItem!key1,15,5.0,0.15
 MasterBedRoomDoor2,lantern,bricks.jpg,ReqItem!key2,15.1,5.0,0.15
-BlockWallMasterBedRoom,lantern,bricks.jpg,1,16,3.55,-1
-BlockWallMasterBedRoom2,lantern,bricks.jpg,1,16.1,3.55,-1
-BlockWallFirstFloorRight,0,0,1,22,3.55,-1
+BlockWallMasterBedRoom,lantern,bricks.jpg,Block,16,3.55,-1
+BlockWallMasterBedRoom2,lantern,bricks.jpg,Block,16.1,3.55,-1
+BlockWallFirstFloorRight,0,0,Block,22,3.55,-1
 
 Atticleft,Wall10x3,01Atticleft.png,0,7,9,0
 AtticDown,lantern,arrowStairwayDown.png,Stairs!UpperHallwayUp,10,9,0.15
 chest,chest,chest.png,ReqItem!Chestkey,7,8,0.15
 Chestkey,key3,chestkey.png,Item,6,8,0.15
-BlockWallAtticleft,0,0,1,2,7.45,-1
+Grace,earnest,Grace.png,0,5,7.50,0.15
+BlockWallAtticleft,0,0,Block,2,7.45,-1
 
 Atticright,Wall10x3,01Atticright.png,0,17,9,0
-BlockWallAtticRight,0,0,1,22,7.45,-1
+BlockWallAtticRight,0,0,Block,22,7.45,-1
 
 key1,key1,key1.png,Item,16.5,1,0.15
 key2,key2,key2.png,Item,0,-10,0.15

@@ -17,6 +17,7 @@ class Behaviour
 		virtual void onCollision( GameObject * otherGameObject );
 		virtual void onBlock();
 		virtual void swapTexture();
+        virtual void setAbleToMove();
 };
 
 #endif // BEHAVIOUR_H

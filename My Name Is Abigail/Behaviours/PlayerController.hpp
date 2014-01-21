@@ -36,11 +36,12 @@ class PlayerController : public Behaviour
         void InteractWithObject();
         virtual void onCollision(GameObject * otherObject);
         virtual void onBlock();
+
         void moveCharacter(float step);
         void checkPosition();
         void mergeItems( GameObject * itemA, GameObject * itemB);
         std::vector< GameObject * >  getInventory();
-        void setAbleToMove(bool value);
+        virtual void setAbleToMove();
 };
 
 

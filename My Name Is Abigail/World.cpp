@@ -35,8 +35,8 @@ void World::checkCollision( GameObject* firstCollider )
 
             if(children[i]->hasCollider() && children[i]->getLocation().z == 0.15f)
             {
-
-                if(glm::abs(children[i]->getLocation().y - playerPosition.y - 1.5) < 1.5f ){
+                //                                         playerPosition.y - 1.5
+                if(glm::abs(children[i]->getLocation().y - playerPosition.y - 1) < 1.5f ){
                         //std::cout << children[i]->getName() << std::endl;
                     if(glm::abs(children[i]->getLocation().x - playerPosition.x) < 0.5f )
                     {

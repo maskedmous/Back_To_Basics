@@ -155,7 +155,7 @@ if(level.is_open()){
 
                             if(BehaviourId == "Npc"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                loadedObj->setBehaviour( new InvadableBehaviour(loadedObj, aWorld, aInventory, aTipsystem, BehaviourArgument1) );
+                                loadedObj->setBehaviour( new InvadableBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, BehaviourArgument1) );
                             }
                             if(BehaviourId == "Stairs"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);

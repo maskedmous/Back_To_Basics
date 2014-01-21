@@ -19,9 +19,7 @@ PlayerController::~PlayerController()
 
 void PlayerController::update(float step)
 {
-    if(ableToMove)
-    {
-        oldPos = parent->getLocation();
+
 
         //if left mouse button is cliked
         if(mouseState == "Standby")
@@ -70,6 +68,9 @@ void PlayerController::update(float step)
             }
         }
 
+    if(ableToMove)
+    {
+        oldPos = parent->getLocation();
         if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
         {
             parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
@@ -203,7 +204,9 @@ std::vector< GameObject * > PlayerController::getInventory()
     return items;
 }
 
-void PlayerController::setAbleToMove(bool value)
+void PlayerController::setAbleToMove()
 {
-    ableToMove = value;
+    if(ableToMove == true){
+        ableToMove = false;
+    } else ableToMove = true;
 }

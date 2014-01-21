@@ -9,7 +9,7 @@
 class InvadableBehaviour : public Behaviour
 {
     public:
-        InvadableBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, std::string respondingObject );
+        InvadableBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, std::string respondingObject );
         virtual ~InvadableBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
@@ -19,6 +19,7 @@ class InvadableBehaviour : public Behaviour
         GameObject * parent;
         Inventory * inventory;
         TipSystem * tipSystem;
+        AudioPlayer * audioPlayer;
         std::string responder;
 };
 

@@ -25,6 +25,10 @@ void Behaviour::onCollision( GameObject * otherGameObject )
 void Behaviour::onBlock(){
 
 }
+
+void Behaviour::setAbleToMove(){
+}
+
 void Behaviour::swapTexture(){
 
     std::cout << "should not be called" << std::endl;

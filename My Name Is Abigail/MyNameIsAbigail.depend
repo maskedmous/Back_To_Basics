@@ -713,12 +713,12 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1390237957 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
+1390306485 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
 	<cassert>
 	<iostream>
 	"Behaviour.hpp"
 
-1390237957 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
+1390306459 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
 	<vector>
 
 1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
@@ -821,7 +821,7 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
 	<SFML/System.hpp>
 
-1390235128 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1390304864 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	"Time.hpp"
 	"FPS.hpp"
@@ -850,12 +850,13 @@
 	"MainMenu.hpp"
 	"TipSystem.hpp"
 
-1389355509 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+1390302210 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
 	"Game.hpp"
 	"Button.hpp"
 	"Inventory.hpp"
 	"GameObject.hpp"
+	"AudioPlayer.hpp"
 
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.hpp
 	<string>
@@ -889,7 +890,7 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1390237053 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1390306493 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -909,7 +910,7 @@
 	"Mesh.hpp"
 	"Texture.hpp"
 
-1390233914 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1390302210 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -921,7 +922,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1390301296 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1390306805 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -974,7 +975,7 @@
 	"Time.hpp"
 	<iostream>
 
-1390169555 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+1390304544 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
 	<cassert>
 	"World.hpp"
 	"Camera.hpp"
@@ -985,7 +986,7 @@
 	<iostream>
 	"Game.hpp"
 
-1390236861 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1390306537 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
 	"../Texture.hpp"
@@ -1441,11 +1442,11 @@
 	<fstream>
 	"TipSystem.hpp"
 
-1389781182 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+1390306864 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
 	"InvadableBehaviour.hpp"
 	<iostream>
 
-1389741602 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
+1390306827 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"

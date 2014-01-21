@@ -56,7 +56,7 @@ void Game::build()
     audioPlayer = new AudioPlayer();
 
     mainMenu = new MainMenu(hud, window, this);
-
+    audioPlayer->PlayMusic("menu");
     setState("Main Menu");
 }
 
@@ -86,6 +86,7 @@ void Game::buildLevel()
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
 
+    audioPlayer->PlayMusic("musicAct1");
     setState("Play");
 
 
