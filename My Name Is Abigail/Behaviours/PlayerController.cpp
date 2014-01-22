@@ -47,6 +47,11 @@ void PlayerController::update(float step)
     {
         if(interactButton == "Standby")
         {
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            {
+                interactButton = "Down";
+                setState(2);
+            }
             if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
             {
                 //call on mouse down
@@ -56,6 +61,10 @@ void PlayerController::update(float step)
         //if it is down
         if(interactButton == "Down")
         {
+            if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            {
+                interactButton = "Standby";
+            }
             //check if it is up
             if(!sf::Keyboard::isKeyPressed( sf::Keyboard::W) && (!sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))
             {
@@ -223,11 +232,9 @@ void PlayerController::setAbleToMove()
 {
     if(ableToMove == true){
         ableToMove = false;
-        setState(1);
     } else
     {
         ableToMove = true;
-        setState(2);
     }
 }
 
