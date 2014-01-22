@@ -53,7 +53,7 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
 
     if(active == true){
         tipSystem->getTip(parent->getName());
-        if(soundToPlay != ""){
+        if(soundToPlay != "NULL"){
             if(audioPlayer->CheckStatus() != 2){
                 //std::cout << audioPlayer->CheckStatus() << std::endl;
                 audioPlayer->Play(soundToPlay,false);

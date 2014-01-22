@@ -69,6 +69,8 @@
 		<Unit filename="Behaviours\RotatingBehaviour.hpp" />
 		<Unit filename="Behaviours\StairsBehaviour.cpp" />
 		<Unit filename="Behaviours\StairsBehaviour.h" />
+		<Unit filename="Behaviours\TextureAnimationBehaviour.cpp" />
+		<Unit filename="Behaviours\TextureAnimationBehaviour.hpp" />
 		<Unit filename="Behaviours\TextureSwappingBehaviour.cpp" />
 		<Unit filename="Behaviours\TextureSwappingBehaviour.hpp" />
 		<Unit filename="Behaviours\TriggerBehaviour.cpp" />

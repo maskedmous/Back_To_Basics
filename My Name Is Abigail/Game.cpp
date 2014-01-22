@@ -23,6 +23,7 @@
 #include "Behaviours/InvadableBehaviour.hpp"
 #include "Behaviours/DoorBehaviour.hpp"
 #include "Behaviours/ItemBehaviour.hpp"
+#include "Behaviours/TriggerBehaviour.hpp"
 #include "Behaviours/StairsBehaviour.h"
 #include "Behaviours/TextureSwappingBehaviour.hpp"
 #include "Behaviours/RotatingBehaviour.hpp"
@@ -86,6 +87,13 @@ void Game::buildLevel()
         hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
+
+
+    GameObject * fireTrigger = new GameObject("fireTrigger", glm::vec3(4.5f, -0.45f, -1.0f));
+        fireTrigger->setCollider( new Collider( 4.0f, 2.0f, fireTrigger));
+        std::string soundForTrigger = "fireloop";
+        fireTrigger->setBehaviour( new TriggerBehaviour(fireTrigger, world, inventory, tipSystem, audioPlayer, -1 , soundForTrigger) );
+        world->add(fireTrigger);
 
     audioPlayer->PlayMusic("musicAct1");
     setState("Intro");

@@ -109,27 +109,28 @@ void PlayerController::update(float step)
             }
         }
 
-        oldPos = parent->getLocation();
+        if(ableToMove){
+            oldPos = parent->getLocation();
 
-        if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
-        {
-            parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
-            //std::cout << "right is loved" << std::endl;
-                if(parent->getTexture()->getName() != "models/AbigailsideRight.png")
-                {
-                    parent->setColorMap(animation[1]);
-                }
-        }
-        if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
-        {
-            parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
-            //std::cout << "left is loved" << std::endl;
-            if(parent->getTexture()->getName() != "models/AbigailsideLeft.png")
+            if((sf::Keyboard::isKeyPressed( sf::Keyboard::Right)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::D)))
             {
-                parent->setColorMap(animation[0]);
+                parent->translate( glm::vec3(3.0f * step, 0.0f, 0.0f));
+                //std::cout << "right is loved" << std::endl;
+                    if(parent->getTexture()->getName() != "models/AbigailsideRight.png")
+                    {
+                        parent->setColorMap(animation[1]);
+                    }
+            }
+            if((sf::Keyboard::isKeyPressed( sf::Keyboard::Left)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
+            {
+                parent->translate( glm::vec3(-3.0f * step, 0.0f, 0.0f));
+                //std::cout << "left is loved" << std::endl;
+                if(parent->getTexture()->getName() != "models/AbigailsideLeft.png")
+                {
+                    parent->setColorMap(animation[0]);
+                }
             }
         }
-
         if(targetItem != NULL)
         {
             checkPosition();

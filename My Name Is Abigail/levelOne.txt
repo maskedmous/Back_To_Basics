@@ -1,3 +1,6 @@
+boilerOutside,WallBetweenWall,wallthingie.png,0,5,-3,0.0
+boilerOutside,WallBetweenWall,wallthingie.png,0,4,-3,0.0
+
 BoilerRoom,Wall3x3,14BoilerRoom.png,0,7,-3,0
 pileOfBricks,pileofbricks,pileofbricks.png,0,8,-4.2,0.15
 BlockWallBasementleft,0,0,Block,5.5,-4.45,-1
@@ -7,16 +10,21 @@ boiler-MainCellar,WallBetweenWall,wallthingie.png,0,9,-3,0
 
 MainCellar,Wall5x3,15MainCellar.png,0,12,-3,0	
 stairsBasementUp,lantern,arrowStairwayUp.png,Stairs!stairsEntranceHallDown,14,-3,0.15
-MainCellar-storage,WallBetweenWall,wallthingie.png,0,15,-3,0.21
+firstStairsTip,0,0,Trigger!30!NULL,14,-4.45,-1
+
+MainCellar-storage,WallBetweenWall,inbetweendoors.png,0,15,-3,0.21
 MainCellar-storage,WallBetweenWall,wallthingie.png,0,15,-3,0
-BlockWallMainCellar,0,0,Block,15.5,-4.45,-1
 
 StorageRoomDARK,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGHT.png,17.5,-3,0
 demonstatueSwitchTexture,demon,demonstatue.png,0,15,-3.7,0.15
 matches,matches,matches.png,Item,18.35,-3.8,0.15
-
 lanternoff,lantern,lanternoff.png,ReqItem!matches,17.6,-2.7,0.15
 lantern,lantern,lantern.png,1,17.6,-2.7,0.14.9999
+triggerBasementDoor,0,0,Trigger!30!NULL,15.7,-4.45,-1
+
+storage-CellarDoor,lantern,lock.png,ReqItem!CellarKey,15.7,-3.45,0.15
+BlockWallMainCellar,0,0,Block,15.5,-4.45,-1
+
 BlockWallBasementRight,0,0,Block,19.5,-4.45,-1
 
 Kitchen,Wall4x3,06Kitchen.png,0,-8.5,1,0
@@ -27,6 +35,7 @@ Kitchen-Diningroom,WallBetweenWall,wallthingie.png,0,-6,1,0
 
 Diningroom,Wall5x3,07Diningroom.png,0,-3,1,0
 BlockWalldiningRoom,0,0,Block,0,-0.45,-1
+triggerDiningRoom,0,0,Trigger!30!NULL,0.1,-0.45,-1
 
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0.21
 Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0
@@ -35,7 +44,8 @@ Livingroom,Wall8x3,08Livingroom.png,0,4.5,1,0
 LivingroomScenery,wall8x3,livingroomFurniture.png,0,4.5,1,0.14
 pokerholder,pokerholder,pokerholder.png,0,3.55,0.5,0.149999
 poker,poker,poker.png,Item,3.55,0.3,0.15
-fire,lantern,lantern.png,ReqItem!BucketOfWater,4.5,0,0.15
+fire,0,0,ReqItem!BucketOfWater,4.5,0,0.15
+fireAnimation,lantern,fire1.png,Animation,4.5,0.0,0.16
 statue,statue,statue.png,0,2,0.20,0.14999999
 
 stone,stone,stone.png,Item,999,1,0.15
@@ -43,16 +53,21 @@ stone,stone,stone.png,Item,999,1,0.15
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0.21
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0
 
-EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!StorageRoomLIGHT.png,12,1,0
+EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart0_ERNEST.png,12,1,0
+EntranceHallLayer2,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart1_ERNEST.png,12,1,0.1
 stairsEntranceHallUp,lantern,arrowStairwayUp.png,Stairs!UpperHallwayDown,14,1,0.15
-stairsEntranceHallDown,lantern,arrowStairwayDown.png,Stairs!stairsBasementUp,10,1,0.15
-triggerEarnest,0,0,Trigger!3500!NULL,10,-0.45,-1
-earnest,earnest,earnest.png,Npc!EntranceHall,11.7,-0.45,0.15
+stairsEntranceHallDown,lantern,arrowStairwayDown.png,Stairs!stairsBasementUp,10.1,1,0.15
+MeetingEarnestTrigger,0,0,Trigger!10!2_Meeting_Ernest_1,11.2,-0.45,-1
+triggerEarnest,0,0,Trigger!30!NULL,12.5,-0.45,-1
+earnest,earnest,earnest.png,Npc!EntranceHall,12.5,-0.50,0.15
 
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0.21
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0
 
 Study,Wall4x3,10Study.png,0,17.5,1,0
+
+triggerWinterGarden,0,0,Trigger!30!NULL,20,-0.45,-1
+BlockWallGroundFloorRight,0,0,Block,20,-0.45,-1
 
 Study-Wintergarden,WallBetweenWall,wallthingie.png,0,20,1,0.21
 Study-Wintergarden,WallBetweenWall,wallthingie.png,0,20,1,0
@@ -75,17 +90,16 @@ GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0
 UpperHallWayPart0,Wall4x3,UpperHallWayPart0.png,0,12,5,0.0
 UpperHallWayPart1,Wall4x3,UpperHallWayPart1.png,0,12,5,0.01
 UpperHallWayPart2,Wall4x3,UpperHallWayPart2.png,0,12,5,0.145
-UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.5,5,0.15
+UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.6,5,0.15
 UpperHallwayDown,lantern,arrowStairwayDown.png,Stairs!stairsEntranceHallUp,10.5,5,0.15
 
 UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0.21
 UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0
 
 MasterBedroom,Wall7x3,05MasterBedroom.png,0,18.5,5,0
-MasterBedRoomDoor,lantern,bricks.jpg,ReqItem!key1,15,5.0,0.15
-MasterBedRoomDoor2,lantern,bricks.jpg,ReqItem!key2,15.1,5.0,0.15
-BlockWallMasterBedRoom,lantern,bricks.jpg,Block,16,3.55,-1
-BlockWallMasterBedRoom2,lantern,bricks.jpg,Block,16.1,3.55,-1
+MasterBedRoomDoor,lantern,bricks.jpg,ReqItem!Hammer,15,5.0,0.15
+BlockWallMasterBedRoom,lantern,bricks.jpg,Block,15.1,3.55,-1
+
 BlockWallFirstFloorRight,0,0,Block,22,3.55,-1
 
 Atticleft,Wall10x3,01Atticleft.png,0,7,9,0
@@ -98,6 +112,9 @@ BlockWallAtticleft,0,0,Block,2,7.45,-1
 Atticright,Wall10x3,01Atticright.png,0,17,9,0
 BlockWallAtticRight,0,0,Block,22,7.45,-1
 
-key1,key1,key1.png,Item,16.5,1,0.15
+CellarKey,key1,key3.png,Item,0,-10,0
+
+thread,lantern,thread.png,0,0,-10,0
+
 key2,key2,key2.png,Item,0,-10,0.15
 key3,key3,key3.png,Item,0,-10,0.15

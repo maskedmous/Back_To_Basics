@@ -11,6 +11,8 @@ InvadableBehaviour::InvadableBehaviour(GameObject * aParent, World* aWorld, Inve
     inventory = aInventory;
     responder = respondingObject;
     audioPlayer = aAudioPlayer;
+    invading = false;
+    firstInvade = true;
 
 }
 
@@ -29,10 +31,27 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
 	//std::cout  << "hey im a NPC" << std::endl;
 
     //std::string ddd = "wallName5";
-    audioPlayer->Play("creakingdoor", false);
+    audioPlayer->Play("infiltrate", false);
+    if(invading == false){
+        audioPlayer->PlayMusic("ernestInvadeMusic");
+        invading = true;
+    }else {
+        audioPlayer->PlayMusic("musicAct1");
+        invading = false;
+        if(firstInvade == true){
+            audioPlayer->Play("3_Meeting_Ernest_2", false);
+            firstInvade = false;
+        }
+    }
+
     otherGameObject->getBehaviour()->setAbleToMove();
     GameObject * randomGameObject = world->findGameObject(responder);
     randomGameObject->getBehaviour()->swapTexture();
 
+    if(parent->getName() == "earnest"){
+        std::string anotherName = "EntranceHallLayer2";
+        GameObject * moreGameObjects = world->findGameObject(anotherName);
+        moreGameObjects->getBehaviour()->swapTexture();
+    }
 }
 

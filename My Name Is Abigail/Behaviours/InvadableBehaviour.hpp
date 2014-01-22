@@ -21,6 +21,8 @@ class InvadableBehaviour : public Behaviour
         TipSystem * tipSystem;
         AudioPlayer * audioPlayer;
         std::string responder;
+        bool invading;
+        bool firstInvade;
 };
 
 
