@@ -177,7 +177,7 @@ GameObject * Inventory::getFromInventory(unsigned int itemIndex)
 
 bool Inventory::checkValidItemIndex(unsigned int itemIndex)
 {
-    if (itemIndex <= items.size() && items.size() != 0 && items.size() != 1)
+    if (itemIndex < items.size() && items.size() != 0 && items.size() != 1)
     {
         return true;
     }
