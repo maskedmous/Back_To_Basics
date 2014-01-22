@@ -25,18 +25,6 @@ class MainMenu
         Button * optionsButton;
         Button * exitButton;
 
-        sf::Texture backgroundTex;
-        sf::Sprite backgroundSprite;
-
-        sf::Texture startGameTex;
-		sf::Sprite startGame;
-
-		sf::Texture optionsTex;
-		sf::Sprite options;
-
-		sf::Texture exitGameTex;
-		sf::Sprite exitGame;
-
     private:
         std::string mouseState;
 };

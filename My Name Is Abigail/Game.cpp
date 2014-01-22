@@ -68,7 +68,7 @@ void Game::buildLevel()
 
     Inventory * inventory = new Inventory();
 
-    tipSystem = new TipSystem(hud);
+    tipSystem = new TipSystem(hud, audioPlayer);
 
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer);
@@ -148,9 +148,14 @@ void Game::update( float step )
     {
         assert( world != NULL );
         world->update( step );
+
+        if(sf::Keyboard::isKeyPressed( sf::Keyboard::Escape))
+        {
+            state = "Ingame Menu";
+        }
     }
 
-	if(state == "Main Menu")
+	if(state == "Main Menu" || state == "GoMenu")
     {
         assert( mainMenu != NULL );
         mainMenu->Update(step);
@@ -161,6 +166,12 @@ void Game::update( float step )
 	if(tipSystem != NULL)
     {
         tipSystem->countdown(step);
+    }
+
+    if(state == "GoToMenu")
+    {
+        setState("Destroying");
+        DestroyGame();
     }
 
 
@@ -185,4 +196,14 @@ void Game::setState(std::string newState)
 std::string Game::getState()
 {
     return state;
+}
+
+void Game::DestroyGame()
+{
+    std::cout << "destroying game!!" << std::endl;
+    world->removeEveryChild();
+    world->add( camera );
+    audioPlayer->Stop();
+    audioPlayer->PlayMusic("menu");
+    setState("GoMenu");
 }

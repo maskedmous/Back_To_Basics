@@ -169,6 +169,17 @@ void GameObject::remove( std::string& child)
     }
 }
 
+void GameObject::removeEveryChild()
+{
+    std::cout << "children size: " << children.size() << " Removing!" << std::endl;
+
+    children.clear();
+
+    std::cout << "removed all children" << std::endl;
+    std::cout << "children size" << children.size() << std::endl;
+    //if(children.size() > 1) removeEveryChild();
+}
+
 GameObject* GameObject::findGameObject(std::string& object)
 {
     for( unsigned int i = 0; i < children.size(); ++i){

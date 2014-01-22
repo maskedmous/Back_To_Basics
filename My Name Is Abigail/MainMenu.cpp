@@ -55,6 +55,11 @@ void MainMenu::Update(float step)
             }
         }
     }
+    if(game->getState() == "GoMenu")
+    {
+        mouseState = "Down";
+        game->setState("Main Menu");
+    }
 }
 
 void MainMenu::OnMouseDown(float step)

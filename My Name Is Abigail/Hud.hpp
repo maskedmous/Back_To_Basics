@@ -36,6 +36,12 @@ class Hud
         bool tipBool;
 
         std::vector< Button * > mainMenuButtons;
+        std::vector< Button * > ingameMenuButtons;
+
+        Button * resumeButton;
+        Button * quitToMenuButton;
+
+        std::string mouseState;
 
         unsigned int firstTrigger;
         GameObject * itemA;
@@ -54,6 +60,7 @@ class Hud
 		void setSlotTrigger();
 		void setInventory(Inventory * aInventory);
 		void addButtonToMainMenu(Button * newButton);
+		void addButtonToIngameMenu(Button * newButton);
 		void setTip(std::string aTip);
 		void countdown(float step);
 		void setAudioPlayer(AudioPlayer * m_audioPlayer);

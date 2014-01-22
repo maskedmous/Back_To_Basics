@@ -53,6 +53,7 @@ class GameObject
 		void add( GameObject * child );
 		void remove (GameObject * child );
 		void remove (std::string& child );
+		void removeEveryChild();
 		GameObject* findGameObject( std::string& object);
 
 

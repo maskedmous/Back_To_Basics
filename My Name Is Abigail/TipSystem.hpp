@@ -1,12 +1,13 @@
 #ifndef TIPSYSTEM_HPP
 #define TIPSYSTEM_HPP
 
+#include "AudioPlayer.hpp"
 #include "Hud.hpp"
 
 class TipSystem
 {
     public:
-        TipSystem(Hud * aHud);
+        TipSystem(Hud * aHud, AudioPlayer * aAudioPlayer);
         virtual ~TipSystem();
         void getTip(std::string itemName);
         void countdown(float step);
@@ -20,6 +21,7 @@ class TipSystem
         void reset();
 
         Hud * hud;
+        AudioPlayer * audioPlayer;
         float timer;
 };
 

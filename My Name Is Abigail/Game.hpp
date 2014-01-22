@@ -50,6 +50,7 @@ class Game
 		void update( float step );
 		void draw();
 		void drawHud();
+		void DestroyGame();
 
         sf::SoundBuffer bufferMenuMusic;
         sf::Sound menuMusic;

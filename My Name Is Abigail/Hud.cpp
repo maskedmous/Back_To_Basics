@@ -48,12 +48,20 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     }
     else { std::cout << "could not load this font" << std::endl; }
 
+    resumeButton = new Button("models/resumeButton.png", glm::vec2(840, (window->getSize().y / 2 - 150)));
+    addButtonToIngameMenu(resumeButton);
+
+    quitToMenuButton = new Button("models/quitbutton.png", glm::vec2(840, (window->getSize().y / 2 + 50)));
+    addButtonToIngameMenu(quitToMenuButton);
+
     firstTrigger = 999;
     slot1Trigger = false;
     slot2Trigger = false;
     slot3Trigger = false;
     slot4Trigger = false;
     slot5Trigger = false;
+
+    mouseState = "Standby";
 }
 
 Hud::~Hud()
@@ -189,6 +197,50 @@ void Hud::draw()
             tipText.setPosition(5, 475);
             window->draw(tipText);
         }
+    }
+
+    if(game->getState() == "Ingame Menu")
+    {
+        window->draw( theHUD );
+        for(unsigned int k = 0; k<ingameMenuButtons.size(); ++k)
+        {
+            Button * ingameButton = ingameMenuButtons[k];
+            window->draw(ingameButton->getButtonSprite());
+        }
+
+        glm::vec2 mousePosition = glm::vec2(glm::ivec2(sf::Mouse::getPosition(* window).x, sf::Mouse::getPosition(* window).y));
+
+        if(mouseState == "Standby")
+        {
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                if(resumeButton->hitButton(mousePosition))
+                {
+                    game->setState("Play");
+                    std::cout << "setting state to play" << std::endl;
+                }
+                if(quitToMenuButton->hitButton(mousePosition))
+                {
+
+                    std::cout << "End Game" << std::endl;
+                    tipBool = false;
+                    tipText.setString("");
+                    tipTimer = 0;
+                    game->setState("GoToMenu");
+                }
+                mouseState = "Down";
+            }
+        }
+         //if it is down
+        if(mouseState == "Down")
+         {
+             //check if it is up
+            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                 //mouse is up so put it back to standby
+                mouseState = "Standby";
+             }
+         }
     }
 
     window->draw( text );
@@ -329,6 +381,11 @@ void Hud::setInventory(Inventory * aInventory)
 void Hud::addButtonToMainMenu(Button * newButton)
 {
     mainMenuButtons.push_back(newButton);
+}
+
+void Hud::addButtonToIngameMenu(Button * newButton)
+{
+    ingameMenuButtons.push_back(newButton);
 }
 
 void Hud::setTip(std::string aTip)
