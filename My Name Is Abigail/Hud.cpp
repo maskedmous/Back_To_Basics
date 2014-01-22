@@ -292,12 +292,21 @@ void Hud::setSlotTrigger()
 
             if(itemA != NULL && itemB != NULL)
             {
-                inventory->mergeItems(itemA, itemB);
-                audioPlayer->Play("merge", false);
+                if(inventory->mergeItems(itemA, itemB))
+                {
+                    std::cout << "I merged items!" << std::endl;
+                    audioPlayer->Play("merge", false);
+                }
+                else
+                {
+                    std::cout << "I failed merging items" << std::endl;
+                    audioPlayer->Play("negativemerge", false);
+                }
             }
             else
             {
-                std::cout <<  "can't merge" << std::endl;
+                std::cout <<  "I failed merging items" << std::endl;
+                audioPlayer->Play("negativemerge", false);
             }
             //reset slots!
             firstTrigger = 999;
@@ -345,4 +354,5 @@ void Hud::countdown(float step)
 void Hud::setAudioPlayer(AudioPlayer * m_audioPlayer)
 {
     audioPlayer = m_audioPlayer;
+    std::cout << "Setting the audioplayer!!" << audioPlayer << std::endl;
 }

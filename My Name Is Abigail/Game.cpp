@@ -55,7 +55,7 @@ void Game::build()
 		world->add( camera );
 
     audioPlayer = new AudioPlayer();
-
+    hud->setAudioPlayer(audioPlayer);
     mainMenu = new MainMenu(hud, window, this);
     audioPlayer->PlayMusic("menu");
     setState("Main Menu");

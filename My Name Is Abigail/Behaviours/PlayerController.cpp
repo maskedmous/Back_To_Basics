@@ -67,6 +67,28 @@ void PlayerController::update(float step)
 
     if(characterState == moving)
     {
+        //if left mouse button is cliked
+        if(mouseState == "Standby")
+         {
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                hud->setSlotTrigger();  //merge items
+                mouseState = "Down";
+            }
+         }
+         //if it is down
+        if(mouseState == "Down")
+         {
+             //check if it is up
+            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                 //mouse is up so put it back to standby
+                mouseState = "Standby";
+                interactButton = "Standby";
+             }
+         }
+
+
         if(interactButton == "Standby")
         {
             if((sf::Keyboard::isKeyPressed( sf::Keyboard::W)) || (sf::Keyboard::isKeyPressed( sf::Keyboard::Space)))

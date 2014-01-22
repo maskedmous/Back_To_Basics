@@ -12,7 +12,7 @@ class Inventory
         void addToInventory(GameObject * item);
         void removeFromInventory(std::string& aString);
         void removeFromInventory(GameObject * aItem);
-        void mergeItems(GameObject * itemA, GameObject * itemB);
+        bool mergeItems(GameObject * itemA, GameObject * itemB);
         void mergeItems(std::string& itemA, std::string& itemB);
         std::vector< GameObject * > getInventory();
         GameObject * getFromInventory(unsigned int itemIndex);

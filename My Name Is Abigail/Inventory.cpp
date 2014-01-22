@@ -52,7 +52,7 @@ void Inventory::removeFromInventory(GameObject* aItem)
     }
 }
 
-void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
+bool Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
 {
     std::cout << itemA->getName() << " " << itemB->getName() << std::endl;
 
@@ -124,7 +124,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                         next = std::string::npos;
                         itemA = NULL;
                         itemB = NULL;
-                        break;
+                        return true;
                     }
                     else if(tempItemA == itemB->getName() && tempItemB == itemA->getName())
                     {
@@ -144,7 +144,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
                         next = std::string::npos;
                         itemA = NULL;
                         itemB = NULL;
-                        break;
+                        return true;
                     }
                     else
                     {
@@ -162,6 +162,7 @@ void Inventory::mergeItems(GameObject * itemA, GameObject * itemB)
         }
         mergeItems.close();
     }
+    return false;
 }
 
 std::vector< GameObject * > Inventory::getInventory()
@@ -176,7 +177,7 @@ GameObject * Inventory::getFromInventory(unsigned int itemIndex)
 
 bool Inventory::checkValidItemIndex(unsigned int itemIndex)
 {
-    if (itemIndex <= items.size() && items.size() != 1)
+    if (itemIndex <= items.size() && items.size() != 0 && items.size() != 1)
     {
         return true;
     }
