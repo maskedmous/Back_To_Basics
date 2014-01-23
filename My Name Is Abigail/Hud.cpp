@@ -51,7 +51,7 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
     resumeButton = new Button("models/resumeButton.png", glm::vec2(840, (window->getSize().y / 2 - 150)));
     addButtonToIngameMenu(resumeButton);
 
-    quitToMenuButton = new Button("models/quitbutton.png", glm::vec2(840, (window->getSize().y / 2 + 50)));
+    quitToMenuButton = new Button("models/quitButton.png", glm::vec2(840, (window->getSize().y / 2 + 50)));
     addButtonToIngameMenu(quitToMenuButton);
 
     firstTrigger = 999;
