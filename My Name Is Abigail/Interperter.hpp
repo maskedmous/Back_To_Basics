@@ -6,14 +6,14 @@
 #include "TipSystem.hpp"
 #include "AudioPlayer.hpp"
 #include <string>
-
+#include "Game.hpp"
 
 class Interperter
 {
     public:
         Interperter(World *);
 
-        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL, TipSystem * = NULL, AudioPlayer * = NULL);
+        void readFile(std::string aName = NULL, World * = NULL, Inventory * = NULL, TipSystem * = NULL, AudioPlayer * = NULL, Game * = NULL);
 
         virtual ~Interperter();
     protected:

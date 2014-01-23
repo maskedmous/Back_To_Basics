@@ -206,7 +206,7 @@ void Hud::draw()
     if(game->getState() == "End Screen")
     {
         window->draw(endScreen);            //draw endscreen
-        window->draw(ingameMenuButtons[1]); //exit button
+        window->draw(ingameMenuButtons[1]->getButtonSprite()); //exit button
 
         glm::vec2 mousePosition = glm::vec2(glm::ivec2(sf::Mouse::getPosition(* window).x, sf::Mouse::getPosition(* window).y));
 

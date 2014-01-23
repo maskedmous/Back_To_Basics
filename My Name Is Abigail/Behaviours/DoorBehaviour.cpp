@@ -11,7 +11,7 @@ DoorBehaviour::DoorBehaviour(GameObject * aParent, World* aWorld, Inventory * aI
     parent = aParent;
     inventory = aInventory;
     audioPlayer = aAudioPlayer;
-
+    tipSystem = aTipsystem;
     requiredItem = recievedItemName;
 }
 
@@ -59,6 +59,7 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
     	if(parent->getName() == "chest"){
     	    std::string ItemName = "thread";
     	    GameObject * threadObj = world->findGameObject(ItemName);
+            tipSystem->getFeedback(threadObj->getName());
             inventory->addToInventory(threadObj);
     	}
 

@@ -428,7 +428,7 @@
 	"AudioPlayer.hpp"
 	"Hud.hpp"
 
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+1390482790 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
 	"Game.hpp"
 	"Button.hpp"
@@ -448,7 +448,7 @@
 	<iostream>
 	"glm.hpp"
 
-1390475491 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1390479594 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
@@ -460,7 +460,7 @@
 	"../TipSystem.hpp"
 	<string>
 
-1390474137 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+1390485630 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
 	"InvadableBehaviour.hpp"
 	<iostream>
 
@@ -470,16 +470,17 @@
 	"../Inventory.hpp"
 	"../TipSystem.hpp"
 
-1390475916 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+1390485130 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
 	"ItemBehaviour.hpp"
 	<iostream>
 
-1390214502 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+1390486263 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
 	"../TipSystem.hpp"
 	"../AudioPlayer.hpp"
+	"../Game.hpp"
 
 1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
 	"KeysBehaviour.hpp"
@@ -637,7 +638,7 @@
 	<GL/glew.h>
 	"glm.hpp"
 
-1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+1390485203 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
 	<cassert>
 	<iostream>
 	<cstdio>
@@ -667,12 +668,13 @@
 	<fstream>
 	<string>
 
-1390167158 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+1390486035 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
 	"Inventory.hpp"
 	"TipSystem.hpp"
 	"AudioPlayer.hpp"
 	<string>
+	"Game.hpp"
 
 1390396372 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
 	"Inventory.hpp"
@@ -750,7 +752,7 @@
 	<iostream>
 	"Game.hpp"
 
-1390473361 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1390486007 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	<SFML/Window.hpp>
 	"Time.hpp"

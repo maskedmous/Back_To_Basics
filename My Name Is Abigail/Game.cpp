@@ -72,7 +72,7 @@ void Game::buildLevel()
     tipSystem = new TipSystem(hud);
 
     interperter = new Interperter (world);
-		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer);
+		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer, this);
 
     GameObject * blockWall = new GameObject("Wall", glm::vec3(4.5f, 0.0f, -1.0f));
         blockWall->setCollider( new Collider (1.0f, 2.0f, blockWall));

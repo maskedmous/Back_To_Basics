@@ -30,7 +30,7 @@ Interperter::~Interperter()
     //dtor
 }
 
-void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer){
+void Interperter::readFile(std::string fileName, World * aWorld, Inventory* aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, Game * aGame){
 
     //Mesh * suzanna = Mesh::load( "models/suzanna.obj");
     //Mesh * wallPlaceHolder = Mesh::load( "models/PlaceHolderWall.obj");
@@ -128,7 +128,7 @@ if(level.is_open()){
                             //std::cout << BehaviourId << "loooooooooooooooooooooooooo" <<std::endl;
 
                             if(BehaviourId == "Item"){
-                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );
+                                loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, aGame) );
                             }
                             if(BehaviourId == "Block"){
                                 loadedObj->setBehaviour( new BlockWallBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );

@@ -39,12 +39,12 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
         if(parent->getName() == "Grace"){
             audioPlayer->PlayMusic("holyGrace");
         }
-
+        tipSystem->getTip(parent->getName());
         invading = true;
     }else {
         audioPlayer->PlayMusic("musicAct1");
         invading = false;
-        if((firstInvade == true) && (parent->getName() == "Earnest")){
+        if((firstInvade == true) && (parent->getName() == "earnest")){
             audioPlayer->Play("3_Meeting_Ernest_2", false);
             firstInvade = false;
         }

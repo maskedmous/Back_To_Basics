@@ -3,13 +3,14 @@
 #include <iostream>
 
 
-ItemBehaviour::ItemBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer)
+ItemBehaviour::ItemBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, Game* aGame)
 :	Behaviour( aParent ), tipSystem(aTipsystem)
 {
     world = aWorld;
     parent = aParent;
     inventory = aInventory;
     audioPlayer = aAudioPlayer;
+    myGame = aGame;
 }
 
 ItemBehaviour::~ItemBehaviour()
@@ -31,6 +32,9 @@ void ItemBehaviour::onCollision( GameObject * otherGameObject )
 
     if(parent->getName() == "Suicidenote"){
         audioPlayer->Play("5_Find_Note",false);
+        otherGameObject->getBehaviour()->setState(1);
+        myGame->setState("End Screen");
+
     }
 }
 

@@ -6,11 +6,12 @@
 #include "../Inventory.hpp"
 #include "../TipSystem.hpp"
 #include "../AudioPlayer.hpp"
+#include "../Game.hpp"
 
 class ItemBehaviour : public Behaviour
 {
     public:
-        ItemBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer);
+        ItemBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer, Game * aGame);
         virtual ~ItemBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
@@ -21,6 +22,7 @@ class ItemBehaviour : public Behaviour
         Inventory * inventory;
         TipSystem * tipSystem;
         AudioPlayer * audioPlayer;
+        Game * myGame;
 };
 
 

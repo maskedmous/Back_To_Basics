@@ -3,5 +3,9 @@ firstStairsTip;Press Spacebar to go up and down stairs.
 MasterBedRoomDoor;The door is stuck, I would need somthing heavy to break trough.
 triggerEarnest;Press "Spacebar" to interact with people.
 triggerBasementDoor;Hmm this door is locked I should find a key.
+triggerFire;it looks like there is something laying in the fire.
 triggerDiningRoom;Hmm the smell of food but a locked door, maybe I should come back later.
 triggerWinterGarden;This door seems locked, maybe I should return here later.
+earnest;Press "Spacebar" to leave infiltration
+triggerGrace;Press "Spacebar" to interact with people.
+Grace;Press "Spacebar" to leave infiltration
