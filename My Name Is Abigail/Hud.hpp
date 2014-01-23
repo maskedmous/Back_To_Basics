@@ -25,6 +25,9 @@ class Hud
         sf::Texture introTex;
         sf::Sprite intro;
 
+        sf::Texture endScreenTex;
+        sf::Sprite endScreen;
+
 		sf::Texture selectionTex;
 		sf::Sprite selection;
 

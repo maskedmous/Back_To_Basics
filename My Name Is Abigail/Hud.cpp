@@ -26,7 +26,11 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
         intro.setTexture(introTex);
         intro.setPosition(0,0);
     }
-
+    if(endScreenTex.loadFromFile("models/endScreen.png"))
+    {
+        endScreen.setTexture(endScreenTex);
+        endScreen.setPosition(0,0);
+    }
 
     if(selectionTex.loadFromFile("models/selection.png"))
     {
@@ -197,6 +201,41 @@ void Hud::draw()
             tipText.setPosition(5, 475);
             window->draw(tipText);
         }
+    }
+
+    if(game->getState() == "End Screen")
+    {
+        window->draw(endScreen);            //draw endscreen
+        window->draw(ingameMenuButtons[1]); //exit button
+
+        glm::vec2 mousePosition = glm::vec2(glm::ivec2(sf::Mouse::getPosition(* window).x, sf::Mouse::getPosition(* window).y));
+
+        if(mouseState == "Standby")
+        {
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                if(quitToMenuButton->hitButton(mousePosition))
+                {
+
+                    std::cout << "End Game" << std::endl;
+                    tipBool = false;
+                    tipText.setString("");
+                    tipTimer = 0;
+                    game->setState("GoToMenu");
+                }
+                mouseState = "Down";
+            }
+        }
+         //if it is down
+        if(mouseState == "Down")
+         {
+             //check if it is up
+            if(! sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+                 //mouse is up so put it back to standby
+                mouseState = "Standby";
+             }
+         }
     }
 
     if(game->getState() == "Ingame Menu")
