@@ -28,5 +28,9 @@ void ItemBehaviour::onCollision( GameObject * otherGameObject )
     audioPlayer->Play("pickUpItem", false);
 	world->remove(parent);
     inventory->addToInventory(parent);
+
+    if(parent->getName() == "Suicidenote"){
+        audioPlayer->Play("5_Find_Note",false);
+    }
 }
 

@@ -378,3 +378,413 @@
 	"TriggerBehaviour.hpp"
 	<iostream>
 
+1390476892 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
+	"AudioPlayer.hpp"
+
+1390476917 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
+	<iostream>
+	<SFML/audio.hpp>
+	<string>
+
+1390322324 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
+	<cassert>
+	<iostream>
+	"Behaviour.hpp"
+
+1390322324 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
+	<vector>
+
+1390237895 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.cpp
+	"BlockWallBehaviour.hpp"
+	<iostream>
+
+1390237449 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
+
+1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
+	"GameObject.hpp"
+
+1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
+	<vector>
+	<string>
+	"glm.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\glm.hpp
+	<iostream>
+	<iomanip>
+	<glm/glm.hpp>
+	<glm/ext.hpp>
+
+1390394055 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
+	"GameObject.hpp"
+	"World.hpp"
+	<vector>
+
+1390473361 c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.hpp
+	"AudioPlayer.hpp"
+	"Hud.hpp"
+
+1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+	<SFML/Graphics.hpp>
+	"Game.hpp"
+	"Button.hpp"
+	"Inventory.hpp"
+	"GameObject.hpp"
+	"AudioPlayer.hpp"
+
+1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
+	<string>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<sfml/audio.hpp>
+	"AudioPlayer.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\button.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"glm.hpp"
+
+1390475491 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+	"DoorBehaviour.hpp"
+	<iostream>
+	<string>
+
+1390313492 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	<string>
+
+1390474137 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+	"InvadableBehaviour.hpp"
+	<iostream>
+
+1390399732 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+
+1390475916 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+	"ItemBehaviour.hpp"
+	<iostream>
+
+1390214502 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
+	"KeysBehaviour.hpp"
+	<sfml/window.hpp>
+	"../GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
+	"../Behaviour.hpp"
+
+1389193691 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
+	"LookAtBehaviour.hpp"
+	<iostream>
+	<sfml/window.hpp>
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
+	"../Behaviour.hpp"
+
+1390404464 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+	<sfml/window.hpp>
+	<iostream>
+	"../Texture.hpp"
+	"PlayerController.hpp"
+	"../GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
+	<iostream>
+	<map>
+	<SFML/Graphics.hpp>
+	<GL/glew.h>
+
+1390322324 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+	<string>
+	<vector>
+	<SFML/Window.hpp>
+	"../glm.hpp"
+	"../Renderer.hpp"
+	"../Behaviour.hpp"
+	"../Inventory.hpp"
+	"../World.hpp"
+	"../Hud.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.hpp
+	<GL/glew.h>
+	<SFML/Window.hpp>
+	"glm.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
+	"RotatingBehaviour.hpp"
+	<iostream>
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
+	"../Behaviour.hpp"
+
+1390217015 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
+	"StairsBehaviour.h"
+	<iostream>
+
+1390214897 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../AudioPlayer.hpp"
+
+1390317973 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.cpp
+	"TextureAnimationBehaviour.hpp"
+	"../Texture.hpp"
+	<iostream>
+
+1390316267 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+
+1390314339 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
+	"TextureSwappingBehaviour.hpp"
+	<sfml/window.hpp>
+	"../GameObject.hpp"
+	"../Texture.hpp"
+	<string>
+
+1390314347 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
+	<string>
+	"../Texture.hpp"
+	"../Behaviour.hpp"
+
+1390403975 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
+	"TriggerBehaviour.hpp"
+	<iostream>
+
+1390317359 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
+	<iostream>
+	<cmath>
+	<SFML/Window.hpp>
+	"WASDBehaviour.hpp"
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
+	<SFML/Window.hpp>
+	"../Behaviour.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\button.cpp
+	"Button.hpp"
+
+1389193000 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
+	"glm.hpp"
+	"Camera.hpp"
+	"Renderer.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.hpp
+	<string>
+	"GameObject.hpp"
+
+1389366626 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
+	<iostream>
+	"Collider.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.hpp
+	"GameObject.hpp"
+	"glm.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.cpp
+	<iostream>
+	"FPS.hpp"
+	"Time.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.hpp
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
+	<SFML/System.hpp>
+
+1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
+	<cassert>
+	<iostream>
+	"Renderer.hpp"
+	"GameObject.hpp"
+	"Behaviour.hpp"
+	"Mesh.hpp"
+	"Texture.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.hpp
+	<vector>
+	<GL/glew.h>
+	"glm.hpp"
+
+1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
+	<cassert>
+	<iostream>
+	<cstdio>
+	<GL/glew.h>
+	<vector>
+	"FPS.hpp"
+	"Hud.hpp"
+	"Behaviour.hpp"
+	"Behaviours/PlayerController.hpp"
+	"Texture.hpp"
+
+1390314996 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+	"Interperter.hpp"
+	"Mesh.hpp"
+	"Texture.hpp"
+	"Behaviours/TextureSwappingBehaviour.hpp"
+	"Behaviours/ItemBehaviour.hpp"
+	"Behaviours/DoorBehaviour.hpp"
+	"Behaviours/BlockWallBehaviour.hpp"
+	"Behaviours/StairsBehaviour.h"
+	"Behaviours/TriggerBehaviour.hpp"
+	"Behaviours/InvadableBehaviour.hpp"
+	"Behaviours/TextureAnimationBehaviour.hpp"
+	"Collider.hpp"
+	<cstdio>
+	<iostream>
+	<fstream>
+	<string>
+
+1390167158 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
+	"World.hpp"
+	"Inventory.hpp"
+	"TipSystem.hpp"
+	"AudioPlayer.hpp"
+	<string>
+
+1390396372 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
+	"Inventory.hpp"
+	<string>
+	<cstdio>
+	<iostream>
+	<fstream>
+	"Texture.hpp"
+	<string>
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.cpp
+	"Light.hpp"
+	"Renderer.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
+	<string>
+	"GameObject.hpp"
+
+1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mainmenu.cpp
+	"MainMenu.hpp"
+
+1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mainmenu.hpp
+	"Hud.hpp"
+	<SFML/Window.hpp>
+	"Game.hpp"
+	"Button.hpp"
+	<SFML/Graphics.hpp>
+
+1389176677 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
+	"Mesh.hpp"
+	<map>
+	<cstring>
+	<fstream>
+	"Renderer.hpp"
+
+1390322121 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.cpp
+	"Renderer.hpp"
+	<cassert>
+	<GL/glew.h>
+	"Time.hpp"
+	"ShaderProgram.hpp"
+	"Texture.hpp"
+	"GameObject.hpp"
+
+1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.hpp
+	<string>
+	<vector>
+	<GL/glew.h>
+	"glm.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.cpp
+	"ShaderProgram.hpp"
+	<iostream>
+	<fstream>
+	"Texture.hpp"
+
+1389176493 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
+	<SFML/Graphics.hpp>
+	"ShaderProgram.hpp"
+	"Texture.hpp"
+	<string>
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.cpp
+	"Time.hpp"
+	<iostream>
+
+1390312100 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
+	<cassert>
+	"World.hpp"
+	"Camera.hpp"
+	"Light.hpp"
+	"Collider.hpp"
+
+1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\main.cpp
+	<iostream>
+	"Game.hpp"
+
+1390473361 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+	<cassert>
+	<SFML/Window.hpp>
+	"Time.hpp"
+	"FPS.hpp"
+	"Hud.hpp"
+	"Renderer.hpp"
+	"ShaderProgram.hpp"
+	"Game.hpp"
+	"World.hpp"
+	"Interperter.hpp"
+	"Camera.hpp"
+	"Collider.hpp"
+	"Light.hpp"
+	"Mesh.hpp"
+	"Texture.hpp"
+	"Inventory.hpp"
+	"Behaviours/KeysBehaviour.hpp"
+	"Behaviours/PlayerController.hpp"
+	"Behaviours/LookAtBehaviour.hpp"
+	"Behaviours/WASDBehaviour.hpp"
+	"Behaviours/InvadableBehaviour.hpp"
+	"Behaviours/DoorBehaviour.hpp"
+	"Behaviours/ItemBehaviour.hpp"
+	"Behaviours/TriggerBehaviour.hpp"
+	"Behaviours/StairsBehaviour.h"
+	"Behaviours/TextureSwappingBehaviour.hpp"
+	"Behaviours/RotatingBehaviour.hpp"
+	"MainMenu.hpp"
+	"TipSystem.hpp"
+
+1390473361 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.cpp
+	<string>
+	<cstdio>
+	<iostream>
+	<fstream>
+	"TipSystem.hpp"
+

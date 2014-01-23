@@ -67,6 +67,9 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
             std::string removeTwo = "fireAnimation";
             world->remove(removeTwo);
 
+            std::string removeTrigger = "fireTrigger";
+            world->remove(removeTrigger);
+
             std::string keyname = "stone";
     	    GameObject * stoneObj = world->findGameObject(keyname);
             stoneObj->setPosition(parent->getLocation());
@@ -80,6 +83,8 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
         if(parent->getName() == "MasterBedRoomDoor"){
             std::string keyname = "BlockWallMasterBedRoom";
             world->remove(keyname);
+            audioPlayer->Play("destroyDoor",false);
+            audioPlayer->PlayMusic("masterBedroomMusic");
     	    //GameObject * key2 = world->findGameObject(keyname);
             //key2->setPosition(parent->getLocation());
 

@@ -43,6 +43,14 @@ void AudioPlayer::Play(std::string soundName, bool loop)
     }
 }
 
+void AudioPlayer::PlayVoicActing(std::string soundName){
+    sound.resetBuffer();
+    voiceActingbuffer.loadFromFile(("sound/" + soundName + ".wav").c_str());
+    sound.setBuffer(voiceActingbuffer);
+    sound.play();
+
+}
+
 void AudioPlayer::PlayMusic(std::string musicName){
     music.openFromFile(("sound/" + musicName + ".wav").c_str());
     music.setLoop(true);

@@ -33,12 +33,18 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
     //std::string ddd = "wallName5";
     audioPlayer->Play("infiltrate", false);
     if(invading == false){
-        audioPlayer->PlayMusic("ernestInvadeMusic");
+        if(parent->getName() == "Earnest"){
+            audioPlayer->PlayMusic("ernestInvadeMusic");
+        }
+        if(parent->getName() == "Grace"){
+            audioPlayer->PlayMusic("holyGrace");
+        }
+
         invading = true;
     }else {
         audioPlayer->PlayMusic("musicAct1");
         invading = false;
-        if(firstInvade == true){
+        if((firstInvade == true) && (parent->getName() == "Earnest")){
             audioPlayer->Play("3_Meeting_Ernest_2", false);
             firstInvade = false;
         }

@@ -1,9 +1,11 @@
-boilerOutside,WallBetweenWall,wallthingie.png,0,5,-3,0.0
-boilerOutside,WallBetweenWall,wallthingie.png,0,4,-3,0.0
+Outsideboiler,WallBetweenWall,newWall.png,0,5,-3,0.0
+Outsideboiler,WallBetweenWall,newWall.png,0,4,-3,0.0
+Outsideboiler,WallBetweenWall,newWall.png,0,3,-3,0.0
+
+BlockWallBasementleft,0,0,Block,5.5,-4.45,-1
 
 BoilerRoom,Wall3x3,14BoilerRoom.png,0,7,-3,0
 pileOfBricks,pileofbricks,pileofbricks.png,0,8,-4.2,0.15
-BlockWallBasementleft,0,0,Block,5.5,-4.45,-1
 
 boiler-MainCellar,WallBetweenWall,wallthingie.png,0,9,-3,0.21
 boiler-MainCellar,WallBetweenWall,wallthingie.png,0,9,-3,0
@@ -26,6 +28,9 @@ storage-CellarDoor,lantern,lock.png,ReqItem!CellarKey,15.7,-3.45,0.15
 BlockWallMainCellar,0,0,Block,15.5,-4.45,-1
 
 BlockWallBasementRight,0,0,Block,19.5,-4.45,-1
+OutsideStorageRoom,WallBetweenWall,newWall.png,0,5,-3,0.0
+OutsideStorageRoom,WallBetweenWall,newWall.png,0,4,-3,0.0
+OutsideStorageRoom,WallBetweenWall,newWall.png,0,3,-3,0.0
 
 Kitchen,Wall4x3,06Kitchen.png,0,-8.5,1,0
 BlockWallGroundFloorLeft,0,0,Block,-10.6,-0.45,-1
@@ -90,23 +95,28 @@ GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0
 UpperHallWayPart0,Wall4x3,UpperHallWayPart0.png,0,12,5,0.0
 UpperHallWayPart1,Wall4x3,UpperHallWayPart1.png,0,12,5,0.01
 UpperHallWayPart2,Wall4x3,UpperHallWayPart2.png,0,12,5,0.145
-UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.6,5,0.15
+UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.2,5,0.15
 UpperHallwayDown,lantern,arrowStairwayDown.png,Stairs!stairsEntranceHallUp,10.5,5,0.15
 
 UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0.21
 UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0
 
+MasterBedRoomDoor,lantern,chainlock.png,ReqItem!Hammer,14.0,4.5,0.15
+BlockWallMasterBedRoom,lantern,bricks.jpg,Block,14.3,3.55,-1
+
 MasterBedroom,Wall7x3,05MasterBedroom.png,0,18.5,5,0
-MasterBedRoomDoor,lantern,bricks.jpg,ReqItem!Hammer,15,5.0,0.15
-BlockWallMasterBedRoom,lantern,bricks.jpg,Block,15.1,3.55,-1
+Suicidenote,bucket,suicideNote.png,Item,20,5,0.15
 
 BlockWallFirstFloorRight,0,0,Block,22,3.55,-1
 
-Atticleft,Wall10x3,01Atticleft.png,0,7,9,0
+EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart0_ERNEST.png,12,1,0
+
+Atticleft,Wall10x3,01Atticleft.png,Swaping!01Atticleft.png!01Atticleft.png,7,9,0
 AtticDown,lantern,arrowStairwayDown.png,Stairs!UpperHallwayUp,10,9,0.15
 chest,chest,chest.png,ReqItem!Chestkey,7,8,0.15
 Chestkey,key3,chestkey.png,Item,6,8,0.15
-Grace,earnest,Grace.png,0,5,7.50,0.15
+Grace,earnest,Grace.png,Npc!Atticleft,5,7.50,0.15
+
 BlockWallAtticleft,0,0,Block,2,7.45,-1
 
 Atticright,Wall10x3,01Atticright.png,0,17,9,0

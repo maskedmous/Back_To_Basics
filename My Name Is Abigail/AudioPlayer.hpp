@@ -12,6 +12,7 @@ class AudioPlayer
         virtual ~AudioPlayer();
 
         void Play(std::string soundName, bool loop );
+        void PlayVoicActing(std::string soundName);
         void PlayMusic(std::string musicName);
         void Stop();
         void Pause();
@@ -26,6 +27,7 @@ class AudioPlayer
        sf::Music music;
 
        sf::SoundBuffer bufferSound;
+       sf::SoundBuffer voiceActingbuffer;
        sf::Sound sound;
 
        bool muted;
