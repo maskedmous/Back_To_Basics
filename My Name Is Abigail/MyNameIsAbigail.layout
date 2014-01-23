@@ -31,8 +31,8 @@
 	<File name="Behaviours\InvadableBehaviour.hpp" open="1" top="0" tabpos="34">
 		<Cursor position="839" topLine="0" />
 	</File>
-	<File name="Behaviours\ItemBehaviour.cpp" open="1" top="1" tabpos="32">
-		<Cursor position="490" topLine="0" />
+	<File name="Behaviours\ItemBehaviour.cpp" open="1" top="0" tabpos="32">
+		<Cursor position="429" topLine="0" />
 	</File>
 	<File name="Behaviours\ItemBehaviour.hpp" open="1" top="0" tabpos="37">
 		<Cursor position="445" topLine="0" />
@@ -67,8 +67,8 @@
 	<File name="Behaviours\TextureSwappingBehaviour.hpp" open="0" top="0" tabpos="11">
 		<Cursor position="293" topLine="5" />
 	</File>
-	<File name="Behaviours\TriggerBehaviour.cpp" open="1" top="0" tabpos="26">
-		<Cursor position="1299" topLine="43" />
+	<File name="Behaviours\TriggerBehaviour.cpp" open="1" top="1" tabpos="26">
+		<Cursor position="1703" topLine="42" />
 	</File>
 	<File name="Behaviours\TriggerBehaviour.hpp" open="1" top="0" tabpos="27">
 		<Cursor position="915" topLine="0" />
