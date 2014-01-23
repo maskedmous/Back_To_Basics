@@ -44,7 +44,7 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
     }else {
         audioPlayer->PlayMusic("musicAct1");
         invading = false;
-        if((firstInvade == true) && (parent->getName() == "earnest")){
+        if((firstInvade == true) && (parent->getName() == "Earnest")){
             audioPlayer->Play("3_Meeting_Ernest_2", false);
             firstInvade = false;
         }
@@ -54,7 +54,7 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
     GameObject * randomGameObject = world->findGameObject(responder);
     randomGameObject->getBehaviour()->swapTexture();
 
-    if(parent->getName() == "earnest"){
+    if(parent->getName() == "Earnest"){
         std::string anotherName = "EntranceHallLayer2";
         GameObject * moreGameObjects = world->findGameObject(anotherName);
         moreGameObjects->getBehaviour()->swapTexture();

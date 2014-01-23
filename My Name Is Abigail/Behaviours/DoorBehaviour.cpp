@@ -40,7 +40,7 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
 
             std::string toFindKey = "CellarKey";
             GameObject * cellerKey = world->findGameObject(toFindKey);
-            cellerKey->setPosition(glm::vec3(16.5, -3.45, 0.15));
+            cellerKey->setPosition(glm::vec3(18.4, -3.35, 0.15));
 
             std::string ddd = "StorageRoomDARK";
             GameObject * randomGameObject = world->findGameObject(ddd);

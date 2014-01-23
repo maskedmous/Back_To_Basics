@@ -18,6 +18,7 @@ MainCellar-storage,WallBetweenWall,newWallDoor.png,0,15,-3,0.21
 MainCellar-storage,WallBetweenWall,wallthingie.png,0,15,-3,0
 
 StorageRoomDARK,Wall4x3,StorageRoomDARK.png,Swaping!StorageRoomDARK.png!StorageRoomLIGHT.png,17.5,-3,0
+StorageRoomItemOverlay,Wall4x3,StorageRoomItemOverlay.png,0,17.5,-3,0.1
 demonstatueSwitchTexture,demon,demonstatue.png,0,15,-3.7,0.15
 matches,matches,matches.png,Item,18.35,-3.8,0.15
 lanternoff,lantern,lanternoff.png,ReqItem!matches,17.6,-2.7,0.15
@@ -47,6 +48,7 @@ Diningroom-Livingroom,WallBetweenWall,wallthingie.png,0,0,1,0
 
 Livingroom,Wall8x3,08Livingroom.png,0,4.5,1,0
 LivingroomScenery,wall8x3,livingroomFurniture.png,0,4.5,1,0.14
+LivingroomScenery,wall8x3,livingroomItemOverlay.png,0,4.5,1,0.141
 pokerholder,pokerholder,pokerholder.png,0,3.55,0.5,0.149999
 poker,poker,poker.png,Item,3.55,0.3,0.15
 fire,0,0,ReqItem!BucketOfWater,4.5,0,0.15
@@ -59,18 +61,20 @@ stone,stone,stone.png,Item,999,1,0.15
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0.21
 livingroom-enteranceHall,WallBetweenWall,wallthingie.png,0,9,1,0
 
-EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart0_ERNEST.png,12,1,0
-EntranceHallLayer2,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart1_ERNEST.png,12,1,0.1
+EntranceHall,Wall5x3,09EntranceHallPart0.png,Swaping!09EntranceHallPart0.png!09EntranceHallPart0_ERNEST.png,12,1,0
+EntranceHallLayer2,Wall5x3,09EntranceHallPart1.png,Swaping!09EntranceHallPart1.png!09EntranceHallPart1_ERNEST.png,12,1,0.1
 stairsEntranceHallUp,lantern,arrowStairwayUp.png,Stairs!UpperHallwayDown,14,1,0.15
 stairsEntranceHallDown,lantern,arrowStairwayDown.png,Stairs!stairsBasementUp,10.1,1,0.15
-MeetingEarnestTrigger,0,0,Trigger!10!2_Meeting_Ernest_1,11.1,-0.45,-1
+MeetingEarnestTrigger,0,0,Trigger!0!2_Meeting_Ernest_1,11.1,-0.45,-1
 triggerEarnest,0,0,Trigger!30!NULL,12.5,-0.45,-1
-earnest,earnest,earnest.png,Npc!EntranceHall,12.5,-0.50,0.15
+Earnest,earnest,earnest.png,Npc!EntranceHall,12.5,-0.50,0.15
 
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0.21
 EntranceHall-Study,WallBetweenWall,wallthingie.png,0,15,1,0
 
-Study,Wall4x3,10Study.png,0,17.5,1,0
+StudyPart0,Wall4x3,10StudyPart0.png,0,17.5,1,0
+StudyPart1,Wall4x3,10StudyPart1.png,0,17.5,1,0.1
+StudyPart2,Wall4x3,10StudyPart2.png,0,17.5,1,0.19
 
 triggerWinterGarden,0,0,Trigger!30!NULL,20,-0.45,-1
 BlockWallGroundFloorRight,0,0,Block,20,-0.45,-1
@@ -91,7 +95,7 @@ Bathroom-GuestBedroom,WallBetweenWall,wallthingie.png,0,2.5,5,0.21
 Bathroom-GuestBedroom,WallBetweenWall,wallthingie.png,0,2.5,5,0
 
 GuestBedroom,Wall6x3,03GuestBedroom.png,0,6,5,0
-
+GuestBedroom,Wall6x3,03GuestBedroomItemOverlay.png,0,6,5,0.1
 GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0.21
 GuestBedroom-UpperHallway,WallBetweenWall,wallthingie.png,0,9.5.5,5,0
 
@@ -101,8 +105,8 @@ UpperHallWayPart2,Wall4x3,UpperHallWayPart2.png,0,12,5,0.145
 UpperHallwayUp,lantern,arrowStairwayUp.png,Stairs!AtticDown,13.2,5,0.15
 UpperHallwayDown,lantern,arrowStairwayDown.png,Stairs!stairsEntranceHallUp,10.5,5,0.15
 
-UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0.21
-UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.5.5,5,0
+UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.4,5,0.14999
+UpperHallway-MasterBedroom,WallBetweenWall,wallthingie.png,0,14.4,5,0.0
 
 MasterBedRoomDoor,lantern,chainlock.png,ReqItem!Hammer,14.0,4.5,0.15
 BlockWallMasterBedRoom,lantern,bricks.jpg,Block,14.3,3.55,-1
@@ -113,8 +117,6 @@ Suicidenote,bucket,suicideNote.png,Item,20,5,0.15
 OutsideMasterBedRoom,WallBetweenWall,newWall.png,0,22.5,5,0
 
 BlockWallFirstFloorRight,0,0,Block,22,3.55,-1
-
-EntranceHall,Wall5x3,09EntranceHall.png,Swaping!09EntranceHall.png!09EntranceHallPart0_ERNEST.png,12,1,0
 
 BlockWallAtticleft,0,0,Block,2,7.45,-1
 OutsideAtticleft,WallBetweenWall,newWall.png,0,1.5,9,0
@@ -131,7 +133,7 @@ OutsideatticRight,WallBetweenWall,newWall.png,0,22.5,9,0
 
 BlockWallAtticRight,0,0,Block,22,7.45,-1
 
-CellarKey,key1,key3.png,Item,0,-10,0
+CellarKey,key3,key3.png,Item,0,-10,0
 
 thread,lantern,thread.png,0,0,-10,0
 
