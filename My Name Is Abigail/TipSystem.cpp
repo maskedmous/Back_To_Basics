@@ -4,8 +4,8 @@
 #include <fstream>
 #include "TipSystem.hpp"
 
-TipSystem::TipSystem(Hud * aHud, AudioPlayer * aAudioPlayer)
-: hud(aHud), audioPlayer(aAudioPlayer), timer(5)
+TipSystem::TipSystem(Hud * aHud)
+: hud(aHud), timer(5)
 {
     //ctor
 }
@@ -141,7 +141,6 @@ void TipSystem::sendTip(std::string aTip)
     //std::cout << aTip << std::endl;
     //send the tip to the hud so the hud shows the tip above the inventory
     hud->setTip(aTip);
-    audioPlayer->Play("tip", false);
 }
 
 void TipSystem::countdown(float step)

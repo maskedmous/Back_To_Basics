@@ -69,7 +69,7 @@ void Game::buildLevel()
 
     Inventory * inventory = new Inventory();
 
-    tipSystem = new TipSystem(hud, audioPlayer);
+    tipSystem = new TipSystem(hud);
 
     interperter = new Interperter (world);
 		interperter->readFile( "LevelOne", world, inventory, tipSystem, audioPlayer);

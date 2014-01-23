@@ -1,858 +1,55 @@
 # depslib dependency file v1.0
-1359893973 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviour.cpp
+1390390230 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\audioplayer.cpp
+	"AudioPlayer.hpp"
+
+1390390230 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\audioplayer.hpp
+	<iostream>
+	<SFML/audio.hpp>
+	<string>
+
+1390317921 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviour.cpp
 	<cassert>
 	<iostream>
 	"Behaviour.hpp"
 
-1359820895 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviour.hpp
-
-1359902126 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\keysbehaviour.cpp
-	"KeysBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-
-1359823466 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\keysbehaviour.hpp
-	"../Behaviour.hpp"
-
-1378132768 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\gameobject.hpp
+1390317900 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviour.hpp
 	<vector>
-	<string>
-	"glm.hpp"
 
-1359909794 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\glm.hpp
-	<iostream>
-	<iomanip>
-	<glm/glm.hpp>
-	<glm/ext.hpp>
-
-1359823488 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\rotatingbehaviour.cpp
-	"RotatingBehaviour.hpp"
-	<iostream>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359823480 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\rotatingbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386001027 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\textureswappingbehaviour.cpp
-	"TextureSwappingBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-	"../Texture.hpp"
-	<string>
-
-1385981757 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\textureswappingbehaviour.hpp
-	<string>
-	"../Behaviour.hpp"
-
-1360914970 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\wasdbehaviour.cpp
-	<iostream>
-	<cmath>
-	<SFML/Window.hpp>
-	"WASDBehaviour.hpp"
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359908478 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\wasdbehaviour.hpp
-	<SFML/Window.hpp>
-	"../Behaviour.hpp"
-
-1361178152 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\camera.cpp
-	"glm.hpp"
-	"Camera.hpp"
-	"Renderer.hpp"
-
-1359907314 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\camera.hpp
-	<string>
-	"GameObject.hpp"
-
-1361178780 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\renderer.hpp
-	<GL/glew.h>
-	<SFML/Window.hpp>
-	"glm.hpp"
-
-1361092254 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\fps.cpp
-	<iostream>
-	"FPS.hpp"
-	"Time.hpp"
-
-1361092144 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\fps.hpp
-
-1358431643 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\time.hpp
-	<SFML/System.hpp>
-
-1386080172 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\game.cpp
-	<cassert>
-	"Time.hpp"
-	"FPS.hpp"
-	"Hud.hpp"
-	"Renderer.hpp"
-	"ShaderProgram.hpp"
-	"Game.hpp"
-	"World.hpp"
-	"Interperter.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/KeysBehaviour.hpp"
-	"Behaviours/WASDBehaviour.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/RotatingBehaviour.hpp"
-
-1361173609 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\hud.hpp
-	<SFML/Graphics.hpp>
-
-1359815027 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\shaderprogram.hpp
-	<string>
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1386002571 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\game.hpp
-	<SFML/Graphics.hpp>
-	<SFML/Window.hpp>
-
-1378132840 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\world.hpp
-	"GameObject.hpp"
-
-1359907327 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\light.hpp
-	<string>
-	"GameObject.hpp"
-
-1359671404 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\mesh.hpp
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1359061002 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\texture.hpp
-	<iostream>
-	<map>
-	<GL/glew.h>
-
-1378134068 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\gameobject.cpp
-	<cassert>
-	<iostream>
-	"Renderer.hpp"
-	"GameObject.hpp"
-	"Behaviour.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-
-1378134948 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\hud.cpp
-	<cassert>
-	<iostream>
-	<cstdio>
-	<GL/glew.h>
-	"FPS.hpp"
-	"Hud.hpp"
-
-1359907291 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\light.cpp
-	"Light.hpp"
-	"Renderer.hpp"
-
-1361016765 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\mesh.cpp
-	"Mesh.hpp"
-	<map>
-	<cstring>
-	<fstream>
-	"Renderer.hpp"
-
-1361179274 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\renderer.cpp
-	"Renderer.hpp"
-	<cassert>
-	<GL/glew.h>
-	"Time.hpp"
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	"GameObject.hpp"
-
-1359060929 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\shaderprogram.cpp
-	"ShaderProgram.hpp"
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1360915113 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\texture.cpp
-	<SFML/Graphics.hpp>
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-
-1359818749 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\time.cpp
-	"Time.hpp"
+1390302305 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.cpp
+	"BlockWallBehaviour.hpp"
 	<iostream>
 
-1378132886 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\world.cpp
-	<cassert>
-	"World.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-
-1361173636 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1386005258 c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\interperter.hpp
-	"World.hpp"
-	<string>
-
-1386080328 source:c:\users\marijn\dropbox\backtobasics\gtp\micro game engine with hud\interperter.cpp
-	"Interperter.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	<cstdio>
-	<iostream>
-	<fstream>
-	<string>
-
-1359893973 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviour.cpp
-	<cassert>
-	<iostream>
-	"Behaviour.hpp"
-
-1359820895 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviour.hpp
-
-1359902126 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\keysbehaviour.cpp
-	"KeysBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-
-1359823466 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\keysbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386448873 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\gameobject.hpp
-	<vector>
-	<string>
-	"glm.hpp"
-
-1359909794 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\glm.hpp
-	<iostream>
-	<iomanip>
-	<glm/glm.hpp>
-	<glm/ext.hpp>
-
-1359823488 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\rotatingbehaviour.cpp
-	"RotatingBehaviour.hpp"
-	<iostream>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359823480 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\rotatingbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386001027 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\textureswappingbehaviour.cpp
-	"TextureSwappingBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-	"../Texture.hpp"
-	<string>
-
-1385981757 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\textureswappingbehaviour.hpp
-	<string>
-	"../Behaviour.hpp"
-
-1359061002 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\texture.hpp
-	<iostream>
-	<map>
-	<GL/glew.h>
-
-1360914970 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\wasdbehaviour.cpp
-	<iostream>
-	<cmath>
-	<SFML/Window.hpp>
-	"WASDBehaviour.hpp"
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359908478 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\wasdbehaviour.hpp
-	<SFML/Window.hpp>
-	"../Behaviour.hpp"
-
-1361178152 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\camera.cpp
-	"glm.hpp"
-	"Camera.hpp"
-	"Renderer.hpp"
-
-1359907314 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\camera.hpp
-	<string>
-	"GameObject.hpp"
-
-1386359205 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\renderer.hpp
-	<GL/glew.h>
-	<SFML/Window.hpp>
-	"glm.hpp"
-
-1361092254 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\fps.cpp
-	<iostream>
-	"FPS.hpp"
-	"Time.hpp"
-
-1361092144 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\fps.hpp
-
-1358431643 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\time.hpp
-	<SFML/System.hpp>
-
-1378134948 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\hud.cpp
-	<cassert>
-	<iostream>
-	<cstdio>
-	<GL/glew.h>
-	"FPS.hpp"
-	"Hud.hpp"
-
-1361173609 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\hud.hpp
-	<SFML/Graphics.hpp>
-
-1386339677 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\interperter.cpp
-	"Interperter.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	<cstdio>
-	<iostream>
-	<fstream>
-	<string>
-
-1386005258 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\interperter.hpp
-	"World.hpp"
-	<string>
-
-1386451286 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\world.hpp
-	"GameObject.hpp"
-
-1359671404 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\mesh.hpp
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1359907291 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\light.cpp
-	"Light.hpp"
-	"Renderer.hpp"
-
-1359907327 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\light.hpp
-	<string>
-	"GameObject.hpp"
-
-1361173636 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1386002571 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\game.hpp
-	<SFML/Graphics.hpp>
-	<SFML/Window.hpp>
-
-1361016765 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\mesh.cpp
-	"Mesh.hpp"
-	<map>
-	<cstring>
-	<fstream>
-	"Renderer.hpp"
-
-1359060929 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\shaderprogram.cpp
-	"ShaderProgram.hpp"
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1359815027 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\shaderprogram.hpp
-	<string>
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1360915113 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\texture.cpp
-	<SFML/Graphics.hpp>
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-
-1359818749 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\time.cpp
-	"Time.hpp"
-	<iostream>
-
-1386340895 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\lookatbehaviour.cpp
-	"LookAtBehaviour.hpp"
-	<iostream>
-	<sfml/window.hpp>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1379590142 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\lookatbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386452887 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\playercontroller.cpp
-	<sfml/window.hpp>
-	<iostream>
-	"PlayerController.hpp"
-	"../GameObject.hpp"
-
-1386450486 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\behaviours\playercontroller.hpp
-	<string>
-	<vector>
-	<SFML/Window.hpp>
-	"../glm.hpp"
-	"../Renderer.hpp"
+1390302305 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
-
-1386452633 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\game.cpp
-	<cassert>
-	"Time.hpp"
-	"FPS.hpp"
-	"Hud.hpp"
-	"Renderer.hpp"
-	"ShaderProgram.hpp"
-	"Game.hpp"
-	"World.hpp"
-	"Interperter.hpp"
-	"Camera.hpp"
-	"Collider.hpp"
-	"Light.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/KeysBehaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Behaviours/LookAtBehaviour.hpp"
-	"Behaviours/WASDBehaviour.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/RotatingBehaviour.hpp"
-
-1386355188 c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\collider.hpp
-
-1386448911 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\gameobject.cpp
-	<cassert>
-	<iostream>
-	"Renderer.hpp"
-	"GameObject.hpp"
-	"Behaviour.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-
-1386359254 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\renderer.cpp
-	"Renderer.hpp"
-	<cassert>
-	<GL/glew.h>
-	"Time.hpp"
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	"GameObject.hpp"
-
-1386451280 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\world.cpp
-	<cassert>
-	"World.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-	"Collider.hpp"
-
-1386449633 source:c:\users\maskedmouse\documents\school\dropbox\backtobasics\gtp\micro game engine with hud\collider.cpp
-	<iostream>
-	"Collider.hpp"
-
-1387020555 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviour.cpp
-	<cassert>
-	<iostream>
-	"Behaviour.hpp"
-
-1386506010 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviour.hpp
-	<vector>
-
-1359902126 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
-	"KeysBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-
-1359823466 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386717531 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.hpp
-	<vector>
-	<string>
-	"glm.hpp"
-
-1359909794 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\glm.hpp
-	<iostream>
-	<iomanip>
-	<glm/glm.hpp>
-	<glm/ext.hpp>
-
-1387023294 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
-	"LookAtBehaviour.hpp"
-	<iostream>
-	<sfml/window.hpp>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1386506065 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
-	"../Behaviour.hpp"
-
-1387358172 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
-	<sfml/window.hpp>
-	<iostream>
-	"PlayerController.hpp"
-	"../GameObject.hpp"
-
-1387358172 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
-	<string>
-	<vector>
-	<SFML/Window.hpp>
-	"../glm.hpp"
-	"../Renderer.hpp"
-	"../Behaviour.hpp"
 	"../Inventory.hpp"
-	"../World.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
 
-1386359205 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\renderer.hpp
-	<GL/glew.h>
-	<SFML/Window.hpp>
-	"glm.hpp"
-
-1387020555 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
+1389357850 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.hpp
 	"GameObject.hpp"
 
-1359823488 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
-	"RotatingBehaviour.hpp"
-	<iostream>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359823480 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
-	"../Behaviour.hpp"
-
-1386001027 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
-	"TextureSwappingBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-	"../Texture.hpp"
-	<string>
-
-1385981757 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
-	<string>
-	"../Behaviour.hpp"
-
-1387448899 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.hpp
-	<iostream>
-	<map>
-	<SFML/Graphics.hpp>
-	<GL/glew.h>
-
-1360914970 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
-	<iostream>
-	<cmath>
-	<SFML/Window.hpp>
-	"WASDBehaviour.hpp"
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1359908478 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
-	<SFML/Window.hpp>
-	"../Behaviour.hpp"
-
-1386777273 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.cpp
-	"glm.hpp"
-	"Camera.hpp"
-	"Renderer.hpp"
-
-1359907314 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.hpp
-	<string>
-	"GameObject.hpp"
-
-1387456070 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
-	<iostream>
-	"Collider.hpp"
-
-1387453934 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.hpp
-	"GameObject.hpp"
-	"glm.hpp"
-
-1387033329 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.cpp
-	<iostream>
-	"FPS.hpp"
-	"Time.hpp"
-
-1361092144 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.hpp
-
-1358431643 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.hpp
-	<SFML/System.hpp>
-
-1388753596 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.cpp
-	<cassert>
-	"Time.hpp"
-	"FPS.hpp"
-	"Hud.hpp"
-	"Renderer.hpp"
-	"ShaderProgram.hpp"
-	"Game.hpp"
-	"World.hpp"
-	"Interperter.hpp"
-	"Camera.hpp"
-	"Collider.hpp"
-	"Light.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Inventory.hpp"
-	"Behaviours/KeysBehaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Behaviours/LookAtBehaviour.hpp"
-	"Behaviours/WASDBehaviour.hpp"
-	"Behaviours/DoorBehaviour.hpp"
-	"Behaviours/ItemBehaviour.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/RotatingBehaviour.hpp"
-	"MainMenu.hpp"
-
-1387467982 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.hpp
-	<SFML/Graphics.hpp>
-	"Game.hpp"
-	"Button.hpp"
-	"Inventory.hpp"
-	"GameObject.hpp"
-
-1359815027 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\shaderprogram.hpp
-	<string>
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1388753473 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.hpp
-	<string>
-	<SFML/Graphics.hpp>
-	<SFML/Window.hpp>
-
-1387448899 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.hpp
-	"World.hpp"
-	"Inventory.hpp"
-	<string>
-
-1359907327 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\light.hpp
-	<string>
-	"GameObject.hpp"
-
-1359671404 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mesh.hpp
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1387021342 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.cpp
-	<cassert>
-	<iostream>
-	"Renderer.hpp"
-	"GameObject.hpp"
-	"Behaviour.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-
-1387451030 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.cpp
-	"Interperter.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/ItemBehaviour.hpp"
-	"Behaviours/DoorBehaviour.hpp"
-	"Collider.hpp"
-	<cstdio>
-	<iostream>
-	<fstream>
-	<string>
-
-1359907291 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\light.cpp
-	"Light.hpp"
-	"Renderer.hpp"
-
-1387460339 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1361016765 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mesh.cpp
-	"Mesh.hpp"
-	<map>
-	<cstring>
-	<fstream>
-	"Renderer.hpp"
-
-1386843489 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\renderer.cpp
-	"Renderer.hpp"
-	<cassert>
-	<GL/glew.h>
-	"Time.hpp"
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	"GameObject.hpp"
-
-1359060929 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\shaderprogram.cpp
-	"ShaderProgram.hpp"
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1387448899 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.cpp
-	<SFML/Graphics.hpp>
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	<string>
-
-1359818749 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.cpp
-	"Time.hpp"
-	<iostream>
-
-1387453478 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
-	<cassert>
-	"World.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-	"Collider.hpp"
-
-1388689296 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
-	<cassert>
-	<iostream>
-	<cstdio>
-	<GL/glew.h>
-	<vector>
-	"FPS.hpp"
-	"Hud.hpp"
-	"Behaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Texture.hpp"
-
-1390322324 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.cpp
-	<cassert>
-	<iostream>
-	"Behaviour.hpp"
-
-1390322324 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviour.hpp
-	<vector>
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
-	"KeysBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
-	"../Behaviour.hpp"
-
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.hpp
+1390400962 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.hpp
 	<vector>
 	<string>
 	"glm.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\glm.hpp
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\glm.hpp
 	<iostream>
 	<iomanip>
 	<glm/glm.hpp>
 	<glm/ext.hpp>
 
-1389193691 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
-	"LookAtBehaviour.hpp"
-	<iostream>
-	<sfml/window.hpp>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
-	"../Behaviour.hpp"
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
-	"RotatingBehaviour.hpp"
-	<iostream>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
-	"../Behaviour.hpp"
-
-1390314339 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
-	"TextureSwappingBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-	"../Texture.hpp"
-	<string>
-
-1390314347 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
-	<string>
-	"../Texture.hpp"
-	"../Behaviour.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.hpp
-	<iostream>
-	<map>
-	<SFML/Graphics.hpp>
-	<GL/glew.h>
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
-	<iostream>
-	<cmath>
-	<SFML/Window.hpp>
-	"WASDBehaviour.hpp"
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
-	<SFML/Window.hpp>
-	"../Behaviour.hpp"
-
-1389193000 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.cpp
-	"glm.hpp"
-	"Camera.hpp"
-	"Renderer.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\camera.hpp
-	<string>
+1390392665 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
 	"GameObject.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.hpp
-	<GL/glew.h>
-	<SFML/Window.hpp>
-	"glm.hpp"
-
-1389366626 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.cpp
-	<iostream>
-	"Collider.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\collider.hpp
-	"GameObject.hpp"
-	"glm.hpp"
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.cpp
-	<iostream>
-	"FPS.hpp"
-	"Time.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\fps.hpp
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.hpp
-	<SFML/System.hpp>
-
-1390404410 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
-	<cassert>
-	<SFML/Window.hpp>
-	"Time.hpp"
-	"FPS.hpp"
-	"Hud.hpp"
-	"Renderer.hpp"
-	"ShaderProgram.hpp"
-	"Game.hpp"
 	"World.hpp"
-	"Interperter.hpp"
-	"Camera.hpp"
-	"Collider.hpp"
-	"Light.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Inventory.hpp"
-	"Behaviours/KeysBehaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Behaviours/LookAtBehaviour.hpp"
-	"Behaviours/WASDBehaviour.hpp"
-	"Behaviours/InvadableBehaviour.hpp"
-	"Behaviours/DoorBehaviour.hpp"
-	"Behaviours/ItemBehaviour.hpp"
-	"Behaviours/TriggerBehaviour.hpp"
-	"Behaviours/StairsBehaviour.h"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/RotatingBehaviour.hpp"
-	"MainMenu.hpp"
-	"TipSystem.hpp"
+	<vector>
 
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.hpp
+1390473213 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\tipsystem.hpp
+	"AudioPlayer.hpp"
+	"Hud.hpp"
+
+1390399360 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.hpp
 	<SFML/Graphics.hpp>
 	"Game.hpp"
 	"Button.hpp"
@@ -860,39 +57,169 @@
 	"GameObject.hpp"
 	"AudioPlayer.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.hpp
-	<string>
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.hpp
+1390400129 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\game.hpp
 	<string>
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<sfml/audio.hpp>
 	"AudioPlayer.hpp"
 
-1389360797 c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.hpp
-	"GameObject.hpp"
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\button.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"glm.hpp"
 
-1390167158 c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.hpp
-	"World.hpp"
-	"Inventory.hpp"
-	"TipSystem.hpp"
-	"AudioPlayer.hpp"
+1390302305 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
+	"ItemBehaviour.hpp"
+	<iostream>
+
+1390218643 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.cpp
+	"KeysBehaviour.hpp"
+	<sfml/window.hpp>
+	"../GameObject.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\keysbehaviour.hpp
+	"../Behaviour.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.cpp
+	"LookAtBehaviour.hpp"
+	<iostream>
+	<sfml/window.hpp>
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
+	"../Behaviour.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.cpp
+	"RotatingBehaviour.hpp"
+	<iostream>
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
+	"../Behaviour.hpp"
+
+1390218643 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
+	"StairsBehaviour.h"
+	<iostream>
+
+1390218643 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../AudioPlayer.hpp"
+
+1390390230 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.cpp
+	"TextureAnimationBehaviour.hpp"
+	"../Texture.hpp"
+	<iostream>
+
+1390390230 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.hpp
+	<iostream>
+	<map>
+	<SFML/Graphics.hpp>
+	<GL/glew.h>
+
+1390390230 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.cpp
+	"TextureSwappingBehaviour.hpp"
+	<sfml/window.hpp>
+	"../GameObject.hpp"
+	"../Texture.hpp"
 	<string>
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.hpp
+1390390230 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\textureswappingbehaviour.hpp
+	<string>
+	"../Texture.hpp"
+	"../Behaviour.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.cpp
+	<iostream>
+	<cmath>
+	<SFML/Window.hpp>
+	"WASDBehaviour.hpp"
+	"../glm.hpp"
+	"../GameObject.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\wasdbehaviour.hpp
+	<SFML/Window.hpp>
+	"../Behaviour.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\button.cpp
+	"Button.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.cpp
+	"glm.hpp"
+	"Camera.hpp"
+	"Renderer.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\camera.hpp
 	<string>
 	"GameObject.hpp"
 
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.hpp
+1389795234 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\renderer.hpp
+	<GL/glew.h>
+	<SFML/Window.hpp>
+	"glm.hpp"
+
+1389527127 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.cpp
+	<iostream>
+	"Collider.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\collider.hpp
+	"GameObject.hpp"
+	"glm.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.cpp
+	<iostream>
+	"FPS.hpp"
+	"Time.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\fps.hpp
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.hpp
+	<SFML/System.hpp>
+
+1390402206 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\gameobject.cpp
+	<cassert>
+	<iostream>
+	"Renderer.hpp"
+	"GameObject.hpp"
+	"Behaviour.hpp"
+	"Mesh.hpp"
+	"Texture.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mesh.hpp
 	<vector>
 	<GL/glew.h>
 	"glm.hpp"
 
-1390322324 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1390402753 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\hud.cpp
+	<cassert>
+	<iostream>
+	<cstdio>
+	<GL/glew.h>
+	<vector>
+	"FPS.hpp"
+	"Hud.hpp"
+	"Behaviour.hpp"
+	"Behaviours/PlayerController.hpp"
+	"Texture.hpp"
+
+1390317847 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -903,28 +230,7 @@
 	"../World.hpp"
 	"../Hud.hpp"
 
-1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\gameobject.cpp
-	<cassert>
-	<iostream>
-	"Renderer.hpp"
-	"GameObject.hpp"
-	"Behaviour.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-
-1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\hud.cpp
-	<cassert>
-	<iostream>
-	<cstdio>
-	<GL/glew.h>
-	<vector>
-	"FPS.hpp"
-	"Hud.hpp"
-	"Behaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Texture.hpp"
-
-1390314996 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1390390520 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -942,558 +248,133 @@
 	<fstream>
 	<string>
 
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\light.cpp
-	"Light.hpp"
-	"Renderer.hpp"
-
-1389176677 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mesh.cpp
-	"Mesh.hpp"
-	<map>
-	<cstring>
-	<fstream>
-	"Renderer.hpp"
-
-1390322121 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.cpp
-	"Renderer.hpp"
-	<cassert>
-	<GL/glew.h>
-	"Time.hpp"
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	"GameObject.hpp"
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\shaderprogram.cpp
-	"ShaderProgram.hpp"
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1389176493 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\texture.cpp
-	<SFML/Graphics.hpp>
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	<string>
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\time.cpp
-	"Time.hpp"
-	<iostream>
-
-1390312100 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\world.cpp
-	<cassert>
-	"World.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-	"Collider.hpp"
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1390404464 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
-	<sfml/window.hpp>
-	<iostream>
-	"../Texture.hpp"
-	"PlayerController.hpp"
-	"../GameObject.hpp"
-
-1390394055 c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.hpp
-	"GameObject.hpp"
-	"World.hpp"
-	<vector>
-
-1390396372 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\inventory.cpp
-	"Inventory.hpp"
-	<string>
-	<cstdio>
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-	<string>
-
-1388759646 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.hpp
-	"GameObject.hpp"
-	"World.hpp"
-	<vector>
-
-1387448899 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
-	"Inventory.hpp"
-	<string>
-
-1390401020 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
-	"DoorBehaviour.hpp"
-	<iostream>
-	<string>
-
-1390313492 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
-	<string>
-
-1390233393 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
-	"ItemBehaviour.hpp"
-	<iostream>
-
-1390214502 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
-	"../AudioPlayer.hpp"
-
-1387286418 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\itembehaviour.cpp
-	"ItemBehaviour.hpp"
-	<iostream>
-
-1387020555 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\itembehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-
-1387448899 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	<string>
-
-1387448899 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
-	"DoorBehaviour.hpp"
-	<iostream>
-	<string>
-
-1388690760 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\button.cpp
-	"Button.hpp"
-
-1388688265 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\button.hpp
-	<SFML/Graphics.hpp>
-	<iostream>
-	"glm.hpp"
-
-1388691141 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mainmenu.hpp
-	"Hud.hpp"
-	<SFML/Window.hpp>
-	"Game.hpp"
-	"Button.hpp"
-	<SFML/Graphics.hpp>
-
-1388691155 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mainmenu.cpp
-	"MainMenu.hpp"
-
-1388960902 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\button.cpp
-	"Button.hpp"
-
-1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\button.hpp
-	<SFML/Graphics.hpp>
-	<iostream>
-	"glm.hpp"
-
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\mainmenu.hpp
-	"Hud.hpp"
-	<SFML/Window.hpp>
-	"Game.hpp"
-	"Button.hpp"
-	<SFML/Graphics.hpp>
-
-1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\mainmenu.cpp
-	"MainMenu.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviour.cpp
-	<cassert>
-	<iostream>
-	"Behaviour.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviour.hpp
-	<vector>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\doorbehaviour.cpp
-	"DoorBehaviour.hpp"
-	<iostream>
-	<string>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\doorbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	<string>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\world.hpp
-	"GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\gameobject.hpp
-	<vector>
-	<string>
-	"glm.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\glm.hpp
-	<iostream>
-	<iomanip>
-	<glm/glm.hpp>
-	<glm/ext.hpp>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\inventory.hpp
-	"GameObject.hpp"
-	"World.hpp"
-	<vector>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\itembehaviour.cpp
-	"ItemBehaviour.hpp"
-	<iostream>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\itembehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\keysbehaviour.cpp
-	"KeysBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\keysbehaviour.hpp
-	"../Behaviour.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\lookatbehaviour.cpp
-	"LookAtBehaviour.hpp"
-	<iostream>
-	<sfml/window.hpp>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\lookatbehaviour.hpp
-	"../Behaviour.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\playercontroller.cpp
-	<sfml/window.hpp>
-	<iostream>
-	"PlayerController.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\playercontroller.hpp
-	<string>
-	<vector>
-	<SFML/Window.hpp>
-	"../glm.hpp"
-	"../Renderer.hpp"
-	"../Behaviour.hpp"
-	"../Inventory.hpp"
-	"../World.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\renderer.hpp
-	<GL/glew.h>
-	<SFML/Window.hpp>
-	"glm.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\rotatingbehaviour.cpp
-	"RotatingBehaviour.hpp"
-	<iostream>
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\rotatingbehaviour.hpp
-	"../Behaviour.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\textureswappingbehaviour.cpp
-	"TextureSwappingBehaviour.hpp"
-	<sfml/window.hpp>
-	"../GameObject.hpp"
-	"../Texture.hpp"
-	<string>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\textureswappingbehaviour.hpp
-	<string>
-	"../Behaviour.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\texture.hpp
-	<iostream>
-	<map>
-	<SFML/Graphics.hpp>
-	<GL/glew.h>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\wasdbehaviour.cpp
-	<iostream>
-	<cmath>
-	<SFML/Window.hpp>
-	"WASDBehaviour.hpp"
-	"../glm.hpp"
-	"../GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\wasdbehaviour.hpp
-	<SFML/Window.hpp>
-	"../Behaviour.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\button.cpp
-	"Button.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\button.hpp
-	<SFML/Graphics.hpp>
-	<iostream>
-	"glm.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\camera.cpp
-	"glm.hpp"
-	"Camera.hpp"
-	"Renderer.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\camera.hpp
-	<string>
-	"GameObject.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\collider.cpp
-	<iostream>
-	"Collider.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\collider.hpp
-	"GameObject.hpp"
-	"glm.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\fps.cpp
-	<iostream>
-	"FPS.hpp"
-	"Time.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\fps.hpp
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\time.hpp
-	<SFML/System.hpp>
-
-1388966802 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\game.cpp
-	<cassert>
-	"Time.hpp"
-	"FPS.hpp"
-	"Hud.hpp"
-	"Renderer.hpp"
-	"ShaderProgram.hpp"
-	"Game.hpp"
-	"World.hpp"
-	"Interperter.hpp"
-	"Camera.hpp"
-	"Collider.hpp"
-	"Light.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Inventory.hpp"
-	"Behaviours/KeysBehaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Behaviours/LookAtBehaviour.hpp"
-	"Behaviours/WASDBehaviour.hpp"
-	"Behaviours/DoorBehaviour.hpp"
-	"Behaviours/ItemBehaviour.hpp"
-	"Behaviours/StairsBehaviour.h"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/RotatingBehaviour.hpp"
-	"MainMenu.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\hud.hpp
-	<SFML/Graphics.hpp>
-	"Game.hpp"
-	"Button.hpp"
-	"Inventory.hpp"
-	"GameObject.hpp"
-
-1388965681 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\game.hpp
-	<string>
-	<SFML/Graphics.hpp>
-	<SFML/Window.hpp>
-	<sfml/audio.hpp>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\shaderprogram.hpp
-	<string>
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\interperter.hpp
+1390213248 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\interperter.hpp
 	"World.hpp"
 	"Inventory.hpp"
-	<string>
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\light.hpp
-	<string>
-	"GameObject.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\mesh.hpp
-	<vector>
-	<GL/glew.h>
-	"glm.hpp"
-
-1388960902 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\mainmenu.hpp
-	"Hud.hpp"
-	<SFML/Window.hpp>
-	"Game.hpp"
-	"Button.hpp"
-	<SFML/Graphics.hpp>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\gameobject.cpp
-	<cassert>
-	<iostream>
-	"Renderer.hpp"
-	"GameObject.hpp"
-	"Behaviour.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\hud.cpp
-	<cassert>
-	<iostream>
-	<cstdio>
-	<GL/glew.h>
-	<vector>
-	"FPS.hpp"
-	"Hud.hpp"
-	"Behaviour.hpp"
-	"Behaviours/PlayerController.hpp"
-	"Texture.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\interperter.cpp
-	"Interperter.hpp"
-	"Mesh.hpp"
-	"Texture.hpp"
-	"Behaviours/TextureSwappingBehaviour.hpp"
-	"Behaviours/ItemBehaviour.hpp"
-	"Behaviours/DoorBehaviour.hpp"
-	"Collider.hpp"
-	<cstdio>
-	<iostream>
-	<fstream>
-	<string>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\inventory.cpp
-	"Inventory.hpp"
-	<string>
-	<cstdio>
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\light.cpp
-	"Light.hpp"
-	"Renderer.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\mainmenu.cpp
-	"MainMenu.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\mesh.cpp
-	"Mesh.hpp"
-	<map>
-	<cstring>
-	<fstream>
-	"Renderer.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\renderer.cpp
-	"Renderer.hpp"
-	<cassert>
-	<GL/glew.h>
-	"Time.hpp"
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	"GameObject.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\shaderprogram.cpp
-	"ShaderProgram.hpp"
-	<iostream>
-	<fstream>
-	"Texture.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\texture.cpp
-	<SFML/Graphics.hpp>
-	"ShaderProgram.hpp"
-	"Texture.hpp"
-	<string>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\time.cpp
-	"Time.hpp"
-	<iostream>
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\world.cpp
-	<cassert>
-	"World.hpp"
-	"Camera.hpp"
-	"Light.hpp"
-	"Collider.hpp"
-
-1388960902 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1388951197 source:c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\stairsbehaviour.cpp
-	"StairsBehaviour.h"
-	<iostream>
-
-1388943499 c:\users\marijn\desktop\my name is abigailbackupkevinafternewyear\behaviours\stairsbehaviour.h
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-
-1390217015 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
-	"StairsBehaviour.h"
-	<iostream>
-
-1390214897 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../AudioPlayer.hpp"
-
-1390404285 c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.hpp
+	"TipSystem.hpp"
 	"AudioPlayer.hpp"
-	"Hud.hpp"
+	<string>
 
-1390404285 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\tipsystem.cpp
+1390390230 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	<string>
+
+1390390230 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+	"../AudioPlayer.hpp"
+
+1390412789 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
+	"../Behaviour.hpp"
+	"../World.hpp"
+	"../Inventory.hpp"
+	"../TipSystem.hpp"
+
+1390394964 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\inventory.cpp
+	"Inventory.hpp"
+	<string>
+	<cstdio>
+	<iostream>
+	<fstream>
+	"Texture.hpp"
+	<string>
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\light.cpp
+	"Light.hpp"
+	"Renderer.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\light.hpp
+	<string>
+	"GameObject.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\main.cpp
+	<iostream>
+	"Game.hpp"
+
+1390403045 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mainmenu.cpp
+	"MainMenu.hpp"
+
+1390398184 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mainmenu.hpp
+	"Hud.hpp"
+	<SFML/Window.hpp>
+	"Game.hpp"
+	"Button.hpp"
+	<SFML/Graphics.hpp>
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\mesh.cpp
+	"Mesh.hpp"
+	<map>
+	<cstring>
+	<fstream>
+	"Renderer.hpp"
+
+1390311146 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\renderer.cpp
+	"Renderer.hpp"
+	<cassert>
+	<GL/glew.h>
+	"Time.hpp"
+	"ShaderProgram.hpp"
+	"Texture.hpp"
+	"GameObject.hpp"
+
+1389214548 c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\shaderprogram.hpp
+	<string>
+	<vector>
+	<GL/glew.h>
+	"glm.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\shaderprogram.cpp
+	"ShaderProgram.hpp"
+	<iostream>
+	<fstream>
+	"Texture.hpp"
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\texture.cpp
+	<SFML/Graphics.hpp>
+	"ShaderProgram.hpp"
+	"Texture.hpp"
+	<string>
+
+1389214548 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\time.cpp
+	"Time.hpp"
+	<iostream>
+
+1390396537 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\tipsystem.cpp
 	<string>
 	<cstdio>
 	<iostream>
 	<fstream>
 	"TipSystem.hpp"
 
-1390400165 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+1390390230 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\world.cpp
+	<cassert>
+	"World.hpp"
+	"Camera.hpp"
+	"Light.hpp"
+	"Collider.hpp"
+
+1390412789 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+	"DoorBehaviour.hpp"
+	<iostream>
+	<string>
+
+1390412789 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
 	"InvadableBehaviour.hpp"
 	<iostream>
 
-1390399732 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
-
-1390317626 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
-	"AudioPlayer.hpp"
-
-1390317631 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
+1390412789 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+	<sfml/window.hpp>
 	<iostream>
-	<SFML/audio.hpp>
-	<string>
+	"../Texture.hpp"
+	"PlayerController.hpp"
+	"../GameObject.hpp"
 
-1390403975 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
+1390412789 source:c:\users\maskedmouse\documents\school\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
 	"TriggerBehaviour.hpp"
 	<iostream>
-
-1390317359 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
-	"../AudioPlayer.hpp"
-
-1390237895 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.cpp
-	"BlockWallBehaviour.hpp"
-	<iostream>
-
-1390237449 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\blockwallbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
-	"../AudioPlayer.hpp"
-
-1390317973 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.cpp
-	"TextureAnimationBehaviour.hpp"
-	"../Texture.hpp"
-	<iostream>
-
-1390316267 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\textureanimationbehaviour.hpp
-	"../Behaviour.hpp"
-	"../World.hpp"
-	"../Inventory.hpp"
-	"../TipSystem.hpp"
 

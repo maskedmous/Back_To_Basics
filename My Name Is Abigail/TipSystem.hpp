@@ -7,7 +7,7 @@
 class TipSystem
 {
     public:
-        TipSystem(Hud * aHud, AudioPlayer * aAudioPlayer);
+        TipSystem(Hud * aHud);
         virtual ~TipSystem();
         void getTip(std::string itemName);
         void countdown(float step);
@@ -21,7 +21,6 @@ class TipSystem
         void reset();
 
         Hud * hud;
-        AudioPlayer * audioPlayer;
         float timer;
 };
 
