@@ -4,8 +4,8 @@ poker;Hm, maybe I can combine this with something.
 thread;This will come in handy to tie something up.
 stone;This is pretty heavy maybe I can smash something with it.
 bone;Don't dogs like bones?
-bucketOfWater;Oh, a bucket of nice cold water!
+BucketOfWater;Oh, a bucket of nice cold water!
 fancyKey;Hey this dog was guarding a key! what can I use it for?
 oldKey;Hey there was a key in the ashes.
-chestKey;This key was really well hidden.
-ironKey;This key looks exactly the same as the last one! really?!
+Chestkey;This key was really well hidden.
+CellarKey;Oh a key now I can open the door!
