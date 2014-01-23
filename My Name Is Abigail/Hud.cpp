@@ -26,7 +26,7 @@ Hud::Hud( sf::RenderWindow * aWindow, Game * aGame )
         intro.setTexture(introTex);
         intro.setPosition(0,0);
     }
-    if(endScreenTex.loadFromFile("models/endScreen.png"))
+    if(endScreenTex.loadFromFile("models/EndScreen.png"))
     {
         endScreen.setTexture(endScreenTex);
         endScreen.setPosition(0,0);
