@@ -2,7 +2,6 @@ lanternoff;Ah great a lamp if only I had something to light it with.
 firstStairsTip;Press Spacebar to go up and down stairs.
 MasterBedRoomDoor;The door is stuck, I would need somthing heavy to break trough.
 triggerEarnest;Press "Spacebar" to interact with people.
-MeetingEarnestTrigger;Wtf is going on!
 triggerBasementDoor;Hmm this door is locked I should find a key.
 triggerDiningRoom;Hmm the smell of food but a locked door, maybe I should come back later.
 triggerWinterGarden;This door seems locked, maybe I should return here later.
