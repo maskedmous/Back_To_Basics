@@ -45,7 +45,7 @@ void InvadableBehaviour::onCollision( GameObject * otherGameObject )
         audioPlayer->PlayMusic("musicAct1");
         invading = false;
         if((firstInvade == true) && (parent->getName() == "Earnest")){
-            audioPlayer->Play("3_Meeting_Ernest_2", false);
+            audioPlayer->PlayVoicActing("3_Meeting_Ernest_2");
             firstInvade = false;
         }
     }

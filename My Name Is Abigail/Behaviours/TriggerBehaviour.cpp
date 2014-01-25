@@ -14,6 +14,7 @@ TriggerBehaviour::TriggerBehaviour(GameObject * aParent, World* aWorld, Inventor
 
     reUseTrigger = true;
     continuous = false;
+    isVoiceActing = false;
     countdown = aInt;
 
     if(countdown == 0) {
@@ -22,7 +23,12 @@ TriggerBehaviour::TriggerBehaviour(GameObject * aParent, World* aWorld, Inventor
     if(countdown < 0){
         continuous = true;
     }
-    active = true;;
+    if(countdown == 666){
+        isVoiceActing = true;
+        reUseTrigger = false;
+    }
+    active = true;
+
 }
 
 TriggerBehaviour::~TriggerBehaviour()
@@ -51,7 +57,14 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
 {
 	//std::cout << "TRIGGERD GAWD DAMN IT" << std::endl;
 
+
     if(active == true){
+
+        if(isVoiceActing){
+            audioPlayer->PlayVoicActing(soundToPlay);
+            active = false;
+        }
+
         tipSystem->getTip(parent->getName());
         if(soundToPlay != "NULL"){
             if(continuous == true){
@@ -59,15 +72,14 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
                     //std::cout << audioPlayer->CheckStatus() << std::endl;
                     audioPlayer->Play(soundToPlay,false);
                 }
-            } else {
-                audioPlayer->Play(soundToPlay,false);
             }
+            if(continuous == false){
+                audioPlayer->Play(soundToPlay,false);
+                active = false;
+                countdown = 30;
+            }
+        }
 
-        }
-        if(continuous == false){
-            active = false;
-            countdown = 30;
-        }
     }
 	//world->remove(parent);
     //inventory->addToInventory(parent);

@@ -20,6 +20,9 @@ class StairsBehaviour : public Behaviour
         Inventory * inventory;
         AudioPlayer * audioPlayer;
         std::string stairsExit;
+
+        bool countdown;
+        float blackScreencountdown;
 };
 
 

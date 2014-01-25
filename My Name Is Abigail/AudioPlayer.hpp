@@ -24,11 +24,13 @@ class AudioPlayer
 
     protected:
     private:
-       sf::Music music;
+        sf::Music music;
 
-       sf::SoundBuffer bufferSound;
-       sf::SoundBuffer voiceActingbuffer;
-       sf::Sound sound;
+        sf::SoundBuffer bufferSound;
+        sf::Sound sound;
+
+        sf::SoundBuffer voiceActingbuffer;
+        sf::Sound voiceActing;
 
        bool muted;
        float volume;

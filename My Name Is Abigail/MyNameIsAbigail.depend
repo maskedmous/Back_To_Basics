@@ -378,10 +378,10 @@
 	"TriggerBehaviour.hpp"
 	<iostream>
 
-1390476892 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
+1390601813 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.cpp
 	"AudioPlayer.hpp"
 
-1390476917 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
+1390601800 c:\users\marijn\documents\github\back_to_basics\my name is abigail\audioplayer.hpp
 	<iostream>
 	<SFML/audio.hpp>
 	<string>
@@ -448,7 +448,7 @@
 	<iostream>
 	"glm.hpp"
 
-1390479594 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
+1390620369 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\doorbehaviour.cpp
 	"DoorBehaviour.hpp"
 	<iostream>
 	<string>
@@ -460,7 +460,7 @@
 	"../TipSystem.hpp"
 	<string>
 
-1390485630 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
+1390611009 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\invadablebehaviour.cpp
 	"InvadableBehaviour.hpp"
 	<iostream>
 
@@ -500,9 +500,10 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\lookatbehaviour.hpp
 	"../Behaviour.hpp"
 
-1390404464 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
+1390593186 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.cpp
 	<sfml/window.hpp>
 	<iostream>
+	<math.h>
 	"../Texture.hpp"
 	"PlayerController.hpp"
 	"../GameObject.hpp"
@@ -513,7 +514,7 @@
 	<SFML/Graphics.hpp>
 	<GL/glew.h>
 
-1390322324 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
+1390592480 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\playercontroller.hpp
 	<string>
 	<vector>
 	<SFML/Window.hpp>
@@ -523,6 +524,7 @@
 	"../Inventory.hpp"
 	"../World.hpp"
 	"../Hud.hpp"
+	"../Time.hpp"
 
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\renderer.hpp
 	<GL/glew.h>
@@ -538,11 +540,11 @@
 1388960902 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\rotatingbehaviour.hpp
 	"../Behaviour.hpp"
 
-1390217015 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
+1390618258 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.cpp
 	"StairsBehaviour.h"
 	<iostream>
 
-1390214897 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
+1390598686 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\stairsbehaviour.h
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
@@ -571,11 +573,11 @@
 	"../Texture.hpp"
 	"../Behaviour.hpp"
 
-1390403975 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
+1390659754 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.cpp
 	"TriggerBehaviour.hpp"
 	<iostream>
 
-1390317359 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
+1390602631 c:\users\marijn\documents\github\back_to_basics\my name is abigail\behaviours\triggerbehaviour.hpp
 	"../Behaviour.hpp"
 	"../World.hpp"
 	"../Inventory.hpp"
@@ -650,7 +652,7 @@
 	"Behaviours/PlayerController.hpp"
 	"Texture.hpp"
 
-1390486181 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
+1390689194 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\interperter.cpp
 	"Interperter.hpp"
 	"Mesh.hpp"
 	"Texture.hpp"
@@ -752,7 +754,7 @@
 	<iostream>
 	"Game.hpp"
 
-1390486007 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
+1390683189 source:c:\users\marijn\documents\github\back_to_basics\my name is abigail\game.cpp
 	<cassert>
 	<SFML/Window.hpp>
 	"Time.hpp"

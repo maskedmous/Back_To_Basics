@@ -71,12 +71,13 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
             std::string removeTrigger = "fireTrigger";
             world->remove(removeTrigger);
 
+            std::string removeTrigger2 = "triggerFire";
+            world->remove(removeTrigger2);
+
             std::string keyname = "stone";
     	    GameObject * stoneObj = world->findGameObject(keyname);
             stoneObj->setPosition(parent->getLocation());
             tipSystem->sendTip("Hey a stone! maybe i should pick it up");
-
-
 
             //inventory->addToInventory(key2);
 
@@ -86,8 +87,10 @@ void DoorBehaviour::onCollision( GameObject * otherGameObject )
             world->remove(keyname);
             audioPlayer->Play("destroyDoor",false);
             audioPlayer->PlayMusic("masterBedroomMusic");
-    	    //GameObject * key2 = world->findGameObject(keyname);
-            //key2->setPosition(parent->getLocation());
+
+            std::string lockname = "UpperHallway-MasterBedroomFront";
+    	    GameObject * frontWall = world->findGameObject(lockname);
+            frontWall->setPosition(glm::vec3(14.4,5,0.21));
 
         }
         /*

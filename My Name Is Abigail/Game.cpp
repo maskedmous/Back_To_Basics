@@ -79,11 +79,14 @@ void Game::buildLevel()
         world->add(blockWall);
 
     GameObject * character = new GameObject("Character", glm::vec3(17.0f, -4.45f,0.2f));
+    //GameObject * character = new GameObject("Character", glm::vec3(17.0f, 7.45f,0.2f));
+
         character->setMesh(Mesh::load("models/AbigailCharacter.obj"));
         character->setColorMap(Texture::load("models/Abigailside.png"));
         character->setBehaviour( new PlayerController( character, window, renderer, world, inventory, hud) );
 
         character->setCollider( new Collider( 1.0f, 1.75f, character));
+        character->getBehaviour()->setState(1);
         hud->setInventory( inventory );
         world->add(character);
     camera->setBehaviour( new LookAtBehaviour(camera, character));
@@ -149,7 +152,12 @@ void Game::update( float step )
         if(sf::Keyboard::isKeyPressed( sf::Keyboard::W) || sf::Keyboard::isKeyPressed( sf::Keyboard::Space) )
         {
             state = "Play";
-            audioPlayer->Play("intro", false);
+            audioPlayer->PlayVoicActing("intro");
+
+            std::string anotherName = "Character";
+            GameObject * theCharacter = world->findGameObject(anotherName);
+            theCharacter->getBehaviour()->setState(2);
+
         }
     }
 	if(state == "Play")

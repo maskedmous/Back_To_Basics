@@ -1,5 +1,6 @@
 #include <sfml/window.hpp>
 #include <iostream>
+#include <math.h>
 #include "../Texture.hpp"
 #include "PlayerController.hpp"
 #include "../GameObject.hpp"
@@ -130,6 +131,10 @@ void PlayerController::update(float step)
                     parent->setColorMap(animation[0]);
                 }
             }
+        }else{
+            mylittlevar+= 0.01;
+            parent->translate(glm::vec3(0.001 * sin(mylittlevar),0,0 ));
+
         }
         if(targetItem != NULL)
         {

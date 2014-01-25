@@ -82,7 +82,7 @@ if(level.is_open()){
                 if(behaviourName != "0"){
 
                     setBehaviour = true;
-                    std::cout << behaviourName << std::endl;
+                    //std::cout << behaviourName << std::endl;
                 }
             }
 
@@ -136,7 +136,7 @@ if(level.is_open()){
 
                             if(BehaviourId == "Swaping"){
                             //loadedObj->setCollider( new Collider(1.0f, 1.0f, loadedObj) );                            //loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj,loadedObj, "StorageRoomDARK.png", "StorageRoomLIGHT.png") );
-                            std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
+                            //std::cout << "Swaping" << "triggered if swappingbehaviour is called========================" << std::endl;
                             }
 
                             if(BehaviourId == "Animation"){
@@ -169,13 +169,13 @@ if(level.is_open()){
 
                             if(BehaviourId == "Swaping"){
                                 BehaviourArgument1 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                std::cout << BehaviourArgument1 << "first argument========================" << std::endl;
+                                //std::cout << BehaviourArgument1 << "first argument========================" << std::endl;
                             }
                         }
                         if(j == 3){
                             if(BehaviourId == "Swaping"){
                                 BehaviourArgument2 = behaviourName.substr( currentBehaviour, nextBehaviour - currentBehaviour);
-                                std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
+                                //std::cout << BehaviourArgument2 << "SECOND argument========================" << std::endl;
                                 loadedObj->setBehaviour( new TextureSwappingBehaviour(loadedObj, BehaviourArgument1, BehaviourArgument2) );
                             }
 

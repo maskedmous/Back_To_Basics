@@ -9,6 +9,7 @@
 #include "../Inventory.hpp"
 #include "../World.hpp"
 #include "../Hud.hpp"
+#include "../Time.hpp"
 
 class PlayerController : public Behaviour
 {
@@ -26,6 +27,8 @@ class PlayerController : public Behaviour
 
         enum charState {intro,frozen,moving};
         charState characterState;
+
+        float mylittlevar;
 
     protected:
         std::string mouseState;

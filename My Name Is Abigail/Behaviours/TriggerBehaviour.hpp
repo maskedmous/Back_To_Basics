@@ -27,6 +27,7 @@ class TriggerBehaviour : public Behaviour
         bool active;
         bool reUseTrigger;
         bool continuous;
+        bool isVoiceActing;
 };
 
 #endif // TRIGGERBEHAVIOUR_HPP_INCLUDED
