@@ -131,7 +131,7 @@ if(level.is_open()){
                                 loadedObj->setBehaviour( new ItemBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer, aGame) );
                             }
                             if(BehaviourId == "Block"){
-                                loadedObj->setBehaviour( new BlockWallBehaviour(loadedObj, aWorld, aInventory, aTipsystem, aAudioPlayer) );
+                                loadedObj->setBehaviour( new BlockWallBehaviour(loadedObj) );
                             }
 
                             if(BehaviourId == "Swaping"){
@@ -140,7 +140,7 @@ if(level.is_open()){
                             }
 
                             if(BehaviourId == "Animation"){
-                                loadedObj->setBehaviour(new TextureAnimationBehaviour(loadedObj, aWorld , aInventory, aTipsystem, aAudioPlayer) );
+                                loadedObj->setBehaviour(new TextureAnimationBehaviour(loadedObj) );
                             }
 
 

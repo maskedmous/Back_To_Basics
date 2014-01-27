@@ -49,18 +49,6 @@ void StairsBehaviour::onCollision( GameObject * otherGameObject )
     blackWallObj->setPosition ( glm::vec3(otherStairObject->getLocation().x, otherStairObject->getLocation().y, 1) );
     countdown = true;
     blackScreencountdown = 1;
-
-
-    /*
-    if(upOrDown == true){
-        otherGameObject->translate( glm::vec3(-3.0f , 4.0f, 0.0f));
-
-    }
-    if(upOrDown == false){
-        otherGameObject->translate( glm::vec3(3.0f , -4.0f, 0.0f));
-
-    }
-    */
 }
 
 

@@ -9,20 +9,12 @@
 class TextureAnimationBehaviour : public Behaviour
 {
     public:
-        TextureAnimationBehaviour(GameObject* aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer);
+        TextureAnimationBehaviour(GameObject* aParent);
         virtual ~TextureAnimationBehaviour();
         virtual void onCollision(GameObject * aGameObject);
         virtual void update(float step );
     protected:
     private:
-        World * world;
-        GameObject * parent;
-        Inventory * inventory;
-        TipSystem * tipSystem;
-        AudioPlayer * audioPlayer;
-        std::string responder;
-
-
         Texture * textureOne;
         Texture * textureTwo;
         Texture * textureThree;

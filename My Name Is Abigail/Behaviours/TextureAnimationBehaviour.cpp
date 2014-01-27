@@ -4,15 +4,9 @@
 #include <iostream>
 
 
-TextureAnimationBehaviour::TextureAnimationBehaviour(GameObject * aParent, World* aWorld, Inventory * aInventory, TipSystem * aTipsystem, AudioPlayer * aAudioPlayer)
-:	Behaviour( aParent ), tipSystem(aTipsystem)
+TextureAnimationBehaviour::TextureAnimationBehaviour(GameObject * aParent)
+:	Behaviour( aParent )
 {
-    world = aWorld;
-    parent = aParent;
-    inventory = aInventory;
-    //responder = respondingObject;
-    audioPlayer = aAudioPlayer;
-
     textureOne = Texture::load(("models/fire1.png" ));
     textureTwo = Texture::load(("models/fire2.png" ));
     textureThree = Texture::load(("models/fire3.png"));

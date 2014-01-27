@@ -7,7 +7,6 @@ TriggerBehaviour::TriggerBehaviour(GameObject * aParent, World* aWorld, Inventor
 :	Behaviour( aParent ), tipSystem(aTipsystem)
 {
     world = aWorld;
-    parent = aParent;
     inventory = aInventory;
     audioPlayer = aAudioPlayer;
     soundToPlay = aString;
@@ -60,20 +59,25 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
 
     if(active == true){
 
-        if(isVoiceActing){
+        if(isVoiceActing)
+        {
             audioPlayer->PlayVoicActing(soundToPlay);
             active = false;
         }
 
         tipSystem->getTip(parent->getName());
-        if(soundToPlay != "NULL"){
-            if(continuous == true){
-                if(audioPlayer->CheckStatus() != 2){
-                    //std::cout << audioPlayer->CheckStatus() << std::endl;
+
+        if(soundToPlay != "NULL")
+        {
+            if(continuous == true)
+            {
+                if(audioPlayer->CheckStatus() != 2)
+                {
                     audioPlayer->Play(soundToPlay,false);
                 }
             }
-            if(continuous == false){
+            if(continuous == false)
+            {
                 audioPlayer->Play(soundToPlay,false);
                 active = false;
                 countdown = 30;
@@ -81,8 +85,5 @@ void TriggerBehaviour::onCollision( GameObject * otherGameObject )
         }
 
     }
-	//world->remove(parent);
-    //inventory->addToInventory(parent);
-
 }
 
