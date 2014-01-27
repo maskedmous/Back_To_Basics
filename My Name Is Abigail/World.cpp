@@ -57,22 +57,19 @@ void World::checkBlock()
 {
     for(unsigned int i=0; i<children.size(); ++i)
     {
-        if(children[i]->hasCollider())
+        if(children[i]->getName() == "Character")
         {
-            if(children[i]->getName() == "Character")
+            for(unsigned int j=0; j<children.size(); ++j)
             {
-                for(unsigned int j=0; j<children.size(); ++j)
+               if(children[j]->getName() != "Character")
                 {
-                   if(children[j]->getName() != "Character")
+                    //wall blocks are at Z -1.0f
+                    if(children[j]->hasCollider() && children[j]->getLocation().z == -1.0f)
                     {
-                        //wall blocks are at Z -1.0f
-                        if(children[j]->hasCollider() && children[j]->getLocation().z == -1.0f)
+                        //check if its colliding
+                        if(children[i]->getCollider()->isColliding(children[j]))
                         {
-                            //check if its colliding
-                            if(children[i]->getCollider()->isColliding(children[j]))
-                            {
-                                children[i]->onCollision(children[j]);
-                            }
+                            children[i]->onCollision(children[j]);
                         }
                     }
                 }
